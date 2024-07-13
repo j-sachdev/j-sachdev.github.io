@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Online Tools ⚡</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+
+<body>
+    
+    <header class="">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+            <div class="flex-shrink-0">
+                <a href="" title="Fast Online Tools" class="flex">
+                    <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                </a>
+            </div>
+
+            <button type="button"
+                class="inline-flex p-1 text-black transition-all duration-200 lg:hidden focus:bg-gray-100 hover:bg-gray-100"
+                onclick="handleMenu()">
+                <!-- Menu open: "hidden", Menu closed: "block" -->
+                <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+                <!-- Menu open: "block", Menu closed: "hidden" -->
+                <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-10 bg-white inset-0 p-3">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="#" id="brand" class="flex gap-2 items-center">
+                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                    </a>
+                    <button class="p-2" onclick="handleMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Text Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Image Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Coding Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">AI Tools</a>
+                    <div class="h-[1px] bg-gray-300"></div>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Blog</a>
+
+                </div>
+
+                <div class="fixed bottom-0 left-0 right-0 flex justify-center items-end">
+                    <div class="p-4 rounded-md mb-4 flex items-center">
+                        <p class="font-medium mr-2">Made with </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="h-6 w-6 text-red-500 mr-2">
+                            <path fill="currentColor"
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Text Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Image Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Coding Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    AI Tools </a>
+
+                <div class="w-px h-5 bg-black/20"></div>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Blog </a>
+
+            </div>
+        </div>
+    </div>
+</header>
+    
+
+    <section class="py-10 bg-gray-50">
+        <div class="mx-auto max-w-6xl shadow-md mb-8">
+            <div class="mt-6 overflow-hidden bg-white rounded-xl">
+                <div class="px-6 py-12 sm:p-12">
+                    <h1 class="text-3xl font-semibold text-center text-gray-900">Count Text Lines</h1>
+                    <p class="font-normal py-6">Ultimate line counting tool for all your text analysis needs!
+                        Whether you're a writer, programmer, or editor, our line counting tool is designed to provide
+                        accurate and instant results.
+                        Simply paste your text, and our tool will count the number of lines,
+                        making it an essential resource for managing word limits, coding standards, or document
+                        formatting.
+                        This free, user-friendly online tool is perfect for anyone needing a quick and reliable line
+                        count.
+                        Try our line counting tool now and experience the best in text analysis.
+                    </p>
+                    <div class="-mx-4 flex flex-wrap">
+                        <div class="w-full px-4 md:w-1/2 lg:w-1/2">
+                            <div class="mb-6">
+                                <label class="mb-[10px] block text-base font-medium text-dark dark:text-white">
+                                    Input
+                                </label>
+                                <div class="relative">
+                                    <textarea id="editor" type="text" rows="6" autofocus="" spellcheck="false"
+                                        oninput="countLines()" placeholder="Enter your text...Try to add multiple lines"
+                                        class="w-full bg-transparent rounded-md border border-stroke dark:border-dark-3 p-3 pl-12 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2"></textarea>
+                                        
+                                    <span class="absolute top-[18px] left-4">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.8">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M1.56622 3.23223C2.03506 2.76339 2.67094 2.5 3.33398 2.5H9.16732C9.62755 2.5 10.0006 2.8731 10.0006 3.33333C10.0006 3.79357 9.62755 4.16667 9.16732 4.16667H3.33398C3.11297 4.16667 2.90101 4.25446 2.74473 4.41074C2.58845 4.56702 2.50065 4.77899 2.50065 5V16.6667C2.50065 16.8877 2.58845 17.0996 2.74473 17.2559C2.90101 17.4122 3.11297 17.5 3.33398 17.5H15.0006C15.2217 17.5 15.4336 17.4122 15.5899 17.2559C15.7462 17.0996 15.834 16.8877 15.834 16.6667V10.8333C15.834 10.3731 16.2071 10 16.6673 10C17.1276 10 17.5006 10.3731 17.5006 10.8333V16.6667C17.5006 17.3297 17.2373 17.9656 16.7684 18.4344C16.2996 18.9033 15.6637 19.1667 15.0006 19.1667H3.33398C2.67094 19.1667 2.03506 18.9033 1.56622 18.4344C1.09738 17.9656 0.833984 17.3297 0.833984 16.6667V5C0.833984 4.33696 1.09738 3.70107 1.56622 3.23223Z"
+                                                    fill="#9CA3AF" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M16.6673 2.39909C16.4195 2.39909 16.1818 2.49754 16.0066 2.67278L8.25314 10.4262L7.81264 12.1882L9.57463 11.7477L17.3281 3.99427C17.5033 3.81903 17.6018 3.58135 17.6018 3.33352C17.6018 3.0857 17.5033 2.84802 17.3281 2.67278C17.1528 2.49754 16.9152 2.39909 16.6673 2.39909ZM14.8281 1.49427C15.3159 1.00647 15.9775 0.732422 16.6673 0.732422C17.3572 0.732422 18.0188 1.00647 18.5066 1.49427C18.9944 1.98207 19.2684 2.64367 19.2684 3.33352C19.2684 4.02338 18.9944 4.68498 18.5066 5.17278L10.5899 13.0894C10.4831 13.1962 10.3493 13.272 10.2028 13.3086L6.86945 14.142C6.58547 14.213 6.28506 14.1298 6.07808 13.9228C5.8711 13.7158 5.78789 13.4154 5.85888 13.1314L6.69222 9.79808C6.72885 9.65155 6.80461 9.51773 6.91141 9.41093L14.8281 1.49427Z"
+                                                    fill="#9CA3AF" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4 md:w-1/2 lg:w-1/2">
+                            <div class="mb-6">
+                                <label class="mb-[10px] block text-base font-medium text-dark dark:text-white">
+                                    Output
+                                </label>
+                                <p class="mt-4 text-6xl font-bold text-black" id="linesCount">Empty</p>
+
+
+                                <div class="flex mt-5">
+                                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                    <span class="ml-2 text-sm text-gray-500"> Line Break is used as Delimiter </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <input type="checkbox" class="border-gray-300 rounded h-5 w-5" id="chkExcludeBlank" />
+
+                        <div class="flex flex-col">
+                            <h1 class="text-gray-700 font-medium leading-none">Exclude Blank Lines</h1>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:space-y-0 md:space-x-4 md:flex-row my-6">
+                        <span onclick="countLines()"
+                            class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200  bg-blue-500 hover:bg-blue-600 focus:bg-blue-600"
+                            role="button"> Count Lines </span>
+                        <span onclick="clearEditor()"
+                            class="inline-flex items-center justify-center py-4 text-base font-semibold underline cursor-pointer">Clear</span>
+                    </div>
+
+
+                    <div class="pt-2 my-6">
+                        Our <span class="font-bold">Count Lines</span> tool makes it easy to count the number of lines
+                        in any text. Simply paste your text and get an instant line count. This tool is perfect for
+                        writers, coders, and anyone needing to track line numbers. Fast, accurate, and free, our Count
+                        Lines tool is your go-to solution for quick and easy line counting. Try it now!
+                        <p class="my-6">
+                        <h3 class="my-6 font-semibold">Try out our tool today and see how fun and easy it is to count
+                            numbers of lines in text!</h3>
+                    </div>
+
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-[#1A1D2B]">
+    <div class="container mx-auto p-0 md:p-8 xl:px-0">
+        <div class="mx-auto max-w-7xl px-6 pb-10 pt-16">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <a href="/">
+                            <div class="flex items-center space-x-2 text-2xl font-medium">
+                                <span>
+                                    <img src="assets/logo-invert.svg" class="w-60 -ml-4">
+                                </span>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="max-w-md pr-16 text-md text-gray-200">Your quick, reliable toolkit for all tasks.
+                        Fast, free tools to make online activities easier.
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Linkedin</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Twitter</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Popular Tools</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/image-cropper-online"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Cropper
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/image-resizer"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Resize Your Images
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/image-filters"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Filters
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/remove-duplicates"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Remove Duplicate Lines
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Other Tools</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/ai-tools-directory"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">AI Tools Directory
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/upside-down-text-generator.html"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Text Based Tools
+                                    </a>
+                                </li>                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Resources</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                
+                                <li>
+                                    <a href="/blog" class="text-md leading-6 text-gray-300 hover:text-gray-50">Blog
+                                    </a>
+                                </li>                                    
+                                <li>
+                                    <a href="/terms"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Terms
+                                        of Service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/privacy"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Company</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/about-us"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">About Us
+                                    </a>
+                                </li>                                   
+                                <li>
+                                    <a href="/contact-us"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
+                <div class="text-md text-center text-white">
+                    Copyright © 2024 . Crafted with
+                    <span class="text-gray-50">♥</span> by Developers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const navDialog = document.getElementById('nav-dialog');
+        function handleMenu() {
+            navDialog.classList.toggle('hidden');
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</footer>
+    <script>
+        function init(){
+            var chk = document.getElementById("chkExcludeBlank");            
+            chk.addEventListener("change", countLines);
+        }        
+
+        function countLines() {
+            var text = document.getElementById("editor").value;
+            var counterEl = document.getElementById("linesCount");
+            var chk = document.getElementById("chkExcludeBlank");            
+            if(!text){
+                counterEl.innerHTML = "Empty";
+                return;
+            }
+
+            var lines = text.split(/\r\n|\r|\n/);            
+            if (chk.checked) {
+                lines = lines.filter(line => line.trim() !== '');
+            }            
+            var counterText = "";
+            if(lines.length > 1){
+                counterText = lines.length + " Lines";
+            }
+            else{
+                counterText = lines.length + " Line";
+            }
+            counterEl.innerHTML = counterText;
+
+        }
+
+        function clearEditor() {
+            var input = document.querySelector("#editor");
+            input.value = "";
+            countLines();
+        }
+        init();
+    </script>
+
+</body>
+
+</html>
