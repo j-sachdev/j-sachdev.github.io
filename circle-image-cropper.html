@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>    
+    <title>Free Online Circle Image Cropper - Easy & Quick Round Image Edits</title>
+    <meta name="description"
+        content="Easily crop your images into perfect circles online with our free, easy-to-use circle image cropper tool.">
+    <meta name="keywords"
+        content="crop images into circles online, online round photo editor, round image cropper">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,19 +22,10 @@
 
   gtag('config', 'G-D94TC827TJ');
 </script>
-        
 </head>
 
 <body>
-    <title>Free Online Circle Image Cropper - Easy & Quick Round Image Edits</title>
-    <meta name="description"
-        content="Easily crop your images into perfect circles online with our free, easy-to-use circle image cropper tool.">
-    <meta name="keywords"
-        content="crop images into circles online, online round photo editor, round image cropper">
     
-   <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />
     <header class="">
     <div class="px-4 mx-auto sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
@@ -192,10 +190,10 @@
                     </span>
                 </div>
                 <div class=" mt-2 flex items-center gap-x-3 dropdown">
-                    <label class="w-full text-black font-medium">
+                    <!-- <label class="w-full text-black font-medium">
                         <span class="text-center ml-2">Cropper Options: </span>
-                    </label>
-                    <span class="rounded-md shadow-sm"><button
+                    </label> -->
+                    <!-- <span class="rounded-md shadow-sm"><button
                             class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                             type="button" aria-haspopup="true" aria-expanded="true"
                             aria-controls="headlessui-menu-items-117">
@@ -205,8 +203,8 @@
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                     clip-rule="evenodd"></path>
                             </svg>
-                        </button></span>
-                    <div
+                        </button></span> -->
+                    <!-- <div
                         class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-bottom-right -translate-y-2 scale-95">
                         <div class="absolute bottom-0 w-56 mb-6 right-1  bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
                             id="cropperOptions" role="menu">
@@ -228,7 +226,7 @@
                                     role="menuitem">Free</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -423,215 +421,6 @@
 
         </div>
     </section>
- #end region
-
-#region_footer_bottom
-
-    <style>
-        .cropper-crop-box {
-            border-radius: 50%;
-        }
-
-        .cropper-view-box,
-        .cropper-face {
-            border-radius: 50%; /* Make the crop area round */
-        }
-
-        .cropper-bg {
-            background-image: none;
-            background-color: #e2e2e2;
-        }
-
-        .cropper-modal,
-        .cropper-line,
-        .cropper-view-box,
-        .cropper-point {
-            background-color: gray;
-            outline-color: transparent;
-        }
-
-        .cropper-center {
-            display: none;
-        }
-
-        .cropper-point.point-se {
-            width: 5px;
-            height: 5px;
-        }
-
-        .dropdown:focus-within .dropdown-menu {
-            opacity: 1;
-            transform: translate(0) scale(1);
-            visibility: visible;
-        }
-
-        .active #image-preview {
-            border-color: #3b82f6;
-        }
-    </style>
-    <script>
-        const fileInput = document.querySelector("#upload");
-        const uploadedImage = document.querySelector("#uploadedImage");
-        const dragArea = document.querySelector("#uploadPanel");
-        const editorPanel = document.querySelector("#editorPanel");
-        const btnCropper = document.querySelector("#btnCropper");
-        const cropperOptions = document.querySelector("#cropper-options");
-        const cropperItems = document.querySelectorAll(".cropper-item");
-        const btnUpload = document.querySelector("#btnUpload");
-
-
-        let cropper = null;
-        let image = null;
-        let isCropperEnabled = false;
-
-
-        function downloadImage(croppedImage) {
-            var a = document.createElement("a");
-            a.href = croppedImage;
-            a.download = fileName;
-            a.click();
-        }
-
-        function setCropper(aspectRatio = 16 / 9) {
-            isCropperEnabled = true;
-            dragArea.classList.add("hidden");
-            editorPanel.classList.remove("hidden");
-            image = document.querySelector("#uploadedImage");
-            cropper && cropper.destroy();
-            cropper = new Cropper(image, {
-                aspectRatio: 1,
-                background: true,
-                viewMode: 1,
-                autoCrop: true,
-                ready() {
-                    var el = document.querySelector(".cropper-drag-box");
-                    el.classList.add("rounded-lg");
-                    const cropBox = cropper.cropBox;
-                    cropBox.classList.add('rounded-crop-box');
-                },
-            });
-        }
-
-        setEventListeners();
-
-        function fileInputLoader() {
-            console.log("SS");
-            if (isCropperEnabled) return;
-            let file = fileInput.files[0];
-            if (!file) return;
-            fileName = file.name;
-            renderImage(file);
-        }
-
-        function renderImage(file) {
-            let reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onloadend = () => {
-                uploadedImage.src = reader.result;
-                uploadedImage.onload = function () {
-                    setCropper();
-                };
-            };
-        }
-
-
-        function cropImage() {
-            var croppedImage = cropper.getCroppedCanvas().toDataURL("image/png");
-            downloadImage(croppedImage);
-        }
-
-        function dragInputLoader(file, name, type) {
-            if (type.split("/")[0] !== "image") {
-                alert("Please upload an image file");
-                return false;
-            }
-            fileName = name;
-            renderImage(file);
-        }
-        function setEventListeners() {
-            dragArea.addEventListener(
-                "dragenter",
-                (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    dragArea.classList.add("active");
-                },
-                false
-            );
-
-            dragArea.addEventListener(
-                "dragleave",
-                (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    dragArea.classList.remove("active");
-                },
-                false
-            );
-
-            dragArea.addEventListener(
-                "dragover",
-                (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    dragArea.classList.add("active");
-                },
-                false
-            );
-
-            dragArea.addEventListener(
-                "drop",
-                (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    dragArea.classList.remove("active");
-                    let draggedData = e.dataTransfer;
-                    let files = draggedData.files;
-                    dragInputLoader(files[0], files[0].name, files[0].type);
-                },
-                false
-            );
-
-            function onCropperSizeChange(value) {
-                var option = 16 / 9;
-                switch (value) {
-                    case "16:9":
-                        option = 16 / 9;
-                        break;
-                    case "4:3":
-                        option = 4 / 3;
-                        break;
-                    case "1:1":
-                        option = 1 / 1;
-                        break;
-                    case "2:3":
-                        option = 2 / 3;
-                        break;
-                    case "Free":
-                        option = NaN;
-                        break;
-                }
-                setCropper(option);
-            }
-
-            fileInput.addEventListener("change", fileInputLoader);
-            btnUpload.addEventListener("click", function () {
-                fileInput.click();
-            });
-
-            cropperItems.forEach(el => {
-                el.addEventListener("click", function (e) {
-                    var value = e.currentTarget.innerText;
-                    onCropperSizeChange(value);
-                    document.activeElement.blur()
-                    document.querySelector("#cropSelect").innerHTML = value;
-                })
-            })
-
-        }
-
-
-    </script>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -775,7 +564,228 @@
         }
     </style>
 </footer>
-    
+    <style>
+        .cropper-crop-box {
+            border-radius: 50%;
+        }
+
+        .cropper-view-box,
+        .cropper-face {
+            border-radius: 50%; /* Make the crop area round */
+        }
+
+        .cropper-bg {
+            background-image: none;
+            background-color: #e2e2e2;
+        }
+
+        .cropper-modal,
+        .cropper-line,
+        .cropper-view-box,
+        .cropper-point {
+            background-color: gray;
+            outline-color: transparent;
+        }
+
+        .cropper-center {
+            display: none;
+        }
+
+        .cropper-point.point-se {
+            width: 5px;
+            height: 5px;
+        }
+
+        .dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            transform: translate(0) scale(1);
+            visibility: visible;
+        }
+
+        .active #image-preview {
+            border-color: #3b82f6;
+        }
+    </style>
+    <script>
+        const fileInput = document.querySelector("#upload");
+        const uploadedImage = document.querySelector("#uploadedImage");
+        const dragArea = document.querySelector("#uploadPanel");
+        const editorPanel = document.querySelector("#editorPanel");
+        const btnCropper = document.querySelector("#btnCropper");
+        const cropperOptions = document.querySelector("#cropper-options");
+        const cropperItems = document.querySelectorAll(".cropper-item");
+        const btnUpload = document.querySelector("#btnUpload");
+
+
+        let cropper = null;
+        let image = null;
+        let isCropperEnabled = false;
+
+
+        function downloadImage(croppedImage) {
+            var a = document.createElement("a");
+            a.href = croppedImage;
+            a.download = fileName;
+            a.click();
+        }
+
+        function setCropper(aspectRatio = 16 / 9) {
+            isCropperEnabled = true;
+            dragArea.classList.add("hidden");
+            editorPanel.classList.remove("hidden");
+            image = document.querySelector("#uploadedImage");
+            cropper && cropper.destroy();
+            cropper = new Cropper(image, {
+                aspectRatio: 1,
+                background: true,
+                viewMode: 1,
+                autoCrop: true,
+                ready() {
+                    var el = document.querySelector(".cropper-drag-box");
+                    el.classList.add("rounded-lg");
+                    const cropBox = cropper.cropBox;
+                    cropBox.classList.add('rounded-crop-box');
+                },
+            });
+        }
+
+        setEventListeners();
+
+        function fileInputLoader() {
+            console.log("SS");
+            if (isCropperEnabled) return;
+            let file = fileInput.files[0];
+            if (!file) return;
+            fileName = file.name;
+            renderImage(file);
+        }
+
+        function renderImage(file) {
+            let reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = () => {
+                uploadedImage.src = reader.result;
+                uploadedImage.onload = function () {
+                    setCropper();
+                };
+            };
+        }
+
+        function getRoundedCanvas(sourceCanvas) {
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('2d');
+        var width = sourceCanvas.width;
+        var height = sourceCanvas.height;
+        canvas.width = width;
+        canvas.height = height;
+        context.imageSmoothingEnabled = true;
+        context.drawImage(sourceCanvas, 0, 0, width, height);
+        context.globalCompositeOperation = 'destination-in';
+        context.beginPath();
+        context.arc(width / 2, height / 2, Math.min(width, height) / 2, 0, 2 * Math.PI, true);
+        context.fill();
+        return canvas;
+      }
+
+        function cropImage() {
+            var croppedCanvas = cropper.getCroppedCanvas();
+            var roundedCanvas = getRoundedCanvas(croppedCanvas);
+            var croppedImage = roundedCanvas.toDataURL("image/png");
+            downloadImage(croppedImage);
+        }
+
+        function dragInputLoader(file, name, type) {
+            if (type.split("/")[0] !== "image") {
+                alert("Please upload an image file");
+                return false;
+            }
+            fileName = name;
+            renderImage(file);
+        }
+        function setEventListeners() {
+            dragArea.addEventListener(
+                "dragenter",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.add("active");
+                },
+                false
+            );
+
+            dragArea.addEventListener(
+                "dragleave",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.remove("active");
+                },
+                false
+            );
+
+            dragArea.addEventListener(
+                "dragover",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.add("active");
+                },
+                false
+            );
+
+            dragArea.addEventListener(
+                "drop",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.remove("active");
+                    let draggedData = e.dataTransfer;
+                    let files = draggedData.files;
+                    dragInputLoader(files[0], files[0].name, files[0].type);
+                },
+                false
+            );
+
+            function onCropperSizeChange(value) {
+                var option = 16 / 9;
+                switch (value) {
+                    case "16:9":
+                        option = 16 / 9;
+                        break;
+                    case "4:3":
+                        option = 4 / 3;
+                        break;
+                    case "1:1":
+                        option = 1 / 1;
+                        break;
+                    case "2:3":
+                        option = 2 / 3;
+                        break;
+                    case "Free":
+                        option = NaN;
+                        break;
+                }
+                setCropper(option);
+            }
+
+            fileInput.addEventListener("change", fileInputLoader);
+            btnUpload.addEventListener("click", function () {
+                fileInput.click();
+            });
+
+            cropperItems.forEach(el => {
+                el.addEventListener("click", function (e) {
+                    var value = e.currentTarget.innerText;
+                    onCropperSizeChange(value);
+                    document.activeElement.blur()
+                    document.querySelector("#cropSelect").innerHTML = value;
+                })
+            })
+
+        }
+
+
+    </script>
 
 </body>
 

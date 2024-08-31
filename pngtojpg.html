@@ -2,14 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css" />
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
-</script>
-<script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js">
-    </script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/mdn-like.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.8/beautify.min.js"></script>
+    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,41 +104,7 @@
 </header>
     
 
-    <section class="py-10 bg-gray-50">
-        <div class="mx-auto max-w-6xl shadow-md mb-8">
-            <div class="mt-6 overflow-hidden bg-white rounded-xl">
-                <div class="px-6 py-12 sm:p-12">
-                    <h1 class="text-3xl font-semibold text-center text-gray-900">JavaScript Beautifier</h1>
-                    <form class="mt-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
-                            <div class="sm:col-span-2">
-                                <div class="mt-2.5 relative">
-                                    <div id="app"></div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row ">
-                                <button type="button" onclick="onBeautify()"
-                                    class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-600">
-                                    Beautify JS
-                                </button> 
-                                <span onclick="copyToClipBoard()"
-                                class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-[#fe5f3c] hover:bg-orange-600 focus:bg-orange-600"
-                                role="button"> Copy To Clipboard </span>                               
-                                <span onclick="clearEditor()" class="inline-flex items-center justify-center py-4 text-base font-semibold underline cursor-pointer">Clear</span>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="px-12 pb-12">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">JavaScript Beautifier: Enhancing Code Readability</h3>
-                    <p class="pt-2">JavaScript Beautifier is a crucial tool for developers seeking to enhance code readability and maintainability effortlessly. By formatting JavaScript code with consistent indentation, spacing, and line breaks, it significantly improves comprehension and facilitates debugging. Structured code organization clarifies logic and flow, making it easier for team members to collaborate effectively. The tool's ability to reduce syntax errors and inconsistencies enhances overall code quality and aligns with coding standards, ensuring long-term project sustainability.</p>
-                  
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     
     <footer class="bg-[#1A1D2B]">
@@ -289,56 +248,7 @@
         }
     </style>
 </footer>
-    <script>
-        function onBeautify() {
-            var options = {
-                "indent_size": "4",
-                "indent_char": " ",
-                "max_preserve_newlines": "5",
-                "preserve_newlines": true,
-                "keep_array_indentation": false,
-                "break_chained_methods": false,
-                "indent_scripts": "normal",
-                "brace_style": "collapse",
-                "space_before_conditional": true,
-                "unescape_strings": false,
-                "jslint_happy": false,
-                "end_with_newline": false,
-                "wrap_line_length": "0",
-                "indent_inner_html": false,
-                "comma_first": false,
-                "e4x": false,
-                "indent_empty_lines": false
-            }
-            var result = js_beautify(editor.getValue(), options)
-            editor.setValue(result);
-            return false;
-        }
-        
-        function copyToClipBoard(){
-            editor.execCommand('selectAll');
-            var currentText = editor.getValue();
-            var textArea = document.createElement("textarea");
-            textArea.value = currentText;
-            textArea.style = "'position': 'absolute', 'left': '-9999px'"
-            document.body.appendChild(textArea);            
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-        }
-        
-        function clearEditor(){
-            editor.setValue('');
-        }
-        
-        var editor = CodeMirror(document.querySelector('#app'), {
-            lineNumbers: true,
-            tabSize: 2,
-            value: 'var canvas=document.getElementById("canvas"),context=canvas.getContext("2d");function loadImages(a,t){var o={},e=0,r=0;for(var d in a)r++;for(var d in a)o[d]=new Image,o[d].onload=function(){++e>=r&&t(o)},o[d].src=a[d]};',
-            mode: 'javascript',
-            theme: 'mdn-like'
-        });
-    </script>
+    
 
 </body>
 
