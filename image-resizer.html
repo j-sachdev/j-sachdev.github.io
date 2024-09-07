@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <title>Image Resizer - Free Image Size Adjustment Tool</title>
+    <meta name="description"
+        content="Resize your images online easily with our free image resizer tool. Adjust image dimensions without losing quality." />
+    <meta name="keywords"
+        content="image resizer, resize images online, free image resizer, image size adjustment, compress images, image optimization" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />    
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D94TC827TJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D94TC827TJ');
+</script>
+</head>
+
+<body>
+    
+    <header class="">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+            <div class="flex-shrink-0">
+                <a href="/" title="Fast Online Tools" class="flex">
+                    <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                </a>
+            </div>
+
+            <button type="button"
+                class="inline-flex p-1 text-black transition-all duration-200 lg:hidden focus:bg-gray-100 hover:bg-gray-100"
+                onclick="handleMenu()">
+                <!-- Menu open: "hidden", Menu closed: "block" -->
+                <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+                <!-- Menu open: "block", Menu closed: "hidden" -->
+                <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-10 bg-white inset-0 p-3">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="#" id="brand" class="flex gap-2 items-center">
+                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                    </a>
+                    <button class="p-2" onclick="handleMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Text Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Image Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Coding Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">AI Tools</a>
+                    <div class="h-[1px] bg-gray-300"></div>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Blog</a>
+
+                </div>
+
+                <div class="fixed bottom-0 left-0 right-0 flex justify-center items-end">
+                    <div class="p-4 rounded-md mb-4 flex items-center">
+                        <p class="font-medium mr-2">Made with </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="h-6 w-6 text-red-500 mr-2">
+                            <path fill="currentColor"
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Text Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Image Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Coding Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    AI Tools </a>
+
+                <div class="w-px h-5 bg-black/20"></div>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Blog </a>
+
+            </div>
+        </div>
+    </div>
+</header>
+    
+
+    <section id="uploadPanel" class="bg-gray-50 pt-6">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-10">
+            <div class="max-w-xl mx-auto text-center">
+                <h1 class="text-2xl font-bold leading-tight sm:text-2xl lg:text-3xl">Online Image Resizer - Free, Fast,
+                    and Easy Image Size Adjustment</h1>
+                <p class="mt-4 text-base leading-relaxed">Resize Images Instantly - Adjust Dimensions,<br /> Optimize
+                    for Web, and Enhance Visual Quality</p>
+            </div>
+        </div>
+        <section class="container w-full mx-auto items-center pb-32">
+            <div class="max-w-lg mx-auto bg-white rounded-lg shadow-md overflow-hidden items-center">
+                <div class="px-6 py-12">
+                    <div id="image-preview"
+                        class="max-w-sm p-12 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer">
+                        <input id="upload" type="file" class="hidden" accept="image/*" />
+                        <label for="upload" class="cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-8 h-8 text-gray-700 mx-auto mb-4">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                            </svg>
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-700">Upload Picture</h5>
+                            <p class="font-normal text-sm text-gray-400 md:px-6">Choose any photo of format <br /> <b
+                                    class="text-gray-600">JPG, PNG, or GIF</b> format.</p>
+                            <span id="filename" class="text-gray-500 bg-gray-200 z-50"></span>
+                        </label>
+
+                    </div>
+                    <div class="w-full">
+                        <label id="btnUpload"
+                            class="w-full text-white bg-[#fe5f3c] hover:bg-orange-600/90 focus:ring-4 focus:outline-none focus:ring-orange-600/50 font-medium rounded-lg text-sm px-5 py-2.5 flex items-center justify-center mr-2 mb-2 cursor-pointer">
+                            <span class="text-center ml-2">Upload</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="editorPanel" class=" py-10 bg-white hidden">
+        <div class="mx-auto max-w-6xl">
+            <section class=" p-12 flex items-center justify-center">
+                <div
+                    class="bg-gray-100 shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-4xl border-2 border-gray-100 ">
+                    <!-- Image Area -->
+                    <div
+                        class="md:w-2/3 p-12 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-200">
+                        <div class="w-88 h-112 flex items-center justify-center overflow-hidden">
+                            <img id="uploadedImage"
+                                src="https://images.pexels.com/photos/26051261/pexels-photo-26051261/free-photo-of-a-small-echidna-is-sitting-on-the-ground.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Uploaded Image" class="shadow bg-white p-3 max-w-full max-h-full object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="bg-white md:w-1/3 p-6 shadow-[-8px_5px_5px_rgba(238,238,238,1)]">
+                        <h2 class="text-2xl font-semibold border-b border-gray-300 pb-2 mb-4">Resizing</h2>
+
+                        <!-- Dimension Section -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-medium mb-2">Dimensions</h3>
+                            <div class="space-y-2 mt-4">
+                                <label for="txtWidth"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Width</label>
+                                <div class="mt-2">
+                                    <input type="text" placeholder="Width" id="txtWidth"
+                                        class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6">
+                                </div>
+                                <label for="txtHeight"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Height</label>
+                                <div class="mt-2">
+                                    <input type="text" placeholder="Height" id="txtHeight"
+                                        class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6">
+                                </div>
+                                <div class="mt-6"></div>
+                                <label for="chkAspectRatio" class="text-sm font-medium leading-6 text-gray-900">Aspect
+                                    Ratio</label>
+                                <div class="mt-4 inline-block align-middle ml-2">
+                                    <input type="checkbox" checked class="border-gray-300 rounded h-5 w-5"
+                                        id="chkAspectRatio" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Percentage Slider -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-medium mb-2" id="lblPercentage">Percentage 50%</h3>
+                            <input id="percentageSlider" type="range" min="1" max="100" value="50">
+                        </div>
+
+                        <!-- CTA Button -->
+                        <button id="btnResize"
+                            class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            Resize Image
+                        </button>
+                    </div>
+                </div>
+
+                <style>
+                    .w-88 {
+                        width: 450px;
+                    }
+
+                    .h-112 {
+                        height: 350px;
+                    }
+                </style>
+            </section>
+
+
+
+        </div>
+        </div>
+    </section>
+
+    <div class="bg-white py-12 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Discover the Power of
+                    <br />Online Image Resizer
+                </p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">Effortlessly Resize and Optimize Images with
+                    High-Quality Results, Custom Dimensions and Support for Multiple File Formats</p>
+            </div>
+            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <g id="style=linear">
+                                            <g id="clock-stand">
+                                                <path id="line" d="M18 20.5L19.5 22" stroke="#ffffff" stroke-width="1.5"
+                                                    stroke-linecap="round"></path>
+                                                <path id="line_2" d="M6 20.5L4.5 22" stroke="#ffffff" stroke-width="1.5"
+                                                    stroke-linecap="round"></path>
+                                                <path id="vector"
+                                                    d="M21 13C21 17.968 16.968 22 12 22C7.032 22 3 17.968 3 13C3 8.032 7.032 4 12 4C16.968 4 21 8.032 21 13Z"
+                                                    stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path id="vector_2"
+                                                    d="M15.339 15.862L12.549 14.197C12.063 13.909 11.667 13.216 11.667 12.649V8.95898"
+                                                    stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path id="line_3" d="M18 2L21.747 5.31064" stroke="#ffffff"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path id="line_4" d="M6 2L2.25304 5.31064" stroke="#ffffff"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            Instant Image Resizing
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Resize your images in seconds with our online
+                            image resizer. No downloads required. Simply upload, adjust dimensions, and save your
+                            optimized image instantly!</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M5.66953 9.91436L8.73167 5.77133C10.711 3.09327 11.7007 1.75425 12.6241 2.03721C13.5474 2.32018 13.5474 3.96249 13.5474 7.24712V7.55682C13.5474 8.74151 13.5474 9.33386 13.926 9.70541L13.946 9.72466C14.3327 10.0884 14.9492 10.0884 16.1822 10.0884C18.4011 10.0884 19.5106 10.0884 19.8855 10.7613C19.8917 10.7724 19.8977 10.7837 19.9036 10.795C20.2576 11.4784 19.6152 12.3475 18.3304 14.0857L15.2683 18.2287C13.2889 20.9067 12.2992 22.2458 11.3758 21.9628C10.4525 21.6798 10.4525 20.0375 10.4525 16.7528L10.4526 16.4433C10.4526 15.2585 10.4526 14.6662 10.074 14.2946L10.054 14.2754C9.6673 13.9117 9.05079 13.9117 7.81775 13.9117C5.59888 13.9117 4.48945 13.9117 4.1145 13.2387C4.10829 13.2276 4.10225 13.2164 4.09639 13.205C3.74244 12.5217 4.3848 11.6526 5.66953 9.91436Z"
+                                            stroke="#ffffff" stroke-width="1.5"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            High-Quality Results
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Maintain the highest quality when resizing
+                            images. Our tool ensures your photos look sharp and professional, perfect for web use or
+                            printing.</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M9.23163 8.61762C7.26389 9.06284 6.28001 9.28545 6.04594 10.0382C5.81186 10.7909 6.4826 11.5753 7.82408 13.1439L8.17113 13.5498C8.55234 13.9955 8.74294 14.2184 8.82869 14.4942C8.91444 14.7699 8.88562 15.0673 8.82799 15.662L8.77552 16.2035C8.5727 18.2965 8.4713 19.343 9.08412 19.8082C9.69694 20.2734 10.6181 19.8492 12.4605 19.0009L12.9372 18.7815C13.4607 18.5404 13.7225 18.4199 14 18.4199C14.2775 18.4199 14.5393 18.5404 15.0628 18.7815L15.5395 19.0009C17.3819 19.8492 18.3031 20.2734 18.9159 19.8082C19.5287 19.343 19.4273 18.2965 19.2245 16.2035M20.1759 13.1439C21.5174 11.5753 22.1881 10.7909 21.9541 10.0382C21.72 9.28545 20.7361 9.06284 18.7684 8.61762L18.2593 8.50244C17.7001 8.37592 17.4205 8.31266 17.196 8.14225C16.9716 7.97183 16.8276 7.71355 16.5396 7.19699L16.2775 6.7267C15.2641 4.9089 14.7575 4 14 4C13.2425 4 12.7359 4.9089 11.7225 6.7267"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M2.08887 16C3.20445 15.121 4.68639 14.7971 6.08887 15.1257"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M2.08887 10.5C3.08887 10 3.37862 10.0605 4.08887 10" stroke="#FFFFFF"
+                                            stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path
+                                            d="M2 5.60867L2.20816 5.48676C4.41383 4.19506 6.75032 3.84687 8.95304 4.48161L9.16092 4.54152"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            Custom Dimensions and Aspect Ratios
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Easily set custom dimensions and aspect
+                            ratios for your images. Ideal for social media, websites, and marketing materials, our tool
+                            gives you complete control over your image sizes.</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0" transform="translate(0,0), scale(1)">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M19 15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V11"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path
+                                            d="M10.5 8.5C10.5 7.67157 11.1716 7 12 7C12.8284 7 13.5 7.67157 13.5 8.5V10.5C13.5 11.3284 12.8284 12 12 12C11.1716 12 10.5 11.3284 10.5 10.5V8.5Z"
+                                            stroke="#FFFFFF" stroke-width="1.5"></path>
+                                        <path d="M12 2V7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            User-Friendly Interface
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Enjoy a seamless and intuitive user
+                            experience. Our image resizer is designed to be simple and easy to use, making it accessible
+                            for everyone, regardless of technical skill.</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Frequently Asked
+                    Questions</h2>
+                <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Get Answers to Your Questions
+                    About Resizing Images, Maintaining Quality, and More</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
+                <div
+                    class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                    <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                        <span class="flex text-lg font-semibold text-black"> How do I resize an image using this tool?
+                        </span>
+                    </button>
+
+                    <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Our online image resizer is simple to use.
+                            Just upload your image, select the desired dimensions, and click "Resize."
+                            Your optimized image will be ready to download in seconds.</p>
+                    </div>
+                </div>
+                <div
+                    class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                    <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                        <span class="flex text-lg font-semibold text-black"> Is the image quality maintained after
+                            resizing?
+                        </span>
+                    </button>
+
+                    <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Yes, our tool ensures that the highest quality is preserved during the resizing process.
+                            Whether you're resizing for the web, social media, or print, your images will look sharp and
+                            professional.</p>
+                    </div>
+                </div>
+                <div
+                    class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                    <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                        <span class="flex text-lg font-semibold text-black"> Can I resize images to custom dimensions
+                            and aspect ratios? </span>
+                    </button>
+
+                    <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Absolutely! Our tool allows you to set custom dimensions and aspect ratios, making it perfect
+                            for resizing images for various platforms like social media, websites, and marketing
+                            materials.</p>
+                    </div>
+                </div>
+                <div
+                    class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                    <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                        <span class="flex text-lg font-semibold text-black"> Is your image resizer free to use?
+                        </span>
+                    </button>
+
+                    <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Yes, our online image resizer is completely free. Enjoy unlimited image resizing without any
+                            hidden costs or subscription fees.</p>
+                    </div>
+                </div>
+                <div
+                    class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                    <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                        <span class="flex text-lg font-semibold text-black"> Can I resize multiple images at once?
+                        </span>
+                    </button>
+
+                    <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Currently, our tool supports resizing one image at a time. We are working on adding batch
+                            resizing capabilities in the future.</p>
+                    </div>
+                </div>
+                <div
+                    class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+                    <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
+                        <span class="flex text-lg font-semibold text-black"> Is it safe to upload my images? </span>
+                    </button>
+
+                    <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Yes, your privacy is important to us. All uploaded images are securely processed and are not
+                            stored on our servers after resizing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-[#1A1D2B]">
+    <div class="container mx-auto p-0 md:p-8 xl:px-0">
+        <div class="mx-auto max-w-7xl px-6 pb-10 pt-16">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <a href="/">
+                            <div class="flex items-center space-x-2 text-2xl font-medium">
+                                <span>
+                                    <img src="assets/logo-invert.svg" class="w-60 -ml-4">
+                                </span>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="max-w-md pr-16 text-md text-gray-200">Your quick, reliable toolkit for all tasks.
+                        Fast, free tools to make online activities easier.
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Linkedin</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Twitter</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Popular Tools</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/image-cropper-online"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Cropper
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/image-resizer"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Resize Your Images
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/image-filters"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Filters
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/remove-duplicates"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Remove Duplicate Lines
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Other Tools</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/ai-tools-directory"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">AI Tools Directory
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/upside-down-text-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Text Based Tools
+                                    </a>
+                                </li>                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Resources</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                
+                                <li>
+                                    <a href="/blog" class="text-md leading-6 text-gray-300 hover:text-gray-50">Blog
+                                    </a>
+                                </li>                                    
+                                <li>
+                                    <a href="/terms-of-use"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Terms
+                                        of Service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/privacy-policy"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Company</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/about-us"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">About Us
+                                    </a>
+                                </li>                                   
+                                <li>
+                                    <a href="/contact-us"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
+                <div class="text-md text-center text-white">
+                    Copyright © 2024 . Crafted with
+                    <span class="text-gray-50">♥</span> by Developers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const navDialog = document.getElementById('nav-dialog');
+        function handleMenu() {
+            navDialog.classList.toggle('hidden');
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</footer>
+    <style>
+        .cropper-bg {
+            background-image: none;
+            background-color: #e2e2e2;
+        }
+
+        .cropper-modal,
+        .cropper-line,
+        .cropper-view-box,
+        .cropper-point {
+            background-color: gray;
+            outline-color: transparent;
+        }
+
+        .cropper-center {
+            display: none;
+        }
+
+        .cropper-point.point-se {
+            width: 5px;
+            height: 5px;
+        }
+
+        .active #image-preview {
+            border-color: #3b82f6;
+        }
+    </style>
+
+    <script>
+        const btnUpload = document.querySelector("#btnUpload");
+        const dragArea = document.querySelector("#uploadPanel");
+        const editorPanel = document.querySelector("#editorPanel");
+        const fileInput = document.querySelector("#upload");
+        const txtWidth = document.querySelector("#txtWidth");
+        const txtHeight = document.querySelector("#txtHeight");
+        const chkAspectRatio = document.querySelector("#chkAspectRatio");
+        const percentageSlider = document.querySelector("#percentageSlider");
+        const btnResize = document.querySelector("#btnResize");
+        const lblPercentage = document.querySelector("#lblPercentage");
+        btnResize.addEventListener("click", resizeImage);
+        percentageSlider.addEventListener("input", onSlide);
+        txtWidth.addEventListener("input", onWidthChange);
+        txtHeight.addEventListener("input", onHeightChange);
+
+        let cropper = null;
+        let image = null;
+        let isCropperEnabled = false;
+
+        function onSlide(e) {
+            lblPercentage.innerHTML = e.target.value + "%";
+        }
+
+        function onWidthChange(e) {
+            var originalWidth = uploadedImage.naturalWidth;
+            var originalHeight = uploadedImage.naturalHeight;
+            var newWidth = e.target.value;
+            if (chkAspectRatio.checked) {
+                var newHeight = (originalHeight / originalWidth) * newWidth;
+                txtHeight.value = parseInt(newHeight);
+            }
+        }
+
+        function onHeightChange(e) {
+            var originalWidth = uploadedImage.naturalWidth;
+            var originalHeight = uploadedImage.naturalHeight;
+            var newHeight = e.target.value;
+            if (chkAspectRatio.checked) {
+                var newWidth = (originalWidth / originalHeight) * newHeight;
+                txtWidth.value = parseInt(newWidth);
+            }
+        }
+
+
+        function resizeImage() {
+            var width = txtWidth.value;
+            var height = txtHeight.value;
+            var reductionPercentage = percentageSlider.value / 100;
+            width = uploadedImage.naturalWidth * reductionPercentage;
+            height = uploadedImage.naturalHeight * reductionPercentage;
+            var croppedImage = cropper
+                .getCroppedCanvas({
+                    width: parseInt(width),
+                    height: parseInt(height),
+                })
+                .toDataURL("image/png");
+            downloadImage(croppedImage);
+        }
+
+        function downloadImage(croppedImage) {
+            var a = document.createElement("a");
+            a.href = croppedImage;
+            a.download = fileName;
+            a.click();
+        }
+
+        setEventListeners();
+
+        function dragInputLoader(file, name, type) {
+            if (type.split("/")[0] !== "image") {
+                alert("Please upload an image file");
+                return false;
+            }
+            fileName = name;
+            renderImage(file);
+        }
+
+        function fileInputLoader() {
+            let file = fileInput.files[0];
+            if (!file) return;
+            fileName = file.name;
+            renderImage(file);
+        }
+
+        function renderImage(file) {
+            let reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = () => {
+                uploadedImage.src = reader.result;
+                uploadedImage.onload = function () {
+                    txtWidth.value = uploadedImage.naturalWidth;
+                    txtHeight.value = uploadedImage.naturalHeight;
+                    setCropper();
+                };
+            };
+        }
+
+        function setCropper() {
+            image = document.querySelector("#uploadedImage");
+            dragArea.classList.add("hidden");
+            editorPanel.classList.remove("hidden");
+            cropper && cropper.destroy();
+            cropper = new Cropper(image, {
+                viewMode: 1,
+                background: false,
+                autoCrop: true,
+                autoCropArea: 1,
+                zoomable: false,
+                rotatable: false,
+                scalable: false,
+                zoomOnTouch: false,
+                guides: false,
+            });
+        }
+
+        function setEventListeners() {
+            dragArea.addEventListener(
+                "dragenter",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.add("active");
+                },
+                false
+            );
+
+            dragArea.addEventListener(
+                "dragleave",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.remove("active");
+                },
+                false
+            );
+
+            dragArea.addEventListener(
+                "dragover",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.add("active");
+                },
+                false
+            );
+
+            dragArea.addEventListener(
+                "drop",
+                (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragArea.classList.remove("active");
+                    let draggedData = e.dataTransfer;
+                    let files = draggedData.files;
+                    dragInputLoader(files[0], files[0].name, files[0].type);
+                },
+                false
+            );
+
+            btnUpload.addEventListener("click", function () {
+                fileInput.click();
+            });
+
+            fileInput.addEventListener("change", fileInputLoader);
+        }
+    </script>
+
+</body>
+
+</html>
