@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>    
-        
+    <title>Generate Random GUID - Online GUID Generator</title>
+    <meta name="description" content="Generate Random GUID - use our GUID Generator to create unique identifiers for your applications. ">
+    <meta name="keywords" content="GUID Generator, UUID Generator, Unique Identifiers, Online GUID Tool, UUID Creation">    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,116 +116,141 @@
 </header>
     
 
-    <section class="py-10 sm:py-16 lg:py-24">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-                <div>
-                    <h1 class="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
-                        Quick & Easy
-                        <div class="relative inline-flex">
-                            <span class="absolute inset-x-0 bottom-0 border-b-[30px] border-[#4ADE80]"></span>
-                            <h1 class="relative text-4xl font-bold text-black sm:text-6xl lg:text-7xl">Online Tools
-                            </h1>
+    <section class="py-10 bg-gray-50">
+        <div class="mx-auto max-w-6xl shadow-md mb-8">
+            <div class="mt-6 overflow-hidden bg-white rounded-xl">
+                <div class="px-6 py-12 sm:p-12">
+                    <h1 class="text-3xl font-semibold text-center text-gray-900">Generate Random GUID/ Random GUID Generator</h1>
+                    
+                    <div class="max-w-lg mx-auto mt-8 p-6 bg-white  rounded-lg">
+                                                
+                        
+                        <div class="mb-4">
+                            <label for="txtCount" class="block text-gray-700 font-medium mb-2">How many GUIDs (0-500):</label>
+                            <input id="txtCount" type="text" placeholder="Enter GUID count" 
+                                   class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
                         </div>
-                    </h1>
-
-                    <p class="mt-8 text-base text-black sm:text-xl">Instant access to essential, fast online tools.
-                        Complete tasks quickly and efficiently without hassle. Fast, free tools to make online
-                        activities easier.</p>
-
-                    <div class="mt-10 sm:flex sm:items-center sm:space-x-8">
-                        <a href="#tools-list" title=""
-                            class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600"
-                            role="button"> Start exploring </a>
-                    </div>
+                        
+                        <div class="mb-12">
+                            <label for="txtOutput" class="inline-block text-gray-700 font-medium mb-2">Output:</label>
+                            <button type="button" onclick="copyToClipBoard()" class="p-3 py-2 text-gray-700 rounded-lg shadow-md bg-slate-100">Copy To Clipboard</button>
+                            <textarea disabled id="txtOutput" rows="4" placeholder="Random GUIDs For You..." 
+                                      class="w-full mt-4 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="button" onclick="generateGUID()"
+                                    class="w-full bg-indigo-600 text-white py-3 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                                Generate GUIDs
+                            </button>
+                        </div>
+                    </div>                                                         
                 </div>
 
-                <div>
-                    <img class="w-full" src="assets/hero-image.png" alt="" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            <div id="tools-list" class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Popular Apps</h2>
-                <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Your Go-To Online Tools:
-                    Popular Converters, Optimizers, and Generators</p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-6 mt-12 lg:mt-16 xl:gap-10 sm:grid-cols-2 lg:grid-cols-3">
-                <a href="/javascript-beautify">
-                    <div class="overflow-hidden bg-white rounded shadow cursor-pointer">
-                        <div class="p-8">
-                            <div class="flex items-center">
-                                <img class="flex-shrink-0 w-12 h-auto" src="assets/js.svg" alt="" />
-                                <div class="ml-5 mr-auto">
-                                    <p class="text-xl font-semibold text-black">JavaScript Beautifier</p>
-                                    <p class="mt-px text-sm text-gray-600">Beautify Your JS</p>
-                                </div>
-                                <svg class="block w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </div>
-                            <p class="text-base leading-relaxed text-gray-600 mt-7">Refine and organize your JavaScript
-                                code effortlessly with our JS beautifier tool, enhancing readability and structure.</p>
+                <div class="px-6">
+                <section class="rounded-lg p-6 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">What is a GUID?</h2>
+                    <p class="text-gray-700">
+                        A GUID, or Globally Unique Identifier, is a 128-bit number used to uniquely identify information in computer systems. GUIDs are also known as UUIDs (Universally Unique Identifiers), and they play a vital role in ensuring that data is unique across different systems and databases.
+                    </p>
+                </section>
+        
+                <section class=" rounded-lg p-6 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">How GUID Generators Work</h2>
+                    <p class="text-gray-700 mb-4">
+                        GUID generators produce unique identifiers using a combination of algorithms and randomization techniques. Here’s a breakdown of the process:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Algorithmic Generation</h3>
+                            <p class="text-gray-700">
+                                Some GUID generators use predefined algorithms to create unique identifiers. These algorithms ensure that the GUIDs are statistically unique, reducing the chances of duplicates.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Randomization</h3>
+                            <p class="text-gray-700">
+                                Many GUID generators incorporate random numbers or timestamps to enhance uniqueness. This randomness ensures that each GUID is distinct, even if generated in rapid succession.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Format</h3>
+                            <p class="text-gray-700">
+                                GUIDs are typically represented as a 32-character hexadecimal string, divided into five groups separated by hyphens (e.g., <code class="bg-gray-200 text-gray-800 px-2 py-1 rounded">123e4567-e89b-12d3-a456-426614174000</code>).
+                            </p>
                         </div>
                     </div>
-                </a>
-
-                <a href="/upside-down-text-generator">
-                    <div class="overflow-hidden bg-white rounded shadow">
-                        <div class="p-8">
-                            <div class="flex items-center">
-                                <img class="flex-shrink-0 w-12 h-auto" src="assets/text.svg" alt="" />
-                                <div class="ml-5 mr-auto">
-                                    <p class="text-xl font-semibold text-black">Text Converters</p>
-                                    <p class="mt-px text-sm text-gray-600">Text Formatting Tools</p>
-                                </div>
-                                <svg class="block w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </div>
-                            <p class="text-base leading-relaxed text-gray-600 mt-7">Make your text pop with our playful
-                                formatting options. Add some flair to your text with our text converter tools.</p>
+                </section>
+        
+                <section class=" rounded-lg p-6 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Why Use a GUID Generator?</h2>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Unique Identification</h3>
+                            <p class="text-gray-700">
+                                GUIDs are designed to be globally unique, making them ideal for identifying records in distributed systems or databases where uniqueness is crucial.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Database Management</h3>
+                            <p class="text-gray-700">
+                                In databases, GUIDs can serve as primary keys, ensuring that each record has a unique identifier, which helps prevent data collisions and conflicts.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Distributed Systems</h3>
+                            <p class="text-gray-700">
+                                For applications that operate across multiple servers or platforms, GUIDs provide a reliable way to track and manage data without risking duplication.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Version Control</h3>
+                            <p class="text-gray-700">
+                                GUIDs are useful in version control systems to uniquely identify changes and updates, ensuring that each version is distinct and traceable.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Integration and Interoperability</h3>
+                            <p class="text-gray-700">
+                                When integrating various systems, GUIDs help maintain consistency and avoid conflicts between different data sources or platforms.
+                            </p>
                         </div>
                     </div>
-                </a>
-
-                <a href="/image-cropper-online">
-                    <div class="overflow-hidden bg-white rounded shadow">
-                        <div class="p-8">
-                            <div class="flex items-center">
-                                <img class="flex-shrink-0 w-12 h-auto" src="assets/image-tool.svg" alt="" />
-                                <div class="ml-5 mr-auto">
-                                    <p class="text-xl font-semibold text-black">Image Manipulator</p>
-                                    <p class="mt-px text-sm text-gray-600">Image Tools</p>
-                                </div>
-                                <svg class="block w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </div>
-                            <p class="text-base leading-relaxed text-gray-600 mt-7">Add Filters, Resize Image or Crop
-                                Images Online using this tool. Play with these image manipulation tools to enhance your
-                                images.</p>
+                </section>
+        
+                <section class=" rounded-lg p-6 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Choosing the Right GUID Generator</h2>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Reliability</h3>
+                            <p class="text-gray-700">
+                                Opt for a generator that uses robust algorithms and randomization techniques to ensure the uniqueness of the GUIDs.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Performance</h3>
+                            <p class="text-gray-700">
+                                Depending on your application’s requirements, choose a generator that balances speed and accuracy.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Compatibility</h3>
+                            <p class="text-gray-700">
+                                Ensure that the GUID format produced by the generator is compatible with your system or database.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Security</h3>
+                            <p class="text-gray-700">
+                                For sensitive applications, choose a GUID generator that incorporates cryptographic methods to enhance security.
+                            </p>
                         </div>
                     </div>
-                </a>
+                </section>
             </div>
 
-            <div class="mt-12 text-center">
-                <a href="#" title=""
-                    class="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">
-                    Check All Applications </a>
             </div>
+
         </div>
     </section>
 
@@ -374,7 +401,39 @@
         }
     </style>
 </footer>
-    
+    <script>
+        
+        function copyToClipBoard() {
+            var output = document.querySelector("#txtOutput");
+            output.disabled = false;
+            output.select();
+            document.execCommand('copy');
+            output.disabled = true;
+        }
+
+        function generateGUID(){
+            const txtCount = document.querySelector("#txtCount");
+            const txtOutput = document.querySelector("#txtOutput");
+
+            const count = txtCount.value;
+            let guids = "";
+            for(i=0;i<count;i++){
+                guids += guid() + "\n";
+            }
+            txtOutput.value = guids;
+
+        }
+        function guid() {
+            const template = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
+            return template.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0,
+                      v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+
+    </script>
 
 </body>
 
