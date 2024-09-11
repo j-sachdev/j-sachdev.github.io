@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <title>Phone Number Parser and Formatting Tool | Validate and Extract Phone Numbers</title>
+        <meta name="description"
+            content="Use our free phone number parsing and formatting tool to easily validate and extract details from phone numbers. Enter a country code and phone number to instantly parse and format numbers based on international standards. Perfect for developers, businesses, and anyone needing to clean or validate phone data." />
+        <meta name="keywords"
+            content="Phone number parser, Phone number formatting tool, Validate phone numbers online, Parse phone numbers by country code, Phone number validation, Format international phone numbers, Free phone parsing tool, Validate and extract phone details, Phone number extractor, International phone number parser" />
+        <link rel="canonical" href="https://fastonlinetools.com/phone-parser-and-formatter" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.11.8/libphonenumber-js.min.js"></script>    
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D94TC827TJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D94TC827TJ');
+</script>
+</head>
+
+<body>
+    
+    <header class="">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+            <div class="flex-shrink-0">
+                <a href="/" title="Fast Online Tools" class="flex">
+                    <img class="w-60 -ml-3" src="/assets/logo.svg" alt="logo" />
+                </a>
+            </div>
+
+            <button type="button"
+                class="inline-flex p-1 text-black transition-all duration-200 lg:hidden focus:bg-gray-100 hover:bg-gray-100"
+                onclick="handleMenu()">
+                <!-- Menu open: "hidden", Menu closed: "block" -->
+                <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+                <!-- Menu open: "block", Menu closed: "hidden" -->
+                <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-10 bg-white inset-0 p-3">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="#" id="brand" class="flex gap-2 items-center">
+                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                    </a>
+                    <button class="p-2" onclick="handleMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 text-gray-500 hover:text-gray-700 cursor-pointer" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Text Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Image Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Coding Tools</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">AI Tools</a>
+                    <div class="h-[1px] bg-gray-300"></div>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Blog</a>
+
+                </div>
+
+                <div class="fixed bottom-0 left-0 right-0 flex justify-center items-end">
+                    <div class="p-4 rounded-md mb-4 flex items-center">
+                        <p class="font-medium mr-2">Made with </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="h-6 w-6 text-red-500 mr-2">
+                            <path fill="currentColor"
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Text Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Image Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Coding Tools </a>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    AI Tools </a>
+
+                <div class="w-px h-5 bg-black/20"></div>
+
+                <a href="#" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
+                    Blog </a>
+
+            </div>
+        </div>
+    </div>
+</header>
+    
+
+    <section id="uploadPanel" class="bg-gray-50 pt-6 pb-10 min-h-screen flex flex-col items-center">
+        <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl flex flex-row justify-between space-x-6">
+            <!-- Form Section -->
+            <div class="w-1/2">
+                <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Phone Number Parsing</h1>
+    
+                <div class="mb-6">
+                    <label for="countryCode" class="block text-sm font-medium text-gray-700 mb-2">Country Code</label>
+                    <input type="text" id="countryCode" placeholder="countryCode" value="US"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <div class="mb-6">
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                    <input type="text" id="phone" placeholder="Enter phone number" value="+12133734253"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <button onclick="parsePhoneNumber()"
+                    class="w-full bg-blue-500 text-white font-medium py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+                    Parse Phone Number
+                </button>
+            </div>
+    
+            <!-- Result Section -->
+            <div class="w-1/2 bg-gray-100 p-6 rounded-lg border border-gray-300 shadow-md">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Result</h2>
+                
+                <!-- Result Details -->
+                <ul id="resultList" class="list-disc pl-5 text-gray-700">
+                    <!-- Data will be inserted here -->
+                </ul>
+    
+                <!-- Copy Button -->
+                <button id="copyButton" onclick="copyResult()"
+                    class="w-full bg-green-500 text-white font-medium py-2 mt-4 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                    Copy Result
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-[#1A1D2B]">
+    <div class="container mx-auto p-0 md:p-8 xl:px-0">
+        <div class="mx-auto max-w-7xl px-6 pb-10 pt-16">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <a href="/">
+                            <div class="flex items-center space-x-2 text-2xl font-medium">
+                                <span>
+                                    <img src="assets/logo-invert.svg" class="w-60 -ml-4">
+                                </span>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="max-w-md pr-16 text-md text-gray-200">Your quick, reliable toolkit for all tasks.
+                        Fast, free tools to make online activities easier.
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Linkedin</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" class="text-gray-200 hover:text-gray-200">
+                            <span class="sr-only">Twitter</span><svg fill="currentColor" viewBox="0 0 24 24"
+                                class="h-6 w-6" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Popular Tools</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/image-cropper-online"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Cropper
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/image-resizer"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Resize Your Images
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/image-filters"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Filters
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/remove-duplicates"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Remove Duplicate Lines
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Other Tools</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/ai-tools-directory"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">AI Tools Directory
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/upside-down-text-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Text Based Tools
+                                    </a>
+                                </li>                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-md font-semibold leading-6 text-white">Resources</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                
+                                <li>
+                                    <a href="/blog" class="text-md leading-6 text-gray-300 hover:text-gray-50">Blog
+                                    </a>
+                                </li>                                    
+                                <li>
+                                    <a href="/terms-of-use"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Terms
+                                        of Service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/privacy-policy"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-md font-semibold leading-6 text-white">Company</h3>
+                            <ul role="list" class="mt-6 space-y-4">
+                                <li>
+                                    <a href="/about-us"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">About Us
+                                    </a>
+                                </li>                                   
+                                <li>
+                                    <a href="/contact-us"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
+                <div class="text-md text-center text-white">
+                    Copyright © 2024 . Crafted with
+                    <span class="text-gray-50">♥</span> by Developers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const navDialog = document.getElementById('nav-dialog');
+        function handleMenu() {
+            navDialog.classList.toggle('hidden');
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</footer>
+    <style>
+        .spinner-border {
+    border-radius: 50%;
+    border-width: 0.25em;
+    border-style: solid;
+}
+        .cropper-bg {
+            background-image: none;
+            background-color: #e2e2e2;
+        }
+
+        .cropper-modal,
+        .cropper-line,
+        .cropper-view-box,
+        .cropper-point {
+            background-color: gray;
+            outline-color: transparent;
+        }
+
+        .cropper-center {
+            display: none;
+        }
+
+        .cropper-point.point-se {
+            width: 5px;
+            height: 5px;
+        }
+
+        .active #image-preview {
+            border-color: #3b82f6;
+        }
+    </style>
+
+    <script>
+        function copyResult() {
+    const resultText = document.getElementById('result').innerText;
+    navigator.clipboard.writeText(resultText).then(() => {
+        alert('Result copied to clipboard!');
+    });
+}
+// Simulate parsing process and populate the list with phone data
+var phoneData = {
+    "Country Code": "US",
+    "Phone Number": "+12133734253",
+    "Formatted Number": "+1 (213) 373-4253",
+    "Carrier": "Example Carrier",
+    "Location": "Los Angeles, CA"
+};
+
+function parsePhoneNumber() {
+    
+    const phoneNumberInput = document.getElementById('phone').value;
+            const countryCode = document.getElementById('countryCode').value;
+            const phoneNumber = libphonenumber.parsePhoneNumber(phoneNumberInput, countryCode); // Default country is 'US'
+            if (phoneNumber) {
+                phoneData = {
+                    "Country Code": phoneNumber.country,
+                    "National Number": phoneNumber.formatNational(),
+                    "International Format": phoneNumber.formatInternational(),
+                    "Valid": phoneNumber.isValid(),
+                    "Type": phoneNumber.getType(),
+                    "URI": phoneNumber.getURI()
+                };
+                // document.getElementById('result').innerHTML = result;
+
+                // Populate the list with phone data
+                const resultList = document.getElementById('resultList');
+                resultList.innerHTML = Object.entries(phoneData).map(([field, value]) => `
+        <li class="mb-2"><strong>${field}:</strong> ${value}</li>
+    `).join('');
+
+
+            } else {
+                document.getElementById('result').innerText = 'Invalid phone number';
+            }
+
+
+
+    // Populate the list with phone data
+    // const resultList = document.getElementById('resultList');
+    // resultList.innerHTML = Object.entries(phoneData).map(([field, value]) => `
+    //     <li class="mb-2"><strong>${field}:</strong> ${value}</li>
+    // `).join('');
+}
+        parsePhoneNumber();
+    </script>
+
+</body>
+
+</html>
