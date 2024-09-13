@@ -484,7 +484,7 @@
 
     <script>
         function copyResult() {
-    const resultText = document.getElementById('result').innerText;
+    const resultText = document.getElementById('resultList').innerText;
     navigator.clipboard.writeText(resultText).then(() => {
         alert('Result copied to clipboard!');
     });
@@ -509,7 +509,7 @@ function parsePhoneNumber() {
                     "National Number": phoneNumber.formatNational(),
                     "International Format": phoneNumber.formatInternational(),
                     "Valid": phoneNumber.isValid(),
-                    "Type": phoneNumber.getType(),
+                    "Type": phoneNumber.getType() || 'Unknown',
                     "URI": phoneNumber.getURI()
                 };
                 // document.getElementById('result').innerHTML = result;
