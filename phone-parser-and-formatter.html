@@ -9,51 +9,7 @@
             content="Phone number parser, Phone number formatting tool, Validate phone numbers online, Parse phone numbers by country code, Phone number validation, Format international phone numbers, Free phone parsing tool, Validate and extract phone details, Phone number extractor, International phone number parser" />
         <link rel="canonical" href="https://fastonlinetools.com/phone-parser-and-formatter" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.11.8/libphonenumber-js.min.js"></script>
-  #end region
-
-#region_content
-    <section id="uploadPanel" class="bg-gray-50 pt-6 pb-10 min-h-screen flex flex-col items-center">
-        <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl flex flex-row justify-between space-x-6">
-            <!-- Form Section -->
-            <div class="w-1/2">
-                <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Phone Number Parsing</h1>
-    
-                <div class="mb-6">
-                    <label for="countryCode" class="block text-sm font-medium text-gray-700 mb-2">Country Code</label>
-                    <input type="text" id="countryCode" placeholder="countryCode" value="US"
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                </div>
-    
-                <div class="mb-6">
-                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <input type="text" id="phone" placeholder="Enter phone number" value="+12133734253"
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                </div>
-    
-                <button onclick="parsePhoneNumber()"
-                    class="w-full bg-blue-500 text-white font-medium py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
-                    Parse Phone Number
-                </button>
-            </div>
-    
-            <!-- Result Section -->
-            <div class="w-1/2 bg-gray-100 p-6 rounded-lg border border-gray-300 shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Result</h2>
-                
-                <!-- Result Details -->
-                <ul id="resultList" class="list-disc pl-5 text-gray-700">
-                    <!-- Data will be inserted here -->
-                </ul>
-    
-                <!-- Copy Button -->
-                <button id="copyButton" onclick="copyResult()"
-                    class="w-full bg-green-500 text-white font-medium py-2 mt-4 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
-                    Copy Result
-                </button>
-            </div>
-        </div>
-    </section>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.11.8/libphonenumber-js.min.js"></script>    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -165,7 +121,176 @@
 </header>
     
 
+    <section id="uploadPanel" class="bg-gray-50 pt-6 pb-10 min-h-screen flex flex-col items-center">
+        <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl flex flex-row justify-between space-x-6">
+            <!-- Form Section -->
+            <div class="w-1/2">
+                <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Phone Number Parsing</h1>
     
+                <div class="mb-6">
+                    <label for="countryCode" class="block text-sm font-medium text-gray-700 mb-2">Country Code</label>
+                    <input type="text" id="countryCode" placeholder="countryCode" value="US"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <div class="mb-6">
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                    <input type="text" id="phone" placeholder="Enter phone number" value="+12133734253"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <button onclick="parsePhoneNumber()"
+                    class="w-full text-white bg-[#fe5f3c] hover:bg-orange-600/90 focus:ring-4 focus:outline-none focus:ring-orange-600/50 font-medium rounded-lg text-sm px-5 py-2.5 flex items-center justify-center mr-2 mb-2 cursor-pointer mt-11">
+                    Parse Phone Number
+                </button>
+            </div>
+    
+            <!-- Result Section -->
+            <div class="w-1/2 bg-gray-100 p-6 rounded-lg border border-gray-300 shadow-md">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Result</h2>
+                
+                <!-- Result Details -->
+                <ul id="resultList" class="list-disc pl-5 text-gray-700">
+                    <!-- Data will be inserted here -->
+                </ul>
+    
+                <!-- Copy Button -->
+                <button id="copyButton" onclick="copyResult()"
+                    class="w-full text-white bg-[#fe5f3c] hover:bg-orange-600/90 focus:ring-4 focus:outline-none focus:ring-orange-600/50 font-medium rounded-lg text-sm px-5 py-2.5 flex items-center justify-center mr-2 mb-2 cursor-pointer">
+                    Copy Result
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white py-12 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Effortless Phone Number Parsing and Formatting Tools
+                </p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">Reliable Phone Number Parsing for Global Formats. Seamless Formatting for Enhanced Readability</p>
+            </div>
+            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <g id="style=linear">
+                                            <g id="clock-stand">
+                                                <path id="line" d="M18 20.5L19.5 22" stroke="#ffffff" stroke-width="1.5"
+                                                    stroke-linecap="round"></path>
+                                                <path id="line_2" d="M6 20.5L4.5 22" stroke="#ffffff" stroke-width="1.5"
+                                                    stroke-linecap="round"></path>
+                                                <path id="vector"
+                                                    d="M21 13C21 17.968 16.968 22 12 22C7.032 22 3 17.968 3 13C3 8.032 7.032 4 12 4C16.968 4 21 8.032 21 13Z"
+                                                    stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path id="vector_2"
+                                                    d="M15.339 15.862L12.549 14.197C12.063 13.909 11.667 13.216 11.667 12.649V8.95898"
+                                                    stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path id="line_3" d="M18 2L21.747 5.31064" stroke="#ffffff"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path id="line_4" d="M6 2L2.25304 5.31064" stroke="#ffffff"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            Easy Data Export
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600"> Simple copy-paste options allow users to quickly transfer data from the tool to other software.</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M5.66953 9.91436L8.73167 5.77133C10.711 3.09327 11.7007 1.75425 12.6241 2.03721C13.5474 2.32018 13.5474 3.96249 13.5474 7.24712V7.55682C13.5474 8.74151 13.5474 9.33386 13.926 9.70541L13.946 9.72466C14.3327 10.0884 14.9492 10.0884 16.1822 10.0884C18.4011 10.0884 19.5106 10.0884 19.8855 10.7613C19.8917 10.7724 19.8977 10.7837 19.9036 10.795C20.2576 11.4784 19.6152 12.3475 18.3304 14.0857L15.2683 18.2287C13.2889 20.9067 12.2992 22.2458 11.3758 21.9628C10.4525 21.6798 10.4525 20.0375 10.4525 16.7528L10.4526 16.4433C10.4526 15.2585 10.4526 14.6662 10.074 14.2946L10.054 14.2754C9.6673 13.9117 9.05079 13.9117 7.81775 13.9117C5.59888 13.9117 4.48945 13.9117 4.1145 13.2387C4.10829 13.2276 4.10225 13.2164 4.09639 13.205C3.74244 12.5217 4.3848 11.6526 5.66953 9.91436Z"
+                                            stroke="#ffffff" stroke-width="1.5"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            Accurate Parsing and Formatting
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Results are presented in a standardized format, ensuring consistency across different phone numbers and regions</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M9.23163 8.61762C7.26389 9.06284 6.28001 9.28545 6.04594 10.0382C5.81186 10.7909 6.4826 11.5753 7.82408 13.1439L8.17113 13.5498C8.55234 13.9955 8.74294 14.2184 8.82869 14.4942C8.91444 14.7699 8.88562 15.0673 8.82799 15.662L8.77552 16.2035C8.5727 18.2965 8.4713 19.343 9.08412 19.8082C9.69694 20.2734 10.6181 19.8492 12.4605 19.0009L12.9372 18.7815C13.4607 18.5404 13.7225 18.4199 14 18.4199C14.2775 18.4199 14.5393 18.5404 15.0628 18.7815L15.5395 19.0009C17.3819 19.8492 18.3031 20.2734 18.9159 19.8082C19.5287 19.343 19.4273 18.2965 19.2245 16.2035M20.1759 13.1439C21.5174 11.5753 22.1881 10.7909 21.9541 10.0382C21.72 9.28545 20.7361 9.06284 18.7684 8.61762L18.2593 8.50244C17.7001 8.37592 17.4205 8.31266 17.196 8.14225C16.9716 7.97183 16.8276 7.71355 16.5396 7.19699L16.2775 6.7267C15.2641 4.9089 14.7575 4 14 4C13.2425 4 12.7359 4.9089 11.7225 6.7267"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M2.08887 16C3.20445 15.121 4.68639 14.7971 6.08887 15.1257"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M2.08887 10.5C3.08887 10 3.37862 10.0605 4.08887 10" stroke="#FFFFFF"
+                                            stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path
+                                            d="M2 5.60867L2.20816 5.48676C4.41383 4.19506 6.75032 3.84687 8.95304 4.48161L9.16092 4.54152"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            Seamless Integration & One-Step Processing
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Users can parse phone numbers in a single step, reducing the time and effort required to obtain accurate results</dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                                <svg width="64px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0" transform="translate(0,0), scale(1)">
+                                        <rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="3.84" fill="#fe5f3c"
+                                            strokewidth="0"></rect>
+                                    </g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M19 15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V11"
+                                            stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path
+                                            d="M10.5 8.5C10.5 7.67157 11.1716 7 12 7C12.8284 7 13.5 7.67157 13.5 8.5V10.5C13.5 11.3284 12.8284 12 12 12C11.1716 12 10.5 11.3284 10.5 10.5V8.5Z"
+                                            stroke="#FFFFFF" stroke-width="1.5"></path>
+                                        <path d="M12 2V7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            Simplifying Phone Number Parsing
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">The interface is designed with a clean and organized layout, ensuring that users can easily navigate through the phone number parsing tool without confusion.</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -230,6 +355,11 @@
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Remove Duplicate Lines
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/resize-image-to-300x300"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Resize Image to 300x300
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="mt-10 md:mt-0">
@@ -249,7 +379,12 @@
                                     <a href="/generate-random-guid"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">GUID Generator Online
                                     </a>
-                                </li>                                     
+                                </li>
+                                <li>
+                                    <a href="/phone-parser-and-formatter"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Phone Number Parsing
+                                    </a>
+                                </li>              
                             </ul>
                         </div>
                     </div>
@@ -349,7 +484,7 @@
 
     <script>
         function copyResult() {
-    const resultText = document.getElementById('result').innerText;
+    const resultText = document.getElementById('resultList').innerText;
     navigator.clipboard.writeText(resultText).then(() => {
         alert('Result copied to clipboard!');
     });
@@ -374,7 +509,7 @@ function parsePhoneNumber() {
                     "National Number": phoneNumber.formatNational(),
                     "International Format": phoneNumber.formatInternational(),
                     "Valid": phoneNumber.isValid(),
-                    "Type": phoneNumber.getType(),
+                    "Type": phoneNumber.getType() || 'Unknown',
                     "URI": phoneNumber.getURI()
                 };
                 // document.getElementById('result').innerHTML = result;
