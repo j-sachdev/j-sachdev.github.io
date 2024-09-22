@@ -2,13 +2,11 @@
 <html lang="en">
 
 <head>    
-    <meta name="robots" content="index, follow">
-    <meta name="twitter:url" content="https://fastonlinetools.com">
-    <meta name="description" content="Elevate your LinkedIn presence with our free LinkedIn font generator. Create eye-catching, stylish fonts, including cursive and unique designs, that you can easily copy and paste into your profile or posts. Stand out in the professional world with cool LinkedIn fonts from fastonline Tools!">
-    <meta name="keywords" content="LinkedIn Font Generator, Stylish LinkedIn Fonts, Free Cursive Font Generator, Unique LinkedIn Font Styles, LinkedIn Profile Enhancer, LinkedIn font Formatter, LinkedIn font Makeover, LinkedIn font Typography, Linkedin Text Formatter">
-    <script src="fonts.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="canonical" href="https://fastonlinetools.com/linkedin-fonts-generator" />    
+    <title>CPF Generator Tool for Brazil</title>
+    <meta name="description"
+        content="Discover the best CPF Generator tool for Brazil. Learn how to generate CPF numbers for testing, development, and educational purposes while ensuring compliance with Brazilian regulations.">
+    <meta name="keywords"
+        content="CPF Generator Tool, Brazil CPF Generator, CPF number generator, CPF validation tool, Brazilian CPF tool, CPF number generator online">    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,57 +118,103 @@
 </header>
     
 
-    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-lg mx-auto" id="fontGenerator"> 
-        <h1 class="text-3xl font-bold text-center mb-6">LinkedIn Font Generator</h1>
-        <div class="flex mb-4">
-            <input type="text" id="inputText" placeholder="Enter your text here"
-                class="border rounded-l-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" />
-            <button id="generateButton"
-                class="bg-blue-500 text-white py-3 rounded-r-lg hover:bg-blue-600 transition duration-200">
-                Generate
-            </button>
-        </div>
-    
-        <div class="bg-gray-50 p-4 rounded-lg mb-4">
-            <h2 class="text-lg font-semibold mb-2">Generated Fonts</h2>
-            <div id="notification" class="notification mb-2 text-green-500"></div>
-            <div id="outputFonts" class="space-y-2 max-h-60 overflow-y-auto">
-                <!-- Transformed fonts will be injected here -->
+    <section class="py-10 bg-gray-50">
+        <div class="mx-auto max-w-6xl shadow-md mb-12">
+            <div class="mt-6 overflow-hidden bg-white rounded-xl">
+                <div class="px-6 py-12 sm:p-12">
+                    <h1 class="text-3xl font-semibold text-center text-gray-900">CPF Generator</h1>
+
+                    <div class="max-w-lg mx-auto mt-8 p-6 bg-white  rounded-lg">
+
+                        <div class="flex items-center space-x-2">
+                            <input type="text" id="txtCPF" placeholder="Click To Generate CPF"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                            <button onclick="copyToClipBoard()"
+                                class="p-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="none">
+                                    <path
+                                        d="M16 2H8C7.44772 2 7 2.44772 7 3V7C7 7.55228 7.44772 8 8 8H16C16.5523 8 17 7.55228 17 7V3C17 2.44772 16.5523 2 16 2ZM16 6H8V4H16V6ZM16 10H8C7.44772 10 7 10.4477 7 11V15C7 15.5523 7.44772 16 8 16H16C16.5523 16 17 15.5523 17 15V11C17 10.4477 16.5523 10 16 10ZM16 14H8V12H16V14ZM18 20H6C4.89543 20 4 19.1046 4 18V8C4 6.89543 4.89543 6 6 6H8V4H16V6H18C19.1046 6 20 6.89543 20 8V18C20 19.1046 19.1046 20 18 20ZM6 8V18H18V8H6Z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="inline-flex items-center my-6">
+                            <label class="flex items-center cursor-pointer relative" for="chkMasked">
+                                <input type="checkbox" checked
+                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-indigo-600 checked:border-indigo-600"
+                                    id="chkMasked" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="chkMasked">
+                                Formatted?
+                            </label>
+                        </div>
+
+                        <div>
+                            <button type="button" onclick="generateCPF()"
+                                class="w-full bg-indigo-600 text-white py-3 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                                Generate CPF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <main class="max-w-4xl mx-auto p-2 pb-12">
+                    <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+                        <h2 class="text-xl font-semibold mb-4">Understanding CPF Numbers</h2>
+                        <p class="mb-4">The Cadastro de Pessoas Físicas (CPF) is an essential identification number for
+                            Brazilian citizens and residents. It is used for various purposes, including tax filings and
+                            financial transactions.</p>
+                    </section>
+
+                    <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+                        <h2 class="text-xl font-semibold mb-4">What is a CPF Generator?</h2>
+                        <p class="mb-4">A CPF generator is a tool used to create CPF numbers. These tools can be helpful
+                            for testing and development purposes, but their use must be aligned with legal requirements.
+                        </p>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>For developers: Testing software that requires CPF numbers.</li>
+                            <li>For educational purposes: Learning about CPF formatting and validation.</li>
+                            <li>For legal compliance: Ensuring generated numbers do not infringe on privacy or legal
+                                standards.</li>
+                        </ul>
+                    </section>
+
+                    <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+                        <h2 class="text-xl font-semibold mb-4">Legal Implications</h2>
+                        <p class="mb-4">Using a CPF generator improperly can lead to legal issues. It's important to
+                            adhere to Brazilian laws regarding the generation and use of CPF numbers.</p>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Generate numbers only for legitimate purposes.</li>
+                            <li>Avoid using generated numbers for fraudulent activities.</li>
+                            <li>Ensure compliance with privacy regulations and data protection laws.</li>
+                        </ul>
+                    </section>
+
+                    <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+                        <h2 class="text-xl font-semibold mb-4">How to Use CPF Generators Responsibly</h2>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Use only trusted and secure generators.</li>
+                            <li>Verify the legitimacy of the tool to avoid misuse.</li>
+                            <li>Keep the generated numbers confidential and use them only as intended.</li>
+                        </ul>
+                    </section>
+                </main>
             </div>
+
+
         </div>
-        <p class="text-center text-sm text-gray-500">Enjoy customizing your LinkedIn profile!</p>
-    </div>
-    
-    <div class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md mt-6" id="information"> 
-        <h2 class="text-2xl font-bold text-center mb-4">Features of the LinkedIn Font Generator</h2>
-        <ul class="space-y-4 mb-6">
-            <li class="flex items-start">
-                <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Generate over <strong>210 unique fancy LinkedIn fonts</strong>.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-keyboard text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Simply <strong>type your text</strong> to create stylish LinkedIn fonts.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-share-square text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Easily <strong>use your new fonts</strong> directly on LinkedIn.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-browser text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Compatible with all <strong>modern web browsers</strong>.</span>
-            </li>
-        </ul>
-    
-        <h2 class="text-2xl font-bold text-center mb-4">How to Generate LinkedIn Fonts</h2>
-        <ol class="list-decimal list-inside space-y-2 text-gray-700 mb-4">
-            <li><i class="fas fa-globe text-blue-500 mr-2"></i>Visit <strong>FastOnlineTools.com</strong>.</li>
-            <li><i class="fas fa-search text-blue-500 mr-2"></i>Search for "LinkedIn Font Generator" and open the tool.</li>
-            <li><i class="fas fa-pen text-blue-500 mr-2"></i>Type or paste the text you want to transform.</li>
-            <li><i class="fas fa-arrow-down text-blue-500 mr-2"></i>Scroll down to view all the generated fancy LinkedIn fonts.</li>
-            <li><i class="fas fa-copy text-blue-500 mr-2"></i>Click the copy button to copy the fonts and use them on LinkedIn.</li>
-        </ol>
-    </div>
+
+    </section>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -349,70 +393,69 @@
         }
     </style>
 </footer>
-    <style>
-        .notification {
-            position: fixed;
-            bottom: 16px;
-            right: 16px;
-            background: #4ade80;
-            /* Green background for notification */
-            color: #ffffff;
-            /* White text color */
-            padding: 8px 16px;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Shadow for the notification */
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1000;
-            /* Ensure notification is above other content */
-        }
-        .notification.show {
-            opacity: 1;
-        }
-    </style>
     <script>
-        const generateButton = document.getElementById('generateButton');
-        const inputText = document.getElementById('inputText');
-        const outputFonts = document.getElementById('outputFonts');
 
-        generateButton.addEventListener('click', () => {
-            const text = inputText.value || 'Sample Text'; // Default text if input is empty
-            generateFont(text);
-        });
+        var result = undefined;
+        var txtCPF = document.querySelector('#txtCPF');
+        var chkMasked = document.querySelector("#chkMasked");
 
-        function generateFont(text) {
-            outputFonts.innerHTML = ''; // Clear previous output
-            const finalRes = forward(text); // Assuming forward is a function from fonts.js
+        function generateCPF() {
 
-            finalRes.split("\n\n").forEach(font => {
-                const div = document.createElement('div');
-                div.className = 'font-mono text-lg bg-gray-200 rounded p-2 flex justify-between items-center hover:bg-gray-300 transition duration-200';
-                div.textContent = font;
+            function calculateCheckDigits(base) {
 
-                const copyButton = document.createElement('button');
-                copyButton.textContent = 'Copy';
-                copyButton.className = 'ml-4 bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600 transition duration-200';
-                copyButton.onclick = () => copyToClipboard(font);
+                let sum1 = 0;
+                let sum2 = 0;
 
-                div.appendChild(copyButton);
-                outputFonts.appendChild(div);
-            });
+                for (let i = 0; i < 9; i++) {
+                    sum1 += base[i] * (10 - i);
+                    sum2 += base[i] * (11 - i);
+                }
+
+                let checkDigit1 = (sum1 * 10) % 11;
+                checkDigit1 = checkDigit1 === 10 ? 0 : checkDigit1;
+
+                sum2 += checkDigit1 * 2;
+
+                let checkDigit2 = (sum2 * 10) % 11;
+                checkDigit2 = checkDigit2 === 10 ? 0 : checkDigit2;
+
+                return [checkDigit1, checkDigit2];
+            }
+
+            let base = [];
+            for (let i = 0; i < 9; i++) {
+                base.push(Math.floor(Math.random() * 10));
+            }
+
+            const [checkDigit1, checkDigit2] = calculateCheckDigits(base);
+
+            const cpf = base.join('') + checkDigit1 + checkDigit2;
+
+            const formattedCPF = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+
+            txtCPF.value = chkMasked.checked ? formattedCPF : cpf;
+
+            result = { cpf, formattedCPF };
         }
 
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                notification.textContent = 'Text copied!';
-                notification.classList.add('show');
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 1000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
+        function copyToClipBoard() {
+            const textToCopy = txtCPF.value;
+            navigator.clipboard.writeText(textToCopy);
         }
-        // Initial call to generate default text
-        generateFont('LinkedIn Font');
+
+        chkMasked.addEventListener("change", function () {
+            if (!result) {
+                return;
+            }
+            if (chkMasked.checked) {
+                txtCPF.value = result.formattedCPF;
+            }
+            else {
+                txtCPF.value = result.cpf;
+            }
+        })
+
+
     </script>
 
 </body>
