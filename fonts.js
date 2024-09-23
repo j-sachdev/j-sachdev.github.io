@@ -96,10 +96,10 @@
     finalText += applyCharMap(doubleStruckCharMap, text) + "\n\n";
     finalText += applyCharMap(wideTextCharMap, text) + "\n\n";
     finalText += cuteText(text) + "\n\n";
-    finalText += luni.tools.tiny.encode(text) + "\n\n";
     finalText += luni.tools.flip.encode(text) + "\n\n";
-    finalText += luni.tools.roundsquares.encode(text) + "\n\n";
-    finalText += luni.tools.squares.encode(text) + "\n\n";
+    finalText += luni.tools.flip.encode(text) + "\n\n";
+    // finalText += luni.tools.roundsquares.encode(text) + "\n\n";
+    // finalText += luni.tools.squares.encode(text) + "\n\n";
     finalText += applyCharMap(squaresCharMap, text) + "\n\n";
     finalText += luni.tools.mirror.encode(text) + "\n\n";
     finalText += luni.tools.creepify.encode(text) + "\n\n";
@@ -4561,11 +4561,11 @@
     }
   }
   
-  handleDuplicates(words1, words2);
+  // handleDuplicates(words1, words2);
   /* Initial translate for default text */
-  if ($("#english-text").val() != "") {
-    var english = $("#english-text").val();
-    var ghetto = translate(english);
-    $("#ghetto-text").val(ghetto);
-  }
+  // if ($("#english-text").val() != "") {
+  //   var english = $("#english-text").val();
+  //   var ghetto = translate(english);
+  //   $("#ghetto-text").val(ghetto);
+  // }
   
