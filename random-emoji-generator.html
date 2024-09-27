@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>    
-    <title>Font Generator Free Facebook Font Generator | Create Stylish Fonts for Your Profile & Posts</title>
-    <meta name="robots" content="index, follow">
-    <meta name="twitter:url" content="https://fastonlinetools.com">
-    
-    <meta name="description" content="Enhance your Facebook presence with our free Facebook font generator. Create eye-catching, stylish fonts, including cursive and unique designs, that you can easily copy and paste into your profile or posts. Stand out in the social media world with cool Facebook fonts from FastOnline Tools!">
-    <meta name="keywords" content="Facebook Font Generator, Stylish Facebook Fonts, Free Cursive Font Generator, Unique Facebook Font Styles, Facebook Profile Enhancer, Facebook Font Formatter, Facebook Font Makeover, Facebook Font Typography, Facebook Text Formatter">
-    <script src="fonts.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="canonical" href="https://fastonlinetools.com/facebook-fonts-generator" />    
+    <link rel="canonical" href="https://fastonlinetools.com/random-emoji-generator" />
+    <meta name="description"
+        content="Generate random emojis using this simple and fun emoji generator tool. Choose the number of emojis to generate, and display them in a neat and responsive grid layout.">
+    <meta name="keywords"
+        content="Online random emoji generation, emoji generator, random emoji, fun emoji tool, emoji picker, generate emoji, emoji display, fast online tools, great online tools">
+    <meta name="author" content="Your Name">
+    <title>Random Emoji Generator | Fun Emoji Picker Tool</title>    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,57 +120,58 @@
 </header>
     
 
-    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-lg mx-auto" id="fontGenerator"> 
-        <h1 class="text-3xl font-bold text-center mb-6">Facebook Font Generator</h1>
-        <div class="flex mb-4">
-            <input type="text" id="inputText" placeholder="Enter your text here"
-                class="border rounded-l-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" />
-            <button id="generateButton"
-                class="bg-blue-500 text-white py-3 rounded-r-lg hover:bg-blue-600 transition duration-200">
-                Generate
-            </button>
-        </div>
-    
-        <div class="bg-gray-50 p-4 rounded-lg mb-4">
-            <h2 class="text-lg font-semibold mb-2">Generated Fonts</h2>
-            <div id="notification" class="notification mb-2 text-green-500"></div>
-            <div id="outputFonts" class="space-y-2 max-h-60 overflow-y-auto">
-                <!-- Transformed fonts will be injected here -->
+    <!-- Main Section -->
+    <section class="container mx-auto text-center py-12 px-4">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">Random Emoji Generator</h1>
+        <p class="text-lg text-gray-600 mb-8">Generate random emojis and have some fun! Choose how many emojis you'd
+            like to see and let the magic happen.</p>
+
+        <!-- Flexbox Container for Generate Section and Functionality Demo -->
+        <div class="flex flex-col md:flex-row justify-center items-start gap-6">
+
+            <!-- Functionality Section -->
+            <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg flex-grow min-h-[250px] min-w-[300px] flex flex-col">
+                <!-- Input -->
+                <div class="flex flex-col mb-6">
+                    <label for="emojiCount" class="text-left text-gray-700 font-semibold mb-2">Enter number of
+                        emojis:</label>
+                    <input id="emojiCount" type="number" min="1" placeholder="E.g., 5"
+                        class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Generate Button -->
+                <button id="generateBtn"
+                    class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-md hover:from-blue-600 hover:to-purple-600 focus:outline-none transition-all duration-300 mt-auto">
+                    Generate Emojis
+                </button>
+            </div>
+
+            <!-- Functionality Demonstration Section -->
+            <div id="functionalityDemo"
+                class="p-6 bg-white rounded-lg shadow-md max-w-lg flex-grow min-h-[250px] min-w-[300px]">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Functionality Demonstration</h3>
+                <p class="text-gray-500 mb-4">Your generated emojis will be displayed here:</p>
+                <div id="emojiFunctionality" class="flex flex-wrap justify-center gap-4 text-3xl"></div>
             </div>
         </div>
-        <p class="text-center text-sm text-gray-500">Enjoy customizing your Facebook profile!</p>
-    </div>
-    
-    <div class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md mt-6" id="information"> 
-        <h2 class="text-2xl font-bold text-center mb-4">Features of the Facebook Font Generator</h2>
-        <ul class="space-y-4 mb-6">
-            <li class="flex items-start">
-                <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Generate over <strong>210 unique fancy Facebook fonts</strong>.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-keyboard text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Simply <strong>type your text</strong> to create stylish Facebook fonts.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-share-square text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Easily <strong>use your new fonts</strong> directly on Facebook.</span>
-            </li>
-            <li class="flex items-start">
-                <i class="fas fa-browser text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Compatible with all <strong>modern web browsers</strong>.</span>
-            </li>
-        </ul>
-    
-        <h2 class="text-2xl font-bold text-center mb-4">How to Generate Facebook Fonts</h2>
-        <ol class="list-decimal list-inside space-y-2 text-gray-700 mb-4">
-            <li><i class="fas fa-globe text-blue-500 mr-2"></i>Visit <strong>FastOnlineTools.com</strong>.</li>
-            <li><i class="fas fa-search text-blue-500 mr-2"></i>Search for "Facebook Font Generator" and open the tool.</li>
-            <li><i class="fas fa-pen text-blue-500 mr-2"></i>Type or paste the text you want to transform.</li>
-            <li><i class="fas fa-arrow-down text-blue-500 mr-2"></i>Scroll down to view all the generated fancy Facebook fonts.</li>
-            <li><i class="fas fa-copy text-blue-500 mr-2"></i>Click the copy button to copy the fonts and use them on Facebook.</li>
-        </ol>
-    </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-xl mx-auto my-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">About Random Emoji Generator</h2>
+            <p class="text-gray-700">
+                The Random Emoji Generator is a tool designed to create unique emojis effortlessly. It allows for
+                unlimited emoji generation, meaning you can produce multiple emojis simultaneously. Best of all, it
+                works without consuming your device's internet during the generation process.
+            </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-xl mx-auto my-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Features of Random Emoji Generator</h2>
+            <ul class="list-disc list-inside text-left text-gray-700 space-y-2">
+                <li>Instantly create random emojis with a single click.</li>
+                <li>Generate multiple emojis at once for more fun.</li>
+                <li>Efficient performance without consuming device resources.</li>
+            </ul>
+        </div>
+
+    </section>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -361,70 +360,33 @@
         }
     </style>
 </footer>
-    <style>
-        .notification {
-            position: fixed;
-            bottom: 16px;
-            right: 16px;
-            background: #4ade80;
-            /* Green background for notification */
-            color: #ffffff;
-            /* White text color */
-            padding: 8px 16px;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Shadow for the notification */
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1000;
-            /* Ensure notification is above other content */
-        }
-        .notification.show {
-            opacity: 1;
-        }
-    </style>
     <script>
-        const generateButton = document.getElementById('generateButton');
-        const inputText = document.getElementById('inputText');
-        const outputFonts = document.getElementById('outputFonts');
+const emojiArray = ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "🥲", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟", "😕", "🙁", "☹️", "👋", "🤚", "🖐", "✋", "🖖", "👌", "🤌", "🤏", "✌️", "🤞", "🤟", "🤘", "🤙", "👈", "👉", "👆", "🖕", "👇", "☝️", "👍", "👎", "👊", "🤛", "🤜", "👏", "🙌", "👐", "🤲", "🤝", "🙏", "✍️", "💪", "👶", "👧", "🧒", "👦", "👩", "🧑", "👨", "👩‍🦱", "🧑‍🦱", "👨‍🦱", "👮‍♀️", "👮", "👮‍♂️", "👷‍♀️", "👷", "👷‍♂️", "💂‍♀️", "💂", "💂‍♂️", "🕵️‍♀️", "🕵️", "🕵️‍♂️", "👩‍⚕️", "👨‍👨‍👧‍👧", "👩‍👩‍👦", "👩‍👩‍👧", "👩‍👩‍👧‍👦", "👨‍👦", "👨‍👦‍👦", "👨‍👧", "👨‍👧‍👦", "👨‍👧‍👧", "👩‍👦", "👩‍👦‍👦", "👩‍👧", "👩‍👧‍👦", "👩‍👧‍👧", "🧳", "🌂", "☂️", "🧵", "🪡", "🪢", "🧶", "👓", "🕶", "🥽", "🥼", "🦺", "👔", "👕", "👖", "🧣", "🧤", "🧥", "🧦", "👗", "👘", "🥻", "🩴", "🩱", "🩲", "🩳", "👙", "👚", "👛", "👜", "👝", "🎒", "👟", "🥾", "🥿", "👠", "👡", "🩰", "👢", "👑", "🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼", "🐻‍❄️", "🐨", "🐯", "🦁", "🐮", "🐷", "🐽", "🐸", "🐵", "🙈", "🙉", "🙊", "🐒", "🐔", "🐧", "🐦", "🐤", "🐣", "🐥", "🦆", "🦅", "🦉", "🦇", "🐺", "🐗", "🐴", "🦄", "🐝", "🪱", "🐛", "🦋", "🐌", "🐞", "🐜", "🪰", "🪲", "🪳", "🦟", "🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐", "🍈", "🍒", "🍑", "🥭", "🍍", "🥥", "🥝", "🍅", "🍆", "🥑", "🥦", "🥬", "🥒", "🌶", "🫑", "🌽", "🥕", "⚽️", "🏀", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱", "🪀", "🏓", "🏸", "🏒", "🏑", "🥍", "🏏", "🚗", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🚄", "🚂", "🏩", "💒", "🏛 ", "⛪️", "🕌", "🕍", "🛕 ", "🎑", "🏞", "🌅 ", "🌄", "🌠", "🎇", "🎆", "🌆", "🏙", "🌃", "🌌", "🌉", "🌁", "⌚️", "📱", "📲", "💻", "⌨️", "🖥", "🖨", "🖱", "🖲", "🕹"];
 
-        generateButton.addEventListener('click', () => {
-            const text = inputText.value || 'Sample Text'; // Default text if input is empty
-            generateFont(text);
-        });
+// Function to generate random emojis
+const generateEmojis = (count) => {
+    const emojiFunctionality = document.getElementById('emojiFunctionality');
+    emojiFunctionality.innerHTML = ''; // Clear the demo section
 
-        function generateFont(text) {
-            outputFonts.innerHTML = ''; // Clear previous output
-            const finalRes = forward(text); // Assuming forward is a function from fonts.js
+    for (let i = 0; i < count; i++) {
+        const randomIndex = Math.floor(Math.random() * emojiArray.length);
+        const emojiElement = document.createElement('span');
+        emojiElement.textContent = emojiArray[randomIndex];
+        emojiFunctionality.appendChild(emojiElement.cloneNode(true));
+    }
+};
 
-            finalRes.split("\n\n").forEach(font => {
-                const div = document.createElement('div');
-                div.className = 'font-mono text-lg bg-gray-200 rounded p-2 flex justify-between items-center hover:bg-gray-300 transition duration-200';
-                div.textContent = font;
+// Event listener for button click
+document.getElementById('generateBtn').addEventListener('click', () => {
+    const count = document.getElementById('emojiCount').value || 16;
+    generateEmojis(count);
+});
 
-                const copyButton = document.createElement('button');
-                copyButton.textContent = 'Copy';
-                copyButton.className = 'ml-4 bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600 transition duration-200';
-                copyButton.onclick = () => copyToClipboard(font);
+// Generate 10 emojis on load
+window.onload = () => {
+    generateEmojis(16);
+};
 
-                div.appendChild(copyButton);
-                outputFonts.appendChild(div);
-            });
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                notification.textContent = 'Text copied!';
-                notification.classList.add('show');
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 1000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
-        // Initial call to generate default text
-        generateFont('Facebook Font');
     </script>
 
 </body>
