@@ -120,8 +120,10 @@
 </header>
     
 
-    <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Welcome to Our Online Web Tool Collection</h1>
-    <div id="app-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl"></div>
+    <section class="flex flex-col items-center justify-center min-h-screen p-4">
+        <h1 class="text-4xl font-bold text-gray-800">Welcome to Our Online Web Tool Collection</h1>
+        <div id="app-container" class="flex flex-wrap justify-center gap-6 w-full max-w-6xl"></div>
+    </section>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -313,9 +315,11 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6; /* Tailwind gray-100 */
         }
         .card {
             transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px; /* Set a fixed width for better alignment */
         }
         .card:hover {
             transform: translateY(-8px);
@@ -323,6 +327,8 @@
         }
         h1 {
             font-family: 'Montserrat', sans-serif;
+            text-align: center; /* Center the heading */
+            margin-bottom: 2rem; /* Space below the heading */
         }
         .button {
             background-color: #3B82F6; /* Tailwind Blue */
@@ -330,6 +336,7 @@
             padding: 0.5rem 1rem;
             border-radius: 0.375rem;
             transition: background-color 0.3s;
+            display: inline-block; /* Ensure button aligns nicely */
         }
         .button:hover {
             background-color: #2563EB; /* Darker Tailwind Blue */
