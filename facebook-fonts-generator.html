@@ -146,7 +146,7 @@
         <ul class="space-y-4 mb-6">
             <li class="flex items-start">
                 <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                <span class="text-gray-700">Generate over <strong>210 unique fancy Facebook fonts</strong>.</span>
+                <span class="text-gray-700">Generate over <strong>100+ unique fancy Facebook fonts</strong>.</span>
             </li>
             <li class="flex items-start">
                 <i class="fas fa-keyboard text-blue-500 mr-3"></i>
@@ -164,7 +164,7 @@
     
         <h2 class="text-2xl font-bold text-center mb-4">How to Generate Facebook Fonts</h2>
         <ol class="list-decimal list-inside space-y-2 text-gray-700 mb-4">
-            <li><i class="fas fa-globe text-blue-500 mr-2"></i>Visit <strong>FastOnlineTools.com</strong>.</li>
+            <li><i class="fas fa-globe text-blue-500 mr-2"></i>Visit <strong><a href="https://fastonlinetools.com/">fastonlinetools.com</a></strong>.</li>
             <li><i class="fas fa-search text-blue-500 mr-2"></i>Search for "Facebook Font Generator" and open the tool.</li>
             <li><i class="fas fa-pen text-blue-500 mr-2"></i>Type or paste the text you want to transform.</li>
             <li><i class="fas fa-arrow-down text-blue-500 mr-2"></i>Scroll down to view all the generated fancy Facebook fonts.</li>
@@ -252,6 +252,16 @@
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">CPF Generator Brazil
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/random-body-part-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Ramdom Body Parts Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-date-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Date Generator
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="mt-10 md:mt-0">
@@ -293,6 +303,16 @@
                                     <a href="/linkedin-fonts-generator"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Linkedin Fonts
                                         Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-letter-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random letter Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-word-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Word Generator
                                     </a>
                                 </li>
                             </ul>
@@ -398,7 +418,7 @@
             finalRes.split("\n\n").forEach(font => {
                 const div = document.createElement('div');
                 div.className = 'font-mono text-lg bg-gray-200 rounded p-2 flex justify-between items-center hover:bg-gray-300 transition duration-200';
-                div.textContent = font;
+                div.innerHTML = font;
 
                 const copyButton = document.createElement('button');
                 copyButton.textContent = 'Copy';

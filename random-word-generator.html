@@ -2,7 +2,12 @@
 <html lang="en">
 
 <head>    
-        
+    <title>Random Word Generator: Generate Creative Words for Writing and Games</title>
+    <meta name="description"
+        content="Discover our Random Word Generator, designed to help you easily create lists of random words from various categories like Household, Nature, Food, and more. Whether you're looking for inspiration for creative writing, fun word games, or educational activities, our tool provides a seamless way to generate the perfect words for any occasion. Select your category, specify the number of words, and let the creativity flow!">
+    <meta name="keywords"
+        content="Random Word Generator, Generate Random Words, Creative Writing Tools, Word List Generator, Inspiration for Writers, Fun Games with Words, Word Categories, Household Words, Nature Words, Food Words, Emotions and Feelings, Educational Word Games, Online random word generation, Random word Generator, word generator, fastonlinetools">
+    <link rel="canonical" href="https://fastonlinetools.com/random-word-generator" />    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,57 +119,47 @@
 </header>
     
 
-    <section class="py-10 bg-gray-50">
-        <div class="mx-auto max-w-6xl shadow-md mb-8">
-            <div class="mt-6 overflow-hidden bg-white rounded-xl">                
-                <div class="px-6 py-12 sm:p-12">
-                    <h1 class="text-3xl font-bold mb-6">Terms of Use</h1>
-            
-                    <p class="mb-4">Effective Date: 14/07/2024</p>
-            
-                    <p>Welcome to Fast Online Tools!</p><br/>
-            
-                    <p class="mb-4">By accessing this website, you agree to be bound by these Terms of Use, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Use License</h2>
-            
-                    <p class="mb-4">Permission is granted to use Fast Online Tools's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:</p>
-            
-                    <ul class="list-disc ml-8 mb-4">
-                        <li>modify or copy the materials;</li>
-                        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-                        <li>attempt to decompile or reverse engineer any software contained on Fast Online Tools's website;</li>
-                        <li>remove any copyright or other proprietary notations from the materials; or</li>
-                        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-                    </ul>
-            
-                    <p class="mb-4">This license shall automatically terminate if you violate any of these restrictions.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
-            
-                    <p class="mb-4">The materials on Fast Online Tools's website are provided on an 'as is' basis. Fast Online Tools makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Limitations</h2>
-            
-                    <p class="mb-4">In no event shall Fast Online Tools or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Fast Online Tools's website, even if Fast Online Tools or a Fast Online Tools authorized representative has been notified orally or in writing of the possibility of such damage.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Modifications</h2>
-            
-                    <p class="mb-4">Fast Online Tools may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms of Use.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Governing Law</h2>
-            
-                    <p class="mb-4">These terms and conditions are governed by and construed in accordance with the laws of India, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-            
-                    <p>If you have any questions about these Terms of Use, please contact us.</p>
-            
+    <section class="flex items-center justify-center h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+            <div class="flex space-x-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">Random Word Generator</h1>
+            <select id="category"
+                class="border rounded-lg p-2 mb-4 w-full text-gray-700 focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-200 ease-in-out">
+                <option value="" disabled selected>Select a category</option>
+            </select>
+            <input type="number" id="count" min="1" value="1"
+                class="border rounded-lg p-2 mb-4 w-full text-gray-700 focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-200 ease-in-out"
+                placeholder="Number of words">
+            <button id="generate"
+                class="bg-purple-600 text-white p-2 rounded-lg w-full hover:bg-purple-700 transition duration-200 ease-in-out">Get
+                Random Words</button>
+            <div id="result" class="mt-4 text-center text-lg font-semibold text-gray-800"></div>
+        </div>
 
-            </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-gray-800 text-lg font-semibold text-center mb-4">How to Use</h2>
+            <ul class="list-disc list-inside text-gray-700 text-left space-y-2">
+                <li class="flex items-center">
+                    <span class="text-purple-600 mr-2">🌟</span>
+                    <span>Select a category.</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-purple-600 mr-2">🔢</span>
+                    <span>Specify the number of words.</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-purple-600 mr-2">✨</span>
+                    <span>Click "Get Random Words."</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-purple-600 mr-2">🎉</span>
+                    <span>Perfect for creative writing, games, and inspiration!</span>
+                </li>
+            </ul>
         </div>
-        </div>
-        </div>
+
+
+    </div>
     </section>
 
     
@@ -374,7 +369,53 @@
         }
     </style>
 </footer>
-    
+    <script>
+        const wordCategories = {
+            household: ["ball", "Bible", "bikini", "book", "bucket", "camera", "church", "crayon", "fireworks", "high heel", "ice cream", "cone", "lamp", "mailbox", "recycle", "sandcastle", "stairs", "tire", "toothbrush"],
+            nature: ["bee", "bird", "butterfly", "cat", "dog", "dolphin", "elephant", "fish", "flower", "giraffe", "moon", "night", "ocean", "rainbow", "snow", "snowman", "spider", "star", "strawberry", "sun"],
+            human: ["baby", "beard", "cry", "ears", "eye", "eyes", "face", "glasses", "happy", "mad", "man", "mouth", "nose", "sad", "woman", "shirt", "pants"],
+            food: ["apple", "beans", "burger", "carrot", "cheese", "cherry", "corn", "donut", "egg", "popsicle", "sandwich", "spaghetti", "taco", "pumpkin", "pizza"],
+            Mammals: ["lion", "tiger", "bear", "kangaroo", "whale", "fox", "zebra", "monkey", "rabbit", "deer"],
+            Birds: ["sparrow", "eagle", "parrot", "penguin", "owl", "flamingo", "hawk", "pigeon", "peacock", "canary"],
+            Reptiles: ["lizard", "snake", "turtle", "crocodile", "chameleon", "gecko", "iguana", "alligator", "monitor", "python"],
+            "Basic Colors": ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "black", "white"],
+            Shades: ["cyan", "magenta", "navy", "maroon", "olive", "teal", "violet", "gold", "silver", "crimson"],
+            "Land Vehicles": ["car", "bicycle", "bus", "motorcycle", "truck", "train", "skateboard", "scooter", "van", "tractor"],
+            "Water Vehicles": ["boat", "ship", "yacht", "submarine", "kayak", "canoe", "jet ski", "ferry", "barge", "sailboat"],
+            "Air Vehicles": ["airplane", "helicopter", "hot air balloon", "glider", "jet", "blimp", "drone", "rocket", "paraglider", "space shuttle"],
+            "Positive Emotions": ["joy", "love", "gratitude", "excitement", "relief", "contentment", "hope", "pride", "curiosity", "satisfaction"],
+            "Negative Emotions": ["fear", "anger", "anxiety", "sadness", "frustration", "disappointment", "jealousy", "guilt", "shame", "boredom"],
+            Spring: ["flower", "bloom", "rain", "sunshine", "butterfly", "baby animals", "gardening", "picnic", "Easter", "spring break"],
+            Summer: ["beach", "sunburn", "vacation", "swimming", "ice cream", "fireworks", "barbecue", "camping", "sandal", "sunhat"],
+            Fall: ["leaves", "harvest", "pumpkin", "Halloween", "bonfire", "apple cider", "sweater", "thanksgiving", "chestnut", "corn maze"],
+            Winter: ["snow", "ice", "sledding", "Christmas", "hot chocolate", "scarf", "skiing", "snowman", "fireplace", "frost"]
+        };
+
+        // Populate the category select element
+        const categorySelect = document.getElementById('category');
+        for (const category in wordCategories) {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+            categorySelect.appendChild(option);
+        }
+
+        document.getElementById('generate').addEventListener('click', () => {
+            const category = document.getElementById('category').value;
+            const count = parseInt(document.getElementById('count').value);
+            const words = wordCategories[category];
+
+            if (!words) return;
+
+            const randomWords = getRandomWords(words, count);
+            document.getElementById('result').innerText = randomWords.join(', ');
+        });
+
+        function getRandomWords(words, count) {
+            const shuffled = words.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+    </script>
 
 </body>
 

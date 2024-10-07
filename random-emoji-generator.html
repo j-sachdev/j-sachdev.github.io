@@ -168,9 +168,10 @@
                 <li>Instantly create random emojis with a single click.</li>
                 <li>Generate multiple emojis at once for more fun.</li>
                 <li>Efficient performance without consuming device resources.</li>
+                <li>Click an emoji to copy it!</li>
             </ul>
         </div>
-
+        <div id="notification" class="notification"></div>
     </section>
 
     
@@ -253,6 +254,16 @@
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">CPF Generator Brazil
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/random-body-part-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Ramdom Body Parts Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-date-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Date Generator
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="mt-10 md:mt-0">
@@ -294,6 +305,16 @@
                                     <a href="/linkedin-fonts-generator"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Linkedin Fonts
                                         Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-letter-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random letter Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-word-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Word Generator
                                     </a>
                                 </li>
                             </ul>
@@ -360,33 +381,74 @@
         }
     </style>
 </footer>
+    <style>
+        .notification {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            background: #4ade80;
+            /* Green background for notification */
+            color: #ffffff;
+            /* White text color */
+            padding: 8px 16px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Shadow for the notification */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+            /* Ensure notification is above other content */
+        }
+
+        .notification.show {
+            opacity: 1;
+        }
+    </style>
+
     <script>
-const emojiArray = ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "🥲", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟", "😕", "🙁", "☹️", "👋", "🤚", "🖐", "✋", "🖖", "👌", "🤌", "🤏", "✌️", "🤞", "🤟", "🤘", "🤙", "👈", "👉", "👆", "🖕", "👇", "☝️", "👍", "👎", "👊", "🤛", "🤜", "👏", "🙌", "👐", "🤲", "🤝", "🙏", "✍️", "💪", "👶", "👧", "🧒", "👦", "👩", "🧑", "👨", "👩‍🦱", "🧑‍🦱", "👨‍🦱", "👮‍♀️", "👮", "👮‍♂️", "👷‍♀️", "👷", "👷‍♂️", "💂‍♀️", "💂", "💂‍♂️", "🕵️‍♀️", "🕵️", "🕵️‍♂️", "👩‍⚕️", "👨‍👨‍👧‍👧", "👩‍👩‍👦", "👩‍👩‍👧", "👩‍👩‍👧‍👦", "👨‍👦", "👨‍👦‍👦", "👨‍👧", "👨‍👧‍👦", "👨‍👧‍👧", "👩‍👦", "👩‍👦‍👦", "👩‍👧", "👩‍👧‍👦", "👩‍👧‍👧", "🧳", "🌂", "☂️", "🧵", "🪡", "🪢", "🧶", "👓", "🕶", "🥽", "🥼", "🦺", "👔", "👕", "👖", "🧣", "🧤", "🧥", "🧦", "👗", "👘", "🥻", "🩴", "🩱", "🩲", "🩳", "👙", "👚", "👛", "👜", "👝", "🎒", "👟", "🥾", "🥿", "👠", "👡", "🩰", "👢", "👑", "🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼", "🐻‍❄️", "🐨", "🐯", "🦁", "🐮", "🐷", "🐽", "🐸", "🐵", "🙈", "🙉", "🙊", "🐒", "🐔", "🐧", "🐦", "🐤", "🐣", "🐥", "🦆", "🦅", "🦉", "🦇", "🐺", "🐗", "🐴", "🦄", "🐝", "🪱", "🐛", "🦋", "🐌", "🐞", "🐜", "🪰", "🪲", "🪳", "🦟", "🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐", "🍈", "🍒", "🍑", "🥭", "🍍", "🥥", "🥝", "🍅", "🍆", "🥑", "🥦", "🥬", "🥒", "🌶", "🫑", "🌽", "🥕", "⚽️", "🏀", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱", "🪀", "🏓", "🏸", "🏒", "🏑", "🥍", "🏏", "🚗", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🚄", "🚂", "🏩", "💒", "🏛 ", "⛪️", "🕌", "🕍", "🛕 ", "🎑", "🏞", "🌅 ", "🌄", "🌠", "🎇", "🎆", "🌆", "🏙", "🌃", "🌌", "🌉", "🌁", "⌚️", "📱", "📲", "💻", "⌨️", "🖥", "🖨", "🖱", "🖲", "🕹"];
+        const emojiArray = ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "🥲", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟", "😕", "🙁", "☹️", "👋", "🤚", "🖐", "✋", "🖖", "👌", "🤌", "🤏", "✌️", "🤞", "🤟", "🤘", "🤙", "👈", "👉", "👆", "🖕", "👇", "☝️", "👍", "👎", "👊", "🤛", "🤜", "👏", "🙌", "👐", "🤲", "🤝", "🙏", "✍️", "💪", "👶", "👧", "🧒", "👦", "👩", "🧑", "👨", "👩‍🦱", "🧑‍🦱", "👨‍🦱", "👮‍♀️", "👮", "👮‍♂️", "👷‍♀️", "👷", "👷‍♂️", "💂‍♀️", "💂", "💂‍♂️", "🕵️‍♀️", "🕵️", "🕵️‍♂️", "👩‍⚕️", "👨‍👨‍👧‍👧", "👩‍👩‍👦", "👩‍👩‍👧", "👩‍👩‍👧‍👦", "👨‍👦", "👨‍👦‍👦", "👨‍👧", "👨‍👧‍👦", "👨‍👧‍👧", "👩‍👦", "👩‍👦‍👦", "👩‍👧", "👩‍👧‍👦", "👩‍👧‍👧", "🧳", "🌂", "☂️", "🧵", "🪡", "🪢", "🧶", "👓", "🕶", "🥽", "🥼", "🦺", "👔", "👕", "👖", "🧣", "🧤", "🧥", "🧦", "👗", "👘", "🥻", "🩴", "🩱", "🩲", "🩳", "👙", "👚", "👛", "👜", "👝", "🎒", "👟", "🥾", "🥿", "👠", "👡", "🩰", "👢", "👑", "🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼", "🐻‍❄️", "🐨", "🐯", "🦁", "🐮", "🐷", "🐽", "🐸", "🐵", "🙈", "🙉", "🙊", "🐒", "🐔", "🐧", "🐦", "🐤", "🐣", "🐥", "🦆", "🦅", "🦉", "🦇", "🐺", "🐗", "🐴", "🦄", "🐝", "🪱", "🐛", "🦋", "🐌", "🐞", "🐜", "🪰", "🪲", "🪳", "🦟", "🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐", "🍈", "🍒", "🍑", "🥭", "🍍", "🥥", "🥝", "🍅", "🍆", "🥑", "🥦", "🥬", "🥒", "🌶", "🫑", "🌽", "🥕", "⚽️", "🏀", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱", "🪀", "🏓", "🏸", "🏒", "🏑", "🥍", "🏏", "🚗", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🚄", "🚂", "🏩", "💒", "🏛", "⛪️", "🕌", "🕍", "🛕", "🎑", "🏞", "🌅", "🌄", "🌠", "🎇", "🎆", "🌆", "🏙", "🌃", "🌌", "🌉", "🌁", "⌚️", "📱", "📲", "💻", "⌨️", "🖥", "🖨", "🖱", "🖲", "🕹"];
 
-// Function to generate random emojis
-const generateEmojis = (count) => {
-    const emojiFunctionality = document.getElementById('emojiFunctionality');
-    emojiFunctionality.innerHTML = ''; // Clear the demo section
+        // Function to generate random emojis
+        const generateEmojis = (count) => {
+            const emojiFunctionality = document.getElementById('emojiFunctionality');
+            emojiFunctionality.innerHTML = ''; // Clear the demo section
 
-    for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * emojiArray.length);
-        const emojiElement = document.createElement('span');
-        emojiElement.textContent = emojiArray[randomIndex];
-        emojiFunctionality.appendChild(emojiElement.cloneNode(true));
-    }
-};
+            for (let i = 0; i < count; i++) {
+                const randomIndex = Math.floor(Math.random() * emojiArray.length);
+                const emojiElement = document.createElement('span');
+                emojiElement.textContent = emojiArray[randomIndex];
 
-// Event listener for button click
-document.getElementById('generateBtn').addEventListener('click', () => {
-    const count = document.getElementById('emojiCount').value || 16;
-    generateEmojis(count);
-});
+                // Add click event listener for copying to clipboard
+                emojiElement.addEventListener('click', () => {
+                    navigator.clipboard.writeText(emojiElement.textContent)
+                        .then(() => {
+                            // alert(`Copied: ${emojiElement.textContent}`);
+                            notification.textContent = 'Emoji copied!';
+                            notification.classList.add('show');
+                            setTimeout(() => {
+                                notification.classList.remove('show');
+                            }, 1500); // Notification will be visible for 1.5 seconds
 
-// Generate 10 emojis on load
-window.onload = () => {
-    generateEmojis(16);
-};
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy: ', err);
+                        });
+                });
 
+                emojiFunctionality.appendChild(emojiElement);
+            }
+        };
+
+        // Event listener for button click
+        document.getElementById('generateBtn').addEventListener('click', () => {
+            const count = document.getElementById('emojiCount').value || 16;
+            generateEmojis(count);
+        });
+
+        // Generate 16 emojis on load
+        window.onload = () => {
+            generateEmojis(16);
+        };
     </script>
 
 </body>

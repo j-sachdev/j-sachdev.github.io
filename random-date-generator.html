@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>    
-        
+    <title>Random Date Generator</title>
+    <meta name="description"
+        content="Generate random dates between two specified years in various formats. Easy to use and interactive random date generator.">
+    <meta name="keywords" content="random date generator, date formats, interactive tool">
+    <link rel="canonical" href="https://fastonlinetools.com/random-date-generator" />    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,58 +118,57 @@
 </header>
     
 
-    <section class="py-10 bg-gray-50">
-        <div class="mx-auto max-w-6xl shadow-md mb-8">
-            <div class="mt-6 overflow-hidden bg-white rounded-xl">                
-                <div class="px-6 py-12 sm:p-12">
-                    <h1 class="text-3xl font-bold mb-6">Terms of Use</h1>
-            
-                    <p class="mb-4">Effective Date: 14/07/2024</p>
-            
-                    <p>Welcome to Fast Online Tools!</p><br/>
-            
-                    <p class="mb-4">By accessing this website, you agree to be bound by these Terms of Use, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Use License</h2>
-            
-                    <p class="mb-4">Permission is granted to use Fast Online Tools's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:</p>
-            
-                    <ul class="list-disc ml-8 mb-4">
-                        <li>modify or copy the materials;</li>
-                        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-                        <li>attempt to decompile or reverse engineer any software contained on Fast Online Tools's website;</li>
-                        <li>remove any copyright or other proprietary notations from the materials; or</li>
-                        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-                    </ul>
-            
-                    <p class="mb-4">This license shall automatically terminate if you violate any of these restrictions.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
-            
-                    <p class="mb-4">The materials on Fast Online Tools's website are provided on an 'as is' basis. Fast Online Tools makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Limitations</h2>
-            
-                    <p class="mb-4">In no event shall Fast Online Tools or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Fast Online Tools's website, even if Fast Online Tools or a Fast Online Tools authorized representative has been notified orally or in writing of the possibility of such damage.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Modifications</h2>
-            
-                    <p class="mb-4">Fast Online Tools may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms of Use.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Governing Law</h2>
-            
-                    <p class="mb-4">These terms and conditions are governed by and construed in accordance with the laws of India, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-            
-                    <p>If you have any questions about these Terms of Use, please contact us.</p>
-            
+    <section class="flex items-center justify-center h-screen bg-gray-100">
+    <main class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-center text-blue-600">Random Date Generator</h1>
 
-            </div>
+        <section class="mb-6">
+            <label for="start-year" class="block font-medium text-gray-700">Start Year:</label>
+            <input id="start-year" type="number" min="1900" max="2100" value="2000"
+                class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
+        </section>
+
+        <section class="mb-6">
+            <label for="end-year" class="block font-medium text-gray-700">End Year:</label>
+            <input id="end-year" type="number" min="1900" max="2100" value="2023"
+                class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
+        </section>
+
+        <button id="generate-btn"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 w-full transform active:scale-95">
+            Generate Random Date
+        </button>
+
+        <div class="mt-4">
+            <p class="font-medium text-gray-700">Generated Date:</p>
+            <div id="date-display" class="text-lg font-semibold  mt-2 border-b border-gray-300 pb-2 text-red-600"></div>
         </div>
+
+        <section class="mt-4">
+            <label for="format" class="block font-medium text-gray-700">Choose Date Format:</label>
+            <select id="format"
+                class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
+                <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                <option value="DD-MM-YYYY">DD-MM-YYYY</option>
+                <option value="MMMM D, YYYY">MMMM D, YYYY</option>
+            </select>
+        </section>
+        <!-- Features Section -->
+        <div class="mt-8 p-6 bg-gray-50 rounded-lg shadow-md w-full max-w-md">
+            <h2 class="text-xl font-bold text-blue-600 mb-4">Features</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Generate random dates between any two specified years.</li>
+                <li>Choose from multiple date formats including <strong>YYYY-MM-DD</strong>,
+                    <strong>MM/DD/YYYY</strong>, <strong>DD-MM-YYYY</strong>, and <strong>MMMM D, YYYY</strong>.</li>
+                <li>Interactive and user-friendly interface for easy navigation.</li>
+                <li>Responsive design that works on mobile and desktop devices.</li>
+                <li>Simple validation to ensure the start year is less than or equal to the end year.</li>
+                <li>Dynamic display of generated dates for immediate feedback.</li>
+            </ul>
         </div>
-        </div>
-    </section>
+    </main>
+</section>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -374,7 +377,41 @@
         }
     </style>
 </footer>
-    
+    <script>
+        document.getElementById('generate-btn').addEventListener('click', function () {
+            const startYear = parseInt(document.getElementById('start-year').value);
+            const endYear = parseInt(document.getElementById('end-year').value);
+            const format = document.getElementById('format').value;
+
+            if (startYear > endYear) {
+                alert("Start year must be less than or equal to end year.");
+                return;
+            }
+
+            const randomDate = getRandomDate(new Date(startYear, 0, 1), new Date(endYear, 11, 31));
+            document.getElementById('date-display').innerText = formatDate(randomDate, format);
+        });
+
+        function getRandomDate(start, end) {
+            const date = new Date(start.getTime() + Math.random() * (end - start));
+            return date;
+        }
+
+        function formatDate(date, format) {
+            switch (format) {
+                case 'YYYY-MM-DD':
+                    return date.toISOString().split('T')[0];
+                case 'MM/DD/YYYY':
+                    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+                case 'DD-MM-YYYY':
+                    return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
+                case 'MMMM D, YYYY':
+                    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                default:
+                    return date.toString();
+            }
+        }
+    </script>
 
 </body>
 

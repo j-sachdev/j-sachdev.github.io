@@ -2,7 +2,12 @@
 <html lang="en">
 
 <head>    
-        
+    <title>Random Body Part Generator</title>
+    <meta name="description" content="Explore random body parts and learn interesting facts about human anatomy in an engaging and interactive way.">
+    <meta name="keywords" content="body parts, human anatomy, educational tool, anatomy facts, interactive learning">
+    <meta property="og:title" content="Random Body Part Generator">
+    <meta property="og:description" content="Discover random body parts and their functions with our interactive generator! Perfect for students and anatomy enthusiasts.">
+    <link rel="canonical" href="https://fastonlinetools.com/random-body-part-generator" />    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,58 +119,20 @@
 </header>
     
 
-    <section class="py-10 bg-gray-50">
-        <div class="mx-auto max-w-6xl shadow-md mb-8">
-            <div class="mt-6 overflow-hidden bg-white rounded-xl">                
-                <div class="px-6 py-12 sm:p-12">
-                    <h1 class="text-3xl font-bold mb-6">Terms of Use</h1>
-            
-                    <p class="mb-4">Effective Date: 14/07/2024</p>
-            
-                    <p>Welcome to Fast Online Tools!</p><br/>
-            
-                    <p class="mb-4">By accessing this website, you agree to be bound by these Terms of Use, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Use License</h2>
-            
-                    <p class="mb-4">Permission is granted to use Fast Online Tools's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:</p>
-            
-                    <ul class="list-disc ml-8 mb-4">
-                        <li>modify or copy the materials;</li>
-                        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-                        <li>attempt to decompile or reverse engineer any software contained on Fast Online Tools's website;</li>
-                        <li>remove any copyright or other proprietary notations from the materials; or</li>
-                        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-                    </ul>
-            
-                    <p class="mb-4">This license shall automatically terminate if you violate any of these restrictions.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
-            
-                    <p class="mb-4">The materials on Fast Online Tools's website are provided on an 'as is' basis. Fast Online Tools makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Limitations</h2>
-            
-                    <p class="mb-4">In no event shall Fast Online Tools or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Fast Online Tools's website, even if Fast Online Tools or a Fast Online Tools authorized representative has been notified orally or in writing of the possibility of such damage.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Modifications</h2>
-            
-                    <p class="mb-4">Fast Online Tools may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms of Use.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Governing Law</h2>
-            
-                    <p class="mb-4">These terms and conditions are governed by and construed in accordance with the laws of India, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-            
-                    <p>If you have any questions about these Terms of Use, please contact us.</p>
-            
+    <section class="bg-gray-100 flex flex-col items-center justify-center min-h-screen text-center">
+    <header class="py-6">
+        <h1 class="text-3xl font-bold text-gray-800">Random Body Part Generator</h1>
+        <p class="mt-2 text-gray-600">Explore different body parts and learn interesting facts about them!</p>
+    </header>
 
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
+    <main class="bg-white shadow-md rounded-lg p-6 w-11/12 max-w-md transition-transform transform hover:scale-105">
+        <h2 id="part-name" class="text-2xl font-semibold text-blue-600 fade-in"></h2>
+        <p id="part-details" class="mt-4 text-gray-700 fade-in"></p>
+        <button onclick="generateRandomBodyPart()" class="mt-6 bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+            Generate Another Body Part
+        </button>
+    </main>
+</section>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -374,7 +341,122 @@
         }
     </style>
 </footer>
-    
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        const bodyParts = [
+            { name: "Head", details: "The head houses the brain, eyes, ears, nose, and mouth, and is essential for sensory perception." },
+            { name: "Face", details: "The face is the front part of the head that features the eyes, nose, and mouth." },
+            { name: "Hair", details: "Hair provides protection and insulation to the head." },
+            { name: "Ear", details: "Ears are essential for hearing and balance." },
+            { name: "Neck", details: "The neck supports the head and contains vital structures like blood vessels and nerves." },
+            { name: "Forehead", details: "The forehead is the area above the eyes and below the hairline." },
+            { name: "Beard", details: "Facial hair that can provide warmth and is a secondary sexual characteristic." },
+            { name: "Eye", details: "Eyes are organs of vision that detect light and convert it into neural signals." },
+            { name: "Nose", details: "The nose is responsible for the sense of smell and assists in breathing." },
+            { name: "Mouth", details: "The mouth is used for eating, speaking, and breathing." },
+            { name: "Chin", details: "The chin is the lowermost part of the face." },
+            { name: "Shoulder", details: "Shoulders connect the arms to the trunk and allow for a wide range of motion." },
+            { name: "Elbow", details: "The elbow is the joint between the upper arm and the forearm." },
+            { name: "Arm", details: "The arm is the limb that extends from the shoulder to the wrist." },
+            { name: "Chest", details: "The chest houses vital organs like the heart and lungs." },
+            { name: "Armpit", details: "The armpit is the area under the arm where it meets the shoulder." },
+            { name: "Forearm", details: "The forearm is the part of the arm between the elbow and the wrist." },
+            { name: "Wrist", details: "The wrist connects the forearm to the hand." },
+            { name: "Back", details: "The back supports the body and protects the spinal cord." },
+            { name: "Navel", details: "The navel marks the spot where the umbilical cord was attached." },
+            { name: "Toes", details: "Toes help maintain balance and support weight during standing and walking." },
+            { name: "Ankle", details: "The ankle connects the foot to the leg." },
+            { name: "Instep", details: "The instep is the arched part of the foot between the toes and the ankle." },
+            { name: "Toenail", details: "Toenails protect the tips of the toes." },
+            { name: "Waist", details: "The waist is the part of the body between the ribs and hips." },
+            { name: "Abdomen", details: "The abdomen contains organs such as the stomach and intestines." },
+            { name: "Buttock", details: "Buttocks are the two rounded portions of the body behind the hips." },
+            { name: "Hip", details: "The hip is the joint connecting the leg to the torso." },
+            { name: "Leg", details: "The leg is the limb used for standing and walking." },
+            { name: "Thigh", details: "The thigh is the upper part of the leg between the hip and the knee." },
+            { name: "Knee", details: "The knee is the joint that connects the thigh to the lower leg." },
+            { name: "Foot", details: "The foot supports the weight of the body and allows for movement." },
+            { name: "Hand", details: "The hand is used for manipulation and grasping." },
+            { name: "Thumb", details: "The thumb is the short, thick first digit of the hand." },
+            { name: "Temple", details: "The temple is the flat region on the side of the head." },
+            { name: "Eyelash", details: "Eyelashes protect the eyes from debris and enhance the appearance." },
+            { name: "Iris", details: "The iris is the colored part of the eye that controls the size of the pupil." },
+            { name: "Cheek", details: "The cheek forms the side of the face and is used in expressions." },
+            { name: "Nostril", details: "Nostrils are the external openings of the nose." },
+            { name: "Lip", details: "Lips are the soft, movable parts that form the opening of the mouth." },
+            { name: "Eyebrow", details: "Eyebrows help divert moisture away from the eyes." },
+            { name: "Eyelid", details: "Eyelids protect the eyes and help spread tears." },
+            { name: "Jaw", details: "The jaw is the structure that allows for chewing and speaking." },
+            { name: "Moustache", details: "Facial hair that grows above the upper lip." },
+            { name: "Mole", details: "A mole is a common skin growth that can be benign or cancerous." },
+            { name: "Index Finger", details: "The index finger is commonly used for pointing." },
+            { name: "Middle Finger", details: "The middle finger is the longest digit of the hand." },
+            { name: "Ring Finger", details: "Traditionally, the ring finger is used to wear wedding bands." },
+            { name: "Little Finger", details: "The little finger is the smallest digit of the hand." },
+            { name: "Palm", details: "The palm is the inner surface of the hand." },
+            { name: "Wrist", details: "The wrist connects the hand to the forearm." },
+            { name: "Knuckle", details: "Knuckles are the joints of the fingers." },
+            { name: "Fingernail", details: "Fingernails protect the tips of the fingers." },
+            { name: "Brain", details: "The brain is the control center of the body." },
+            { name: "Trachea", details: "The trachea is the windpipe that connects the throat to the lungs." },
+            { name: "Lungs", details: "Lungs facilitate gas exchange, supplying oxygen to the blood." },
+            { name: "Heart", details: "The heart pumps blood throughout the body." },
+            { name: "Liver", details: "The liver processes nutrients and detoxifies harmful substances." },
+            { name: "Stomach", details: "The stomach digests food." },
+            { name: "Kidneys", details: "The kidneys filter waste from the blood." },
+            { name: "Large Intestine", details: "The large intestine absorbs water and forms waste." },
+            { name: "Small Intestine", details: "The small intestine absorbs nutrients from food." },
+            { name: "Pharynx", details: "The pharynx is the passageway for food and air." },
+            { name: "Larynx", details: "The larynx contains the vocal cords and is essential for speech." },
+            { name: "Arteries", details: "Arteries carry blood away from the heart." },
+            { name: "Gallbladder", details: "The gallbladder stores bile produced by the liver." },
+            { name: "Spleen", details: "The spleen filters blood and supports the immune system." },
+            { name: "Urinary Bladder", details: "The urinary bladder stores urine." },
+            { name: "Appendix", details: "The appendix is a small pouch attached to the large intestine." },
+            { name: "Canine", details: "Canine teeth are sharp and help in tearing food." },
+            { name: "Hard Palate", details: "The hard palate forms the roof of the mouth." },
+            { name: "Lips", details: "Lips help in eating and speaking." },
+            { name: "Soft Palate", details: "The soft palate is located at the back of the mouth." },
+            { name: "Uvula", details: "The uvula helps with speech and swallowing." },
+            { name: "Tongue", details: "The tongue is vital for tasting, swallowing, and speaking." },
+            { name: "Gingiva (Gums)", details: "Gums protect the roots of teeth." },
+            { name: "Incisor", details: "Incisors are used for cutting food." },
+            { name: "Teeth", details: "Teeth are essential for chewing food." },
+            { name: "Mandible", details: "The mandible is the lower jaw." },
+            { name: "Papillae", details: "Papillae are small projections on the tongue." },
+            { name: "Premolar", details: "Premolars are used for crushing food." },
+        ];
+
+        function generateRandomBodyPart() {
+            const randomIndex = Math.floor(Math.random() * bodyParts.length);
+            const selectedPart = bodyParts[randomIndex];
+
+            const partName = document.getElementById('part-name');
+            const partDetails = document.getElementById('part-details');
+
+            // Add fade-in effect
+            partName.classList.remove('fade-in');
+            partDetails.classList.remove('fade-in');
+            void partName.offsetWidth;  // Trigger reflow
+            void partDetails.offsetWidth; // Trigger reflow
+
+            partName.innerText = selectedPart.name;
+            partDetails.innerText = selectedPart.details;
+
+            partName.classList.add('fade-in');
+            partDetails.classList.add('fade-in');
+        }
+
+        window.onload = generateRandomBodyPart;
+    </script>
 
 </body>
 

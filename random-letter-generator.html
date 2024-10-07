@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>    
-        
+    <title>Random Letter Generator: Generate Letters for Games and Creativity</title>
+    <meta name="description" content="Use our Random Letter Generator to easily create lists of random letters. Perfect for games, creative writing, and educational activities. Choose how many letters you want and let your creativity flow!">
+    <meta name="keywords" content="Random Letter Generator, Generate Random Letters, Letter List Generator, Creative Writing Tools, Fun Games with Letters, Educational Activities, Alphabet Letters, Random Letters for Games">
+    <link rel="canonical" href="https://fastonlinetools.com/random-letter-generator" />    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,58 +117,42 @@
 </header>
     
 
-    <section class="py-10 bg-gray-50">
-        <div class="mx-auto max-w-6xl shadow-md mb-8">
-            <div class="mt-6 overflow-hidden bg-white rounded-xl">                
-                <div class="px-6 py-12 sm:p-12">
-                    <h1 class="text-3xl font-bold mb-6">Terms of Use</h1>
-            
-                    <p class="mb-4">Effective Date: 14/07/2024</p>
-            
-                    <p>Welcome to Fast Online Tools!</p><br/>
-            
-                    <p class="mb-4">By accessing this website, you agree to be bound by these Terms of Use, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Use License</h2>
-            
-                    <p class="mb-4">Permission is granted to use Fast Online Tools's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:</p>
-            
-                    <ul class="list-disc ml-8 mb-4">
-                        <li>modify or copy the materials;</li>
-                        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-                        <li>attempt to decompile or reverse engineer any software contained on Fast Online Tools's website;</li>
-                        <li>remove any copyright or other proprietary notations from the materials; or</li>
-                        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-                    </ul>
-            
-                    <p class="mb-4">This license shall automatically terminate if you violate any of these restrictions.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
-            
-                    <p class="mb-4">The materials on Fast Online Tools's website are provided on an 'as is' basis. Fast Online Tools makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Limitations</h2>
-            
-                    <p class="mb-4">In no event shall Fast Online Tools or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Fast Online Tools's website, even if Fast Online Tools or a Fast Online Tools authorized representative has been notified orally or in writing of the possibility of such damage.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Modifications</h2>
-            
-                    <p class="mb-4">Fast Online Tools may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms of Use.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Governing Law</h2>
-            
-                    <p class="mb-4">These terms and conditions are governed by and construed in accordance with the laws of India, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-            
-                    <p>If you have any questions about these Terms of Use, please contact us.</p>
-            
+    <section class="flex items-center justify-center h-screen bg-gradient-to-r from-blue-400 via-green-500 to-yellow-500">
+    <div class="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">Random Letter Generator</h1>
+            <select id="count" class="border rounded-lg p-2 mb-4 w-full text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200 ease-in-out">
+                <option value="1">1 Letter</option>
+                <option value="2">2 Letters</option>
+                <option value="3">3 Letters</option>
+                <option value="4">4 Letters</option>
+                <option value="5">5 Letters</option>
+                <option value="10">10 Letters</option>
+                <option value="20">20 Letters</option>
+            </select>
+            <button id="generate" class="bg-blue-600 text-white p-2 rounded-lg w-full hover:bg-blue-700 transition duration-200 ease-in-out">Get Random Letters</button>
+            <div id="result" class="mt-4 text-center text-lg font-semibold text-gray-800"></div>
+        </div>
 
-            </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-gray-800 text-lg font-semibold text-center mb-4">How to Use</h2>
+            <ul class="list-disc list-inside text-gray-700 text-left space-y-2">
+                <li class="flex items-center">
+                    <span class="text-blue-600 mr-2">🔤</span>
+                    <span>Select the number of letters.</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-blue-600 mr-2">🆕</span>
+                    <span>Click "Get Random Letters."</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-blue-600 mr-2">✨</span>
+                    <span>Use for games, creative writing, or educational activities!</span>
+                </li>
+            </ul>
         </div>
-        </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -374,7 +361,23 @@
         }
     </style>
 </footer>
-    
+    <script>
+        document.getElementById('generate').addEventListener('click', () => {
+            const count = parseInt(document.getElementById('count').value);
+            const randomLetters = getRandomLetters(count);
+            document.getElementById('result').innerText = randomLetters.join(', ');
+        });
+
+        function getRandomLetters(count) {
+            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const randomChars = [];
+            for (let i = 0; i < count; i++) {
+                const randomIndex = Math.floor(Math.random() * letters.length);
+                randomChars.push(letters[randomIndex]);
+            }
+            return randomChars;
+        }
+    </script>
 
 </body>
 
