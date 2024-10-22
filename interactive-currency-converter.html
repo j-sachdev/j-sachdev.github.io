@@ -2,21 +2,10 @@
 <html lang="en">
 
 <head>    
-    <title>Country Flags Generator & Random Flag Picker | Flag Emoji Finder</title>
-    <meta name="description"
-        content="Discover and generate country flags easily with our Country Flags Generator. Find flag emojis, random flags, and explore flag images from around the world. Perfect for learning, design, and more!">
-    <meta name="keywords"
-        content="country flags generator, random flag picker, flag emoji finder, country flag images, flag emoji, random flag generator, flag generator tool, flag image library, flag lookup">
-    <meta property="og:title" content="Country Flags Generator & Random Flag Picker">
-    <meta property="og:description"
-        content="Generate country flags and find flag emojis with ease. Use our Country Flags Generator to explore flag images, pick random flags, and discover flag emojis for every country.">
-    <meta property="og:url" content="https://fastonlinetools.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Country Flags Generator & Random Flag Picker">
-    <link rel="canonical" href="https://fastonlinetools.com/random-flag-generator" />
-    <meta name="twitter:description"
-        content="Easily generate country flags and find flag emojis. Explore flag images, pick random flags, and discover flag emojis with our user-friendly Country Flags Generator.">
-    <meta name="twitter:url" content="https://fastonlinetools.com">    
+    <title>Interactive Currency Converter</title>
+        <meta name="description" content="Use our interactive currency converter to easily convert between hundred, thousand, lakh, crore, arab, kharab, billion, and trillion rupees.">
+        <meta name="keywords" content="Currency converter, Interactive currency converter, Convert rupees, Rupee conversion, Currency conversion calculator, Hundred to trillion conversion, Lakh to crore converter, Convert between currency denominations, Currency exchange rates, Online currency converter, Financial calculator, Rupees to dollars conversion, Indian currency converter, Currency conversion tool, Instant currency converter">
+        <link rel="canonical" href="https://fastonlinetools.com/interactive-currency-converter" />    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,27 +117,44 @@
 </header>
     
 
-    <div class="container mx-auto max-w-6xl">
-        <div class="mb-8 flex flex-wrap items-center gap-4 justify-center">
-            <button id="showAllFlags"
-                class="text-white bg-[#fe5f3c] hover:bg-orange-600/90 focus:ring-4 focus:outline-none focus:ring-orange-600/50 font-medium rounded-lg text-sm px-5 py-2.5 flex items-center justify-center mr-2 mb-2 cursor-pointer">Show
-                All Flags</button>
-            <button id="showRandomFlag"
-                class="text-white bg-[#fe5f3c] hover:bg-orange-600/90 focus:ring-4 focus:outline-none focus:ring-orange-600/50 font-medium rounded-lg text-sm px-5 py-2.5 flex items-center justify-center mr-2 mb-2 cursor-pointer">Show
-                Random Flag</button>
-            <input type="text" id="searchFlag" placeholder="Search for flags"
-                class="py-2 px-4 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 w-full max-w-xs">
-            <select id="countryCodeSelect"
-                class="py-2 px-4 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 w-full max-w-xs">
-                <option value="">Select Country Code</option>
+    <body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white p-5 rounded shadow">
+        <h1 class="text-xl font-bold mb-4">Currency Converter</h1>
+        <p class="mb-4">Convert between different currency denominations such as Hundred, Thousand, Lakh, Crore, Arab, Kharab, Billion, and Trillion Rupees.</p>
+        <div>
+            <label for="amount" class="block mb-2">Amount:</label>
+            <input id="amount" type="number" class="border border-gray-300 p-2 w-full" placeholder="Enter amount" oninput="convertCurrency()">
+        </div>
+        <div class="mt-4">
+            <label for="fromCurrency" class="block mb-2">From:</label>
+            <select id="fromCurrency" class="border border-gray-300 p-2 w-full" onchange="convertCurrency()">
+                <option value="hundred">Hundred</option>
+                <option value="thousand">Thousand</option>
+                <option value="lakh">Lakh</option>
+                <option value="crore">Crore</option>
+                <option value="arab">Arab</option>
+                <option value="kharab">Kharab</option>
+                <option value="billion">Billion</option>
+                <option value="trillion">Trillion</option>
             </select>
         </div>
-        <div id="flagsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center mb-8">
-            <!-- Example flag item -->
-            <!-- <div class="flag-item bg-gray-200 p-4 rounded-lg">Flag 1</div> -->
+        <div class="mt-4">
+            <label for="toCurrency" class="block mb-2">To:</label>
+            <select id="toCurrency" class="border border-gray-300 p-2 w-full" onchange="convertCurrency()">
+                <option value="hundred">Hundred</option>
+                <option value="thousand">Thousand</option>
+                <option value="lakh">Lakh</option>
+                <option value="crore">Crore</option>
+                <option value="arab">Arab</option>
+                <option value="kharab">Kharab</option>
+                <option value="billion">Billion</option>
+                <option value="trillion">Trillion</option>
+            </select>
         </div>
-        <div id="notification" class="notification"></div>
+        <div id="result" class="mt-4 font-bold"></div>
+        <button id="copyButton" class="mt-4 bg-green-500 text-white p-2 rounded hidden" onclick="copyToClipboard()">Copy Amount</button>
     </div>
+    </body>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -382,199 +388,54 @@
         }
     </style>
 </footer>
-    <style>
-        .spinner-border {
-            border-radius: 50%;
-            border-width: 0.25em;
-            border-style: solid;
-        }
-
-        .cropper-bg {
-            background-image: none;
-            background-color: #e2e2e2;
-        }
-
-        .cropper-modal,
-        .cropper-line,
-        .cropper-view-box,
-        .cropper-point {
-            background-color: gray;
-            outline-color: transparent;
-        }
-
-        .cropper-center {
-            display: none;
-        }
-
-        .cropper-point.point-se {
-            width: 5px;
-            height: 5px;
-        }
-
-        .active #image-preview {
-            border-color: #3b82f6;
-        }
-
-        .flag {
-            width: 200px;
-            /* Adjust width of flag container */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #ffffff;
-            /* White background for flag containers */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Add shadow for better visibility */
-            padding: 8px;
-            text-align: center;
-            /* Center text inside the flag container */
-        }
-
-        .flag img {
-            width: 100px;
-            /* Width of flag image */
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .flag .emoji {
-            font-size: 2rem;
-            /* Adjust size of the emoji */
-            margin-top: 8px;
-        }
-
-        .flag .name {
-            font-size: 1rem;
-            /* Adjust size of the country name */
-            margin-top: 4px;
-            color: #4a5568;
-            /* Text color for country name */
-        }
-
-        .flag.copied {
-            border: 2px solid #4ade80;
-            /* Green border to indicate copied */
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-            /* Optional: glowing effect */
-        }
-
-        .notification {
-            position: fixed;
-            bottom: 16px;
-            right: 16px;
-            background: #4ade80;
-            /* Green background for notification */
-            color: #ffffff;
-            /* White text color */
-            padding: 8px 16px;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Shadow for the notification */
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1000;
-            /* Ensure notification is above other content */
-        }
-
-        .notification.show {
-            opacity: 1;
-        }
-    </style>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const flagsContainer = document.getElementById('flagsContainer');
-            const showAllFlagsButton = document.getElementById('showAllFlags');
-            const showRandomFlagButton = document.getElementById('showRandomFlag');
-            const searchFlagInput = document.getElementById('searchFlag');
-            const countryCodeSelect = document.getElementById('countryCodeSelect');
+        var convertedResult= 0;
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById("amount").value);
+            const fromCurrency = document.getElementById("fromCurrency").value;
+            const toCurrency = document.getElementById("toCurrency").value;
+            const resultElement = document.getElementById("result");
+            const copyButton = document.getElementById("copyButton");
 
-            let flags = []; // This will store the array of flag objects
+            const conversionRates = {
+                hundred: 100,
+                thousand: 1000,
+                lakh: 100000,
+                crore: 10000000,
+                arab: 1000000000,
+                kharab: 100000000000,
+                billion: 1000000000,
+                trillion: 1000000000000
+            };
 
-            // Fetch flags data from the URL
-            fetch('https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0')
-                .then(response => response.json())
-                .then(data => {
-                    flags = data;
-
-                    // Populate the dropdown with country codes
-                    flags.forEach(({ code }) => {
-                        const option = document.createElement('option');
-                        option.value = code;
-                        option.textContent = code;
-                        countryCodeSelect.appendChild(option);
-                    });
-                       // Show 10 flags on page load
-                       const initialFlags = flags.slice(0, 10).map(flag => flag.code);
-                        renderFlags(initialFlags);
-                })
-                .catch(error => console.error('Error fetching flags data:', error));
-
-            // Function to render flags
-            function renderFlags(flagCodes) {
-                flagsContainer.innerHTML = '';
-                flagCodes.forEach(code => {
-                    const flag = flags.find(f => f.code === code);
-                    if (flag) {
-                        const flagElement = document.createElement('div');
-                        flagElement.className = 'flag';
-                        flagElement.innerHTML = `
-                  <img src="${flag.image}" alt="${flag.name}" />
-                    <div class="emoji">${flag.emoji}</div>
-                    <div class="name">${flag.name}</div>
-                `;
-
-                        // Add click event to copy SVG URL
-                        flagElement.addEventListener('click', () => {
-                            navigator.clipboard.writeText(flag.image)
-                                .then(() => {
-                                    // Optional: Add feedback to the user
-
-                                    notification.textContent = 'Link copied!';
-                                    flagElement.classList.add('copied');
-                                    notification.classList.add('show');
-                                    setTimeout(() => {
-                                        flagElement.classList.remove('copied');
-                                        notification.classList.remove('show');
-                                    }, 1500); // Notification will be visible for 1.5 seconds
-
-                                })
-                                .catch(err => console.error('Failed to copy: ', err));
-                        });
-
-
-                        flagsContainer.appendChild(flagElement);
-                    }
-                });
+            // Check for valid input
+            if (isNaN(amount) || amount < 0) {
+                resultElement.textContent = "Please enter a valid amount.";
+                copyButton.classList.add("hidden");
+                return;
             }
 
-            // Show all flags
-            showAllFlagsButton.addEventListener('click', () => {
-                renderFlags(flags.map(flag => flag.code));
-            });
+            // Convert the amount to a base unit (we'll use 'hundred' as the base)
+            const baseAmount = amount * conversionRates[fromCurrency] / conversionRates['hundred'];
 
-            // Show a random flag
-            showRandomFlagButton.addEventListener('click', () => {
-                const randomFlag = flags[Math.floor(Math.random() * flags.length)];
-                renderFlags([randomFlag.code]);
-            });
+            // Convert from base unit to the target currency
+            const convertedAmount = baseAmount * conversionRates['hundred'] / conversionRates[toCurrency];
 
-            // Search for flags
-            searchFlagInput.addEventListener('input', () => {
-                const searchTerm = searchFlagInput.value.toLowerCase();
-                const filteredFlags = flags.filter(flag => flag.name.toLowerCase().includes(searchTerm));
-                renderFlags(filteredFlags.map(flag => flag.code));
-            });
+            const resultText = `Converted Amount: ${convertedAmount.toFixed(2)} ${toCurrency.charAt(0).toUpperCase() + toCurrency.slice(1)}`;
+            resultElement.textContent = resultText;
+            convertedResult = convertedAmount.toFixed(2);
+            // Show the copy button
+            copyButton.classList.remove("hidden");
+        }
 
-            // Show flag based on selected country code
-            countryCodeSelect.addEventListener('change', () => {
-                const selectedCode = countryCodeSelect.value;
-                if (selectedCode) {
-                    renderFlags([selectedCode]);
-                }
+        function copyToClipboard() {
+            const resultText = convertedResult;
+            navigator.clipboard.writeText(resultText).then(() => {
+                alert("Amount Copied!");
+            }, () => {
+                alert("Failed to copy!");
             });
-        });
+        }
     </script>
 
 </body>
