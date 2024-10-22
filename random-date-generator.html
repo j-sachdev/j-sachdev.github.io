@@ -118,57 +118,60 @@
 </header>
     
 
-    <section class="flex items-center justify-center h-screen bg-gray-100">
-    <main class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mx-auto">
-        <h1 class="text-2xl font-bold mb-4 text-center text-blue-600">Random Date Generator</h1>
+    <section class="flex items-center justify-center bg-gray-100 pt-4 pb-6">
+        <main class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto">
+            <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">Random Date Generator</h1>
 
-        <section class="mb-6">
-            <label for="start-year" class="block font-medium text-gray-700">Start Year:</label>
-            <input id="start-year" type="number" min="1900" max="2100" value="2000"
-                class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
-        </section>
+            <section class="mb-6">
+                <label for="start-year" class="block font-medium text-gray-700">Start Year:</label>
+                <input id="start-year" type="number" min="1900" max="2100" value="2000"
+                    class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
+            </section>
 
-        <section class="mb-6">
-            <label for="end-year" class="block font-medium text-gray-700">End Year:</label>
-            <input id="end-year" type="number" min="1900" max="2100" value="2023"
-                class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
-        </section>
+            <section class="mb-6">
+                <label for="end-year" class="block font-medium text-gray-700">End Year:</label>
+                <input id="end-year" type="number" min="1900" max="2100" value="2023"
+                    class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
+            </section>
 
-        <button id="generate-btn"
-            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 w-full transform active:scale-95">
-            Generate Random Date
-        </button>
+            <button id="generate-btn"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 w-full transform active:scale-95">
+                Generate Random Date
+            </button>
 
-        <div class="mt-4">
-            <p class="font-medium text-gray-700">Generated Date:</p>
-            <div id="date-display" class="text-lg font-semibold  mt-2 border-b border-gray-300 pb-2 text-red-600"></div>
-        </div>
+            <div class="mt-4">
+                <p class="font-medium text-gray-700">Generated Date:</p>
+                <div id="date-display" class="text-lg font-semibold mt-2 border-b border-gray-300 pb-2 text-red-600">
+                </div>
+            </div>
 
-        <section class="mt-4">
-            <label for="format" class="block font-medium text-gray-700">Choose Date Format:</label>
-            <select id="format"
-                class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
-                <option value="YYYY-MM-DD">YYYY-MM-DD</option>
-                <option value="MM/DD/YYYY">MM/DD/YYYY</option>
-                <option value="DD-MM-YYYY">DD-MM-YYYY</option>
-                <option value="MMMM D, YYYY">MMMM D, YYYY</option>
-            </select>
-        </section>
-        <!-- Features Section -->
-        <div class="mt-8 p-6 bg-gray-50 rounded-lg shadow-md w-full max-w-md">
-            <h2 class="text-xl font-bold text-blue-600 mb-4">Features</h2>
-            <ul class="list-disc list-inside text-gray-700">
-                <li>Generate random dates between any two specified years.</li>
-                <li>Choose from multiple date formats including <strong>YYYY-MM-DD</strong>,
-                    <strong>MM/DD/YYYY</strong>, <strong>DD-MM-YYYY</strong>, and <strong>MMMM D, YYYY</strong>.</li>
-                <li>Interactive and user-friendly interface for easy navigation.</li>
-                <li>Responsive design that works on mobile and desktop devices.</li>
-                <li>Simple validation to ensure the start year is less than or equal to the end year.</li>
-                <li>Dynamic display of generated dates for immediate feedback.</li>
-            </ul>
-        </div>
-    </main>
-</section>
+            <section class="mt-4">
+                <label for="format" class="block font-medium text-gray-700">Choose Date Format:</label>
+                <select id="format"
+                    class="mt-1 border border-gray-300 rounded w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-400 transition duration-150">
+                    <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                    <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                    <option value="DD-MM-YYYY">DD-MM-YYYY</option>
+                    <option value="MMMM D, YYYY">MMMM D, YYYY</option>
+                </select>
+            </section>
+
+            <!-- Features Section -->
+            <div class="mt-8 p-6 bg-gray-50 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold text-blue-600 mb-4">Features</h2>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Generate random dates between any two specified years.</li>
+                    <li>Choose from multiple date formats including <strong>YYYY-MM-DD</strong>,
+                        <strong>MM/DD/YYYY</strong>, <strong>DD-MM-YYYY</strong>, and <strong>MMMM D, YYYY</strong>.
+                    </li>
+                    <li>Interactive and user-friendly interface for easy navigation.</li>
+                    <li>Responsive design that works on mobile and desktop devices.</li>
+                    <li>Simple validation to ensure the start year is less than or equal to the end year.</li>
+                    <li>Dynamic display of generated dates for immediate feedback.</li>
+                </ul>
+            </div>
+        </main>
+    </section>
 
     
     <footer class="bg-[#1A1D2B]">
