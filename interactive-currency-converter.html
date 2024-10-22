@@ -389,54 +389,56 @@
     </style>
 </footer>
     <script>
-        var convertedResult= 0;
-        function convertCurrency() {
-            const amount = parseFloat(document.getElementById("amount").value);
-            const fromCurrency = document.getElementById("fromCurrency").value;
-            const toCurrency = document.getElementById("toCurrency").value;
-            const resultElement = document.getElementById("result");
-            const copyButton = document.getElementById("copyButton");
+    var convertedResult = 0;
 
-            const conversionRates = {
-                hundred: 100,
-                thousand: 1000,
-                lakh: 100000,
-                crore: 10000000,
-                arab: 1000000000,
-                kharab: 100000000000,
-                billion: 1000000000,
-                trillion: 1000000000000
-            };
+    function convertCurrency() {
+        const amount = parseFloat(document.getElementById("amount").value);
+        const fromCurrency = document.getElementById("fromCurrency").value;
+        const toCurrency = document.getElementById("toCurrency").value;
+        const resultElement = document.getElementById("result");
+        const copyButton = document.getElementById("copyButton");
 
-            // Check for valid input
-            if (isNaN(amount) || amount < 0) {
-                resultElement.textContent = "Please enter a valid amount.";
-                copyButton.classList.add("hidden");
-                return;
-            }
+        const conversionRates = {
+            hundred: 100,
+            thousand: 1000,
+            lakh: 100000,
+            crore: 10000000,
+            arab: 1000000000,
+            kharab: 100000000000,
+            million: 1000000,
+            billion: 1000000000,
+            trillion: 1000000000000
+        };
 
-            // Convert the amount to a base unit (we'll use 'hundred' as the base)
-            const baseAmount = amount * conversionRates[fromCurrency] / conversionRates['hundred'];
-
-            // Convert from base unit to the target currency
-            const convertedAmount = baseAmount * conversionRates['hundred'] / conversionRates[toCurrency];
-
-            const resultText = `Converted Amount: ${convertedAmount.toFixed(2)} ${toCurrency.charAt(0).toUpperCase() + toCurrency.slice(1)}`;
-            resultElement.textContent = resultText;
-            convertedResult = convertedAmount.toFixed(2);
-            // Show the copy button
-            copyButton.classList.remove("hidden");
+        // Check for valid input
+        if (isNaN(amount) || amount < 0) {
+            resultElement.textContent = "Please enter a valid amount.";
+            copyButton.classList.add("hidden");
+            return;
         }
 
-        function copyToClipboard() {
-            const resultText = convertedResult;
-            navigator.clipboard.writeText(resultText).then(() => {
-                alert("Amount Copied!");
-            }, () => {
-                alert("Failed to copy!");
-            });
-        }
-    </script>
+        // Convert the amount to a base unit (we'll use 'crore' as the base)
+        const baseAmount = amount * conversionRates[fromCurrency] / conversionRates['crore'];
+
+        // Convert from base unit to the target currency
+        const convertedAmount = baseAmount * conversionRates['crore'] / conversionRates[toCurrency];
+
+        const resultText = `Converted Amount: ${convertedAmount.toFixed(2)} ${toCurrency.charAt(0).toUpperCase() + toCurrency.slice(1)}`;
+        resultElement.textContent = resultText;
+        convertedResult = convertedAmount.toFixed(2);
+        // Show the copy button
+        copyButton.classList.remove("hidden");
+    }
+
+    function copyToClipboard() {
+        const resultText = convertedResult;
+        navigator.clipboard.writeText(resultText).then(() => {
+            alert("Amount Copied!");
+        }, () => {
+            alert("Failed to copy!");
+        });
+    }
+</script>
 
 </body>
 
