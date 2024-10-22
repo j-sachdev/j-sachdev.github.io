@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>    
-        
+    <meta name="description" content="Easily convert your text to bold for social media, chats, and creative writing. Use our online bold text converter to enhance your messages and posts.">
+    <meta name="keywords" content="bold text converter, text to bold, online text converter, social media text styling, chat text styling">
+    <title>Bold Text Converter - Transform Your Text Easily</title>
+    <link rel="canonical" href="https://fastonlinetools.com/bold-text-convertor" />    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,58 +117,26 @@
 </header>
     
 
-    <section class="py-10 bg-gray-50">
-        <div class="mx-auto max-w-6xl shadow-md mb-8">
-            <div class="mt-6 overflow-hidden bg-white rounded-xl">                
-                <div class="px-6 py-12 sm:p-12">
-                    <h1 class="text-3xl font-bold mb-6">Terms of Use</h1>
-            
-                    <p class="mb-4">Effective Date: 14/07/2024</p>
-            
-                    <p>Welcome to Fast Online Tools!</p><br/>
-            
-                    <p class="mb-4">By accessing this website, you agree to be bound by these Terms of Use, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Use License</h2>
-            
-                    <p class="mb-4">Permission is granted to use Fast Online Tools's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license, you may not:</p>
-            
-                    <ul class="list-disc ml-8 mb-4">
-                        <li>modify or copy the materials;</li>
-                        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-                        <li>attempt to decompile or reverse engineer any software contained on Fast Online Tools's website;</li>
-                        <li>remove any copyright or other proprietary notations from the materials; or</li>
-                        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-                    </ul>
-            
-                    <p class="mb-4">This license shall automatically terminate if you violate any of these restrictions.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Disclaimer</h2>
-            
-                    <p class="mb-4">The materials on Fast Online Tools's website are provided on an 'as is' basis. Fast Online Tools makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Limitations</h2>
-            
-                    <p class="mb-4">In no event shall Fast Online Tools or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Fast Online Tools's website, even if Fast Online Tools or a Fast Online Tools authorized representative has been notified orally or in writing of the possibility of such damage.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Modifications</h2>
-            
-                    <p class="mb-4">Fast Online Tools may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms of Use.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Governing Law</h2>
-            
-                    <p class="mb-4">These terms and conditions are governed by and construed in accordance with the laws of India, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-            
-                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-            
-                    <p>If you have any questions about these Terms of Use, please contact us.</p>
-            
+    <main class="w-full max-w-3xl">
+        <textarea id="inputText" placeholder="Type here..." 
+                  class="w-full p-3 border-2 border-purple-600 rounded-lg mb-4 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-purple-400" 
+                  oninput="convertToBold()"></textarea>
+                
+        <section class="flex flex-col items-start">
+            <div class="bubble bg-yellow-100" id="output">Your text will appear here...</div>
+        </section>
 
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold text-purple-700">Benefits of Using Bold Text</h2>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li><strong>Increased Visibility:</strong> Bold text stands out, making it easier for readers to notice key information.</li>
+                <li><strong>Emphasis:</strong> Helps to highlight important points, making your message clearer and more impactful.</li>
+                <li><strong>Organizational Clarity:</strong> Makes it easier to structure your writing, guiding the reader through your content.</li>
+                <li><strong>Attract Attention:</strong> Ideal for headlines and calls to action, drawing attention to critical parts of your message.</li>
+                <li><strong>Visual Appeal:</strong> Enhances the aesthetics of your text, making it more engaging for your audience.</li>
+            </ul>
+        </section>
+    </main>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -394,7 +365,38 @@
         }
     </style>
 </footer>
-    
+    <style>
+        body {
+            background-color: #f7fafc; /* Simple light background */
+        }
+        .bubble {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .bubble:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        textarea {
+            border-color: #6a1b9a;
+        }
+        #output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+     <script>
+        function convertToBold() {
+            const inputText = document.getElementById('inputText').value;
+            document.getElementById('output').innerHTML = inputText; // Output the input text as bold
+        }
+    </script>
 
 </body>
 
