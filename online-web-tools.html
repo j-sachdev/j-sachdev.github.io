@@ -2,16 +2,10 @@
 <html lang="en">
 
 <head>    
-    <title>Online Web Tools | fastonlinetools.com</title>
-    <meta name="description" content="Explore a collection of online tools for generating gradients, currency symbols, images, and more. Enhance your projects with our user-friendly applications.">
-    <meta name="keywords" content="Tailwind CSS, gradient generator, currency symbols, text tools, GUID generator, image cropper, resize images, remove duplicates, emoji generator, CPF generator, fastonlinetools">
-    <meta property="og:description" content="Discover a variety of online tools that simplify your workflow. From image processing to font generation, we have you covered.">
-    <meta name="twitter:description" content="Explore various online tools to enhance your projects and streamline your tasks.">
-    <link rel="canonical" href="https://fastonlinetools.com/online-web-tools" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#004F6D"/>
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- Google tag (gtag.js) -->
@@ -23,6 +17,13 @@
 
   gtag('config', 'G-D94TC827TJ');
 </script>
+    <title>Online Web Tools | fastonlinetools.com</title>
+    <meta name="description" content="Explore a collection of online tools for generating gradients, currency symbols, images, and more. Enhance your projects with our user-friendly applications.">
+    <meta name="keywords" content="Tailwind CSS, gradient generator, currency symbols, text tools, GUID generator, image cropper, resize images, remove duplicates, emoji generator, CPF generator, fastonlinetools">
+    <meta property="og:description" content="Discover a variety of online tools that simplify your workflow. From image processing to font generation, we have you covered.">
+    <meta name="twitter:description" content="Explore various online tools to enhance your projects and streamline your tasks.">
+    <link rel="canonical" href="https://fastonlinetools.com/online-web-tools" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">    
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <div class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">
                 <a href="/" title="Fast Online Tools" class="flex">
-                    <img class="w-60 -ml-3" src="/assets/logo.svg" alt="logo" />
+                    <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" width="40" height="176"/>
                 </a>
             </div>
 
@@ -57,7 +58,7 @@
             <div id="nav-dialog" class="hidden fixed z-10 bg-white inset-0 p-3">
                 <div id="nav-bar" class="flex justify-between">
                     <a href="#" id="brand" class="flex gap-2 items-center">
-                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" width="40" height="176" />
                     </a>
                     <button class="p-2" onclick="handleMenu()">
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -213,6 +214,11 @@
                                 <li>
                                     <a href="/random-date-generator"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Date Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/case-converter"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Case Converter
                                     </a>
                                 </li>
                             </ul>
@@ -503,6 +509,11 @@
                 name: "Interactive Currency Converter",
                 description: "Use our interactive currency converter to easily convert between hundred, thousand, lakh, crore, arab, kharab, billion, and trillion rupees.",
                 link: "/interactive-currency-converter"
+            },
+            {
+                name: "Case Converter",
+                description: "Case converter tool that converts text to various cases including uppercase, lowercase, camel case, and more..",
+                link: "/case-converter"
             }
         ];
 

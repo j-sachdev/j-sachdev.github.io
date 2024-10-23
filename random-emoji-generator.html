@@ -2,16 +2,10 @@
 <html lang="en">
 
 <head>    
-    <link rel="canonical" href="https://fastonlinetools.com/random-emoji-generator" />
-    <meta name="description"
-        content="Generate random emojis using this simple and fun emoji generator tool. Choose the number of emojis to generate, and display them in a neat and responsive grid layout.">
-    <meta name="keywords"
-        content="Online random emoji generation, emoji generator, random emoji, fun emoji tool, emoji picker, generate emoji, emoji display, fast online tools, great online tools">
-    <meta name="author" content="Your Name">
-    <title>Random Emoji Generator | Fun Emoji Picker Tool</title>    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#004F6D"/>
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- Google tag (gtag.js) -->
@@ -23,6 +17,13 @@
 
   gtag('config', 'G-D94TC827TJ');
 </script>
+    <link rel="canonical" href="https://fastonlinetools.com/random-emoji-generator" />
+    <meta name="description"
+        content="Generate random emojis using this simple and fun emoji generator tool. Choose the number of emojis to generate, and display them in a neat and responsive grid layout.">
+    <meta name="keywords"
+        content="Online random emoji generation, emoji generator, random emoji, fun emoji tool, emoji picker, generate emoji, emoji display, fast online tools, great online tools">
+    <meta name="author" content="Your Name">
+    <title>Random Emoji Generator | Fun Emoji Picker Tool</title>    
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <div class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">
                 <a href="/" title="Fast Online Tools" class="flex">
-                    <img class="w-60 -ml-3" src="/assets/logo.svg" alt="logo" />
+                    <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" width="40" height="176"/>
                 </a>
             </div>
 
@@ -57,7 +58,7 @@
             <div id="nav-dialog" class="hidden fixed z-10 bg-white inset-0 p-3">
                 <div id="nav-bar" class="flex justify-between">
                     <a href="#" id="brand" class="flex gap-2 items-center">
-                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" width="40" height="176" />
                     </a>
                     <button class="p-2" onclick="handleMenu()">
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +150,7 @@
             <!-- Functionality Demonstration Section -->
             <div id="functionalityDemo"
                 class="p-6 bg-white rounded-lg shadow-md max-w-lg flex-grow min-h-[250px] min-w-[300px]">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">Functionality Demonstration</h3>
+                <h2 class="text-xl font-semibold text-gray-700 mb-2">Functionality Demonstration</h2>
                 <p class="text-gray-500 mb-4">Your generated emojis will be displayed here:</p>
                 <div id="emojiFunctionality" class="flex flex-wrap justify-center gap-4 text-3xl"></div>
             </div>
@@ -262,6 +263,11 @@
                                 <li>
                                     <a href="/random-date-generator"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Date Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/case-converter"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Case Converter
                                     </a>
                                 </li>
                             </ul>

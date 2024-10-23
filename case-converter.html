@@ -17,9 +17,13 @@
 
   gtag('config', 'G-D94TC827TJ');
 </script>
-    <title>Generate Random GUID - Online GUID Generator</title>
-    <meta name="description" content="Generate Random GUID - use our GUID Generator to create unique identifiers for your applications. ">
-    <meta name="keywords" content="GUID Generator, UUID Generator, Unique Identifiers, Online GUID Tool, UUID Creation">    
+    <title>Case Converter</title>
+    <meta name="description"
+        content="Mobile-friendly case converter tool that converts text to various cases including uppercase, lowercase, camel case, and more.">
+    <meta name="keywords"
+        content="case converter, text transformation, uppercase, lowercase, camel case, proper case, sentence case, snake case">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fastonlinetools.com/case-converter" />    
 </head>
 
 <body>
@@ -117,141 +121,48 @@
 </header>
     
 
-    <section class="py-10 bg-gray-50">
-        <div class="mx-auto max-w-6xl shadow-md mb-8">
-            <div class="mt-6 overflow-hidden bg-white rounded-xl">
-                <div class="px-6 py-12 sm:p-12">
-                    <h1 class="text-3xl font-semibold text-center text-gray-900">Generate Random GUID/ Random GUID Generator</h1>
-                    
-                    <div class="max-w-lg mx-auto mt-8 p-6 bg-white  rounded-lg">
-                                                
-                        
-                        <div class="mb-4">
-                            <label for="txtCount" class="block text-gray-700 font-medium mb-2">How many GUIDs (0-500):</label>
-                            <input id="txtCount" type="text" placeholder="Enter GUID count" 
-                                   class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        
-                        <div class="mb-12">
-                            <label for="txtOutput" class="inline-block text-gray-700 font-medium mb-2">Output:</label>
-                            <button type="button" onclick="copyToClipBoard()" class="p-3 py-2 text-gray-700 rounded-lg shadow-md bg-slate-100">Copy To Clipboard</button>
-                            <textarea disabled id="txtOutput" rows="4" placeholder="Random GUIDs For You..." 
-                                      class="w-full mt-4 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-                        </div>
-                        
-                        <div>
-                            <button type="button" onclick="generateGUID()"
-                                    class="w-full bg-indigo-600 text-white py-3 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
-                                Generate GUIDs
-                            </button>
-                        </div>
-                    </div>                                                         
-                </div>
+    <section class="flex items-center justify-center min-h-screen mt-6 mb-6" id="case-convert-main">
 
-                <div class="px-6">
-                <section class="rounded-lg p-6 mb-6">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">What is a GUID?</h2>
-                    <p class="text-gray-700">
-                        A GUID, or Globally Unique Identifier, is a 128-bit number used to uniquely identify information in computer systems. GUIDs are also known as UUIDs (Universally Unique Identifiers), and they play a vital role in ensuring that data is unique across different systems and databases.
-                    </p>
-                </section>
-        
-                <section class=" rounded-lg p-6 mb-6">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">How GUID Generators Work</h2>
-                    <p class="text-gray-700 mb-4">
-                        GUID generators produce unique identifiers using a combination of algorithms and randomization techniques. Here’s a breakdown of the process:
-                    </p>
-                    <div class="space-y-4">
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Algorithmic Generation</h3>
-                            <p class="text-gray-700">
-                                Some GUID generators use predefined algorithms to create unique identifiers. These algorithms ensure that the GUIDs are statistically unique, reducing the chances of duplicates.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Randomization</h3>
-                            <p class="text-gray-700">
-                                Many GUID generators incorporate random numbers or timestamps to enhance uniqueness. This randomness ensures that each GUID is distinct, even if generated in rapid succession.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Format</h3>
-                            <p class="text-gray-700">
-                                GUIDs are typically represented as a 32-character hexadecimal string, divided into five groups separated by hyphens (e.g., <code class="bg-gray-200 text-gray-800 px-2 py-1 rounded">123e4567-e89b-12d3-a456-426614174000</code>).
-                            </p>
-                        </div>
-                    </div>
-                </section>
-        
-                <section class=" rounded-lg p-6 mb-6">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Why Use a GUID Generator?</h2>
-                    <div class="space-y-4">
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Unique Identification</h3>
-                            <p class="text-gray-700">
-                                GUIDs are designed to be globally unique, making them ideal for identifying records in distributed systems or databases where uniqueness is crucial.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Database Management</h3>
-                            <p class="text-gray-700">
-                                In databases, GUIDs can serve as primary keys, ensuring that each record has a unique identifier, which helps prevent data collisions and conflicts.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Distributed Systems</h3>
-                            <p class="text-gray-700">
-                                For applications that operate across multiple servers or platforms, GUIDs provide a reliable way to track and manage data without risking duplication.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Version Control</h3>
-                            <p class="text-gray-700">
-                                GUIDs are useful in version control systems to uniquely identify changes and updates, ensuring that each version is distinct and traceable.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Integration and Interoperability</h3>
-                            <p class="text-gray-700">
-                                When integrating various systems, GUIDs help maintain consistency and avoid conflicts between different data sources or platforms.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-        
-                <section class=" rounded-lg p-6 mb-6">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Choosing the Right GUID Generator</h2>
-                    <div class="space-y-4">
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Reliability</h3>
-                            <p class="text-gray-700">
-                                Opt for a generator that uses robust algorithms and randomization techniques to ensure the uniqueness of the GUIDs.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Performance</h3>
-                            <p class="text-gray-700">
-                                Depending on your application’s requirements, choose a generator that balances speed and accuracy.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Compatibility</h3>
-                            <p class="text-gray-700">
-                                Ensure that the GUID format produced by the generator is compatible with your system or database.
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Security</h3>
-                            <p class="text-gray-700">
-                                For sensitive applications, choose a GUID generator that incorporates cryptographic methods to enhance security.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 max-w-lg w-full" id="case-convert-content">
+            <h1 class="text-2xl font-bold mb-4 text-center text-gray-800">Case Converter</h1>
+
+            <textarea id="inputText" rows="4" placeholder="Enter text here..."
+                class="w-full p-2 border border-gray-300 rounded mb-4"></textarea>
+
+            <div class="mb-4 grid grid-cols-2 gap-2">
+                <button onclick="convertCase('uppercase')"
+                    class="bg-blue-500 text-white py-2 rounded">Uppercase</button>
+                <button onclick="convertCase('lowercase')"
+                    class="bg-blue-500 text-white py-2 rounded">Lowercase</button>
+                <button onclick="convertCase('camelcase')" class="bg-blue-500 text-white py-2 rounded">Camel
+                    Case</button>
+                <button onclick="convertCase('propercase')" class="bg-blue-500 text-white py-2 rounded">Proper
+                    Case</button>
+                <button onclick="convertCase('sentencecase')" class="bg-blue-500 text-white py-2 rounded">Sentence
+                    Case</button>
+                <button onclick="convertCase('reversecase')" class="bg-blue-500 text-white py-2 rounded">Reverse
+                    Case</button>
+                <button onclick="convertCase('snakecase')" class="bg-blue-500 text-white py-2 rounded">Snake
+                    Case</button>
+                <button onclick="convertCase('startcase')" class="bg-blue-500 text-white py-2 rounded">Start
+                    Case</button>
             </div>
 
-            </div>
+            <textarea id="outputText" rows="4" readonly class="w-full p-2 border border-gray-300 rounded"></textarea>
 
+            <div class="mt-4 text-gray-700">
+                <h2 class="font-semibold text-lg">Features & Use Cases</h2>
+                <ul class="list-disc ml-4">
+                    <li><strong>Uppercase:</strong> Ideal for titles and headings.</li>
+                    <li><strong>Lowercase:</strong> Useful for URLs and coding.</li>
+                    <li><strong>Camel Case:</strong> Commonly used in programming for variable names.</li>
+                    <li><strong>Proper Case:</strong> Perfect for formatting names and titles.</li>
+                    <li><strong>Sentence Case:</strong> Great for generating grammatically correct sentences.</li>
+                    <li><strong>Reverse Case:</strong> Fun for puzzles and unique formatting.</li>
+                    <li><strong>Snake Case:</strong> Essential for database entries and programming.</li>
+                    <li><strong>Start Case:</strong> Useful for cleaning up text input.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -492,38 +403,49 @@
         }
     </style>
 </footer>
+    <style>
+        #case-convert-content {
+            background-color: whitesmoke;
+        }
+    </style>
     <script>
-        
-        function copyToClipBoard() {
-            var output = document.querySelector("#txtOutput");
-            output.disabled = false;
-            output.select();
-            document.execCommand('copy');
-            output.disabled = true;
-        }
+        function convertCase(caseType) {
+            const input = document.getElementById('inputText').value;
+            let output = '';
 
-        function generateGUID(){
-            const txtCount = document.querySelector("#txtCount");
-            const txtOutput = document.querySelector("#txtOutput");
-
-            const count = txtCount.value;
-            let guids = "";
-            for(i=0;i<count;i++){
-                guids += guid() + "\n";
+            switch (caseType) {
+                case 'uppercase':
+                    output = input.toUpperCase();
+                    break;
+                case 'lowercase':
+                    output = input.toLowerCase();
+                    break;
+                case 'camelcase':
+                    output = input.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) =>
+                        index === 0 ? match.toLowerCase() : match.toUpperCase()
+                    ).replace(/\s+/g, '');
+                    break;
+                case 'propercase':
+                    output = input.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+                    break;
+                case 'sentencecase':
+                    output = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+                    break;
+                case 'reversecase':
+                    output = input.split('').reverse().join('');
+                    break;
+                case 'snakecase':
+                    output = input.toLowerCase().replace(/\s+/g, '_');
+                    break;
+                case 'startcase':
+                    output = input.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+                    break;
+                default:
+                    output = input;
             }
-            txtOutput.value = guids;
 
+            document.getElementById('outputText').value = output;
         }
-        function guid() {
-            const template = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
-            return template.replace(/[xy]/g, function(c) {
-                const r = Math.random() * 16 | 0,
-                      v = c === 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
-        }
-
-
     </script>
 
 </body>
