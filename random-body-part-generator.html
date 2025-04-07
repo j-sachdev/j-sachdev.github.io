@@ -120,20 +120,27 @@
 </header>
     
 
-    <section class="bg-gray-100 flex flex-col items-center justify-center min-h-screen text-center">
-    <header class="py-6">
-        <h1 class="text-3xl font-bold text-gray-800">Random Body Part Generator</h1>
-        <p class="mt-2 text-gray-600">Explore different body parts and learn interesting facts about them!</p>
-    </header>
-
-    <main class="bg-white shadow-md rounded-lg p-6 w-11/12 max-w-md transition-transform transform hover:scale-105">
-        <h2 id="part-name" class="text-2xl font-semibold text-blue-600 fade-in"></h2>
-        <p id="part-details" class="mt-4 text-gray-700 fade-in"></p>
-        <button onclick="generateRandomBodyPart()" class="mt-6 bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 transform hover:scale-105">
-            Generate Another Body Part
+    <section class="bg-white/80 backdrop-blur-lg shadow-2xl rounded-2xl p-8 w-11/12 max-w-md transition-transform transform hover:scale-105 border border-gray-300">
+        <header class="py-4">
+            <h1 class="text-4xl font-extrabold text-gray-800 drop-shadow-md">🔍 Random Body Part Generator</h1>
+            <p class="mt-2 text-gray-600">Discover fascinating facts about different body parts!</p>
+        </header>
+        
+        <div class="relative w-full flex justify-center mb-4">
+            <img id="part-image" class="w-48 h-48 object-cover rounded-lg shadow-md border-4 border-gray-300" src="" alt="Generated Body Part">
+        </div>
+        
+        <h2 id="part-name" class="text-3xl font-semibold text-indigo-700 fade-in"></h2>
+        <p id="part-details" class="mt-4 text-gray-700 fade-in leading-relaxed"></p>
+        
+        <button onclick="generateRandomBodyPart()" class="mt-6 bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110 shadow-md">
+            🎲 Generate Another
         </button>
-    </main>
-</section>
+        
+        <button onclick="downloadChat()" class="mt-4 bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition duration-300 transform hover:scale-110 shadow-md flex items-center justify-center mx-auto">
+            ⬇️ Download 
+        </button>
+    </section>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -469,21 +476,21 @@
         function generateRandomBodyPart() {
             const randomIndex = Math.floor(Math.random() * bodyParts.length);
             const selectedPart = bodyParts[randomIndex];
+            
+            document.getElementById('part-name').innerText = selectedPart.name;
+            document.getElementById('part-details').innerText = selectedPart.details;
+            document.getElementById('part-image').src = 'https://eslbuzz.com/wp-content/uploads/2018/07/14.jpg.webp';
+        }
 
-            const partName = document.getElementById('part-name');
-            const partDetails = document.getElementById('part-details');
-
-            // Add fade-in effect
-            partName.classList.remove('fade-in');
-            partDetails.classList.remove('fade-in');
-            void partName.offsetWidth;  // Trigger reflow
-            void partDetails.offsetWidth; // Trigger reflow
-
-            partName.innerText = selectedPart.name;
-            partDetails.innerText = selectedPart.details;
-
-            partName.classList.add('fade-in');
-            partDetails.classList.add('fade-in');
+        function downloadChat() {
+            const chatLog = bodyParts.map(part => `${part.name}: ${part.details}`).join('\n');
+            const blob = new Blob([chatLog], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'body_part_chat.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         window.onload = generateRandomBodyPart;

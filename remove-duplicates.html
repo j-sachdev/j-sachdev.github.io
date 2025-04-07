@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    
+<head>    
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="title" content="Efficient Deduplication Tool for Names, Items, and Data">
-<meta name="description" content="Quickly identify and remove duplicates from your list with our user-friendly tool. Ensure accurate results while choosing to ignore case sensitivity for effortless deduplication.">
-<meta property="og:title" content="Efficient Deduplication Tool for Names, Items, and Data">
-<meta property="og:description" content="Quickly identify and remove duplicates from your list with our user-friendly tool. Ensure accurate results while choosing to ignore case sensitivity for effortless deduplication.">
-<meta property="og:image" content="URL_TO_IMAGE">
-<meta property="og:url" content="YOUR_PAGE_URL">
-<meta name="twitter:title" content="Efficient Deduplication Tool for Names, Items, and Data">
-<meta name="twitter:description" content="Quickly identify and remove duplicates from your list with our user-friendly tool. Ensure accurate results while choosing to ignore case sensitivity for effortless deduplication.">
-<meta name="twitter:image" content="URL_TO_IMAGE">
-<meta name="twitter:card" content="summary_large_image">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#004F6D"/>
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D94TC827TJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D94TC827TJ');
+</script>
+    <title>Efficient Deduplication Tool for Names, Items, and Data</title>
+    <meta name="title" content="Efficient Deduplication Tool for Names, Items, and Data">
+    <meta name="description"
+        content="Quickly identify and remove duplicates from your list with our user-friendly tool. Ensure accurate results while choosing to ignore case sensitivity for effortless deduplication.">
+    <meta property="og:title" content="Efficient Deduplication Tool for Names, Items, and Data">
+    <meta property="og:description"
+        content="Quickly identify and remove duplicates from your list with our user-friendly tool. Ensure accurate results while choosing to ignore case sensitivity for effortless deduplication.">
+    <meta name="twitter:title" content="Efficient Deduplication Tool for Names, Items, and Data">
+    <meta name="twitter:description"
+        content="Quickly identify and remove duplicates from your list with our user-friendly tool. Ensure accurate results while choosing to ignore case sensitivity for effortless deduplication.">    
 </head>
 
 <body>
@@ -27,7 +36,7 @@
         <div class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">
                 <a href="/" title="Fast Online Tools" class="flex">
-                    <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                    <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" title="logo" loading="lazy" width="40" height="176"/>
                 </a>
             </div>
 
@@ -52,7 +61,7 @@
             <div id="nav-dialog" class="hidden fixed z-10 bg-white inset-0 p-3">
                 <div id="nav-bar" class="flex justify-between">
                     <a href="#" id="brand" class="flex gap-2 items-center">
-                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" />
+                        <img class="w-60 -ml-3" src="assets/logo.svg" alt="logo" title="logo" loading="lazy" width="40" height="176" />
                     </a>
                     <button class="p-2" onclick="handleMenu()">
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -87,15 +96,15 @@
             </div>
 
             <div class="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
-                <a href="#" title=""
+                <a href="/upside-down-text-generator" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
                     Text Tools </a>
 
-                <a href="#" title=""
+                <a href="/image-cropper-online" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
                     Image Tools </a>
 
-                <a href="#" title=""
+                <a href="/javascript-beautify" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
                     Coding Tools </a>
 
@@ -254,7 +263,7 @@
                         <a href="/">
                             <div class="flex items-center space-x-2 text-2xl font-medium">
                                 <span>
-                                    <img src="assets/logo-invert.svg" class="w-60 -ml-4">
+                                    <img src="assets/logo-invert.svg" class="w-60 -ml-4" height="176" width="40" alt="logo-icon" title="logo" loading="lazy">
                                 </span>
                             </div>
 
@@ -288,6 +297,11 @@
                             <h3 class="text-md font-semibold leading-6 text-white">Popular Tools</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li>
+                                    <a href="/random-emoji-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Emoji Generator
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="/image-cropper-online"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Cropper
                                     </a>
@@ -298,13 +312,40 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/image-filters"
-                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Image Filters
+                                    <a href="/remove-duplicates"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Remove Duplicate
+                                        Lines
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/remove-duplicates"
-                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Remove Duplicate Lines
+                                    <a href="/resize-image-to-300x300"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Resize Image to
+                                        300x300
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-flag-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Flag Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cpf-generator-brazil"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">CPF Generator Brazil
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-body-part-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Ramdom Body Parts Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-date-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Date Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/case-converter"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Case Converter
                                     </a>
                                 </li>
                             </ul>
@@ -313,15 +354,78 @@
                             <h3 class="text-md font-semibold leading-6 text-white">Other Tools</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li>
-                                    <a href="/ai-tools-directory"
-                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">AI Tools Directory
+                                    <a href="/tailwind-css-gradient-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Tailwind CSS Graident
+                                        Generator
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/upside-down-text-generator.html"
+                                    <a href="/world-currency-symbols"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">World Currency Symbols
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/upside-down-text-generator"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Text Based Tools
                                     </a>
-                                </li>                                    
+                                </li>
+                                <li>
+                                    <a href="/generate-random-guid"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">GUID Generator Online
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/phone-parser-and-formatter"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Phone Number Parsing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/facebook-fonts-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Facebook Fonts
+                                        Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/linkedin-fonts-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Linkedin Fonts
+                                        Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-letter-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random letter Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/random-word-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Random Word Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/strikethrough-text-convertor"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Strikethrough Text Convertor
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/italic-text-convertor"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Italic Text Convertor
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/bold-text-convertor"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Bold Text Convertor
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/bubble-text-generator"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Bubble Text Generator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/interactive-currency-converter"
+                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">Interactive Currency Converter
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -329,11 +433,11 @@
                         <div>
                             <h3 class="text-md font-semibold leading-6 text-white">Resources</h3>
                             <ul role="list" class="mt-6 space-y-4">
-                                
-                                <li>
+
+                                <!-- <li>
                                     <a href="/blog" class="text-md leading-6 text-gray-300 hover:text-gray-50">Blog
                                     </a>
-                                </li>                                    
+                                </li>                                     -->
                                 <li>
                                     <a href="/terms-of-use"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Terms
@@ -351,15 +455,15 @@
                             <h3 class="text-md font-semibold leading-6 text-white">Company</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li>
-                                    <a href="/about-us"
-                                        class="text-md leading-6 text-gray-300 hover:text-gray-50">About Us
+                                    <a href="/about-us" class="text-md leading-6 text-gray-300 hover:text-gray-50">About
+                                        Us
                                     </a>
-                                </li>                                   
-                                <li>
+                                </li>
+                                <!-- <li>
                                     <a href="/contact-us"
                                         class="text-md leading-6 text-gray-300 hover:text-gray-50">Contact Us
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
