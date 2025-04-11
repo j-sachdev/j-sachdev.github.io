@@ -121,26 +121,35 @@
 </header>
     
 
-    <section class="bg-white/80 backdrop-blur-lg shadow-2xl rounded-2xl p-8 w-11/12 max-w-md transition-transform transform hover:scale-105 border border-gray-300">
-        <header class="py-4">
-            <h1 class="text-4xl font-extrabold text-gray-800 drop-shadow-md">🔍 Random Body Part Generator</h1>
-            <p class="mt-2 text-gray-600">Discover fascinating facts about different body parts!</p>
+    <section>
+        <header>
+            <h1>🔍 Random Body Part Generator</h1>
+            <p>Discover fascinating facts about different body parts!</p>
         </header>
-        
-        <div class="relative w-full flex justify-center mb-4">
-            <img id="part-image" class="w-48 h-48 object-cover rounded-lg shadow-md border-4 border-gray-300" src="" alt="Generated Body Part">
+        <div class="content-container">
+            <div>
+                <h2 id="part-name"></h2>
+                <p id="part-details"></p>
+                <button onclick="generateRandomBodyPart()">🎲 Generate Another</button>
+                <button onclick="downloadChat()">⬇️ Download Facts</button>
+            </div>
+            <img id="part-image" src="" alt="Generated Body Part">
         </div>
-        
-        <h2 id="part-name" class="text-3xl font-semibold text-indigo-700 fade-in"></h2>
-        <p id="part-details" class="mt-4 text-gray-700 fade-in leading-relaxed"></p>
-        
-        <button onclick="generateRandomBodyPart()" class="mt-6 bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-110 shadow-md">
-            🎲 Generate Another
-        </button>
-        
-        <button onclick="downloadChat()" class="mt-4 bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition duration-300 transform hover:scale-110 shadow-md flex items-center justify-center mx-auto">
-            ⬇️ Download 
-        </button>
+        <div style="margin-top: 20px; text-align: left;">
+            <h3>About the Random Body Part Generator</h3>
+            <p>
+                The Random Body Part Generator is an interactive educational tool designed to help users explore the fascinating world of human anatomy. By generating random body parts and providing detailed descriptions of their functions, this tool serves as a fun and engaging way to learn about the human body.
+            </p>
+            <p>
+                Whether you're a student studying biology, a teacher looking for innovative teaching methods, or simply an enthusiast curious about the human body, this generator offers valuable insights into the structure and function of various body parts. From the brain to the toes, each part plays a unique role in maintaining the body's overall health and functionality.
+            </p>
+            <p>
+                With over 100 body parts included in the database, this tool covers everything from major organs like the heart and lungs to smaller components like the uvula and papillae. Each entry provides a concise yet informative description, helping users deepen their understanding of human anatomy.
+            </p>
+            <p>
+                The generator also includes a download feature, allowing users to save the complete list of body parts and their descriptions for offline reference. This makes it an excellent resource for research, study, or casual exploration.
+            </p>
+        </div>
     </section>
 
     
@@ -238,6 +247,75 @@
                                       class="text-md leading-6 text-gray-300 hover:text-gray-50">Case Converter
                                   </a>
                               </li>
+                              <li>
+                                <a href="/ascii-to-binary"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">ASCII to Binary Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/ascii-to-hex"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">ASCII to Hex Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/ascii-to-text"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">ASCII to Text Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/binary-to-ip"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">Binary to IP Address Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/binary-to-text"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">Binary to Text Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/decimal-to-gray-code"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">Decimal to Gray Code Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/gray-to-decimal"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">Gray Code to Decimal Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/ip-to-binary"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">IP Address to Binary Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/json-stringify"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">JSON Stringify
+                                </a>
+                            </li>                              <li>
+                                <a href="/numbers-to-words"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">Numbers to Words Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/url-decode"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">URL Decoder
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/url-encode"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">URL Encoder
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/words-to-numbers"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">Words to Numbers Converter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/xor-calculator"
+                                    class="text-md leading-6 text-gray-300 hover:text-gray-50">XOR Calculator
+                                </a>
+                            </li>
                           </ul>
                       </div>
                       <div class="mt-10 md:mt-0">
@@ -391,14 +469,126 @@
   </style>
 </footer>
     <style>
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #f3e7e9, #e3eeff);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Section Styling */
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            margin: 10px;
+        }
+
+        /* Header Styling */
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        /* Image Styling */
+        #part-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        /* Desktop View Image Placement */
+        @media (min-width: 768px) {
+            .content-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            #part-image {
+                width: 45%;
+                margin-left: 20px;
+            }
+        }
+
+        /* Body Part Name and Details Styling */
+        #part-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4c51bf;
+            margin-bottom: 10px;
+        }
+
+        #part-details {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styling */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4c51bf;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4338ca;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            #part-name {
+                font-size: 1.2rem;
+            }
+
+            #part-details {
+                font-size: 0.9rem;
+            }
         }
     </style>
+
     <script>
         const bodyParts = [
             { name: "Head", details: "The head houses the brain, eyes, ears, nose, and mouth, and is essential for sensory perception." },
@@ -487,7 +677,6 @@
         function generateRandomBodyPart() {
             const randomIndex = Math.floor(Math.random() * bodyParts.length);
             const selectedPart = bodyParts[randomIndex];
-            
             document.getElementById('part-name').innerText = selectedPart.name;
             document.getElementById('part-details').innerText = selectedPart.details;
             document.getElementById('part-image').src = 'https://eslbuzz.com/wp-content/uploads/2018/07/14.jpg.webp';

@@ -17,20 +17,16 @@
 
   gtag('config', 'G-D94TC827TJ');
 </script>
-    <title>Bubble Text Generator</title>
-    <meta name="robots" content="index, follow">
-<meta
-      name="description"
-      content="A live bubble text generator that converts your text into styled bubble formats. Perfect for social media posts, chats, and creative writing."
-    />
-    <meta
-      name="keywords"
-      content="bubble text generator, text to bubble, online text converter, social media text styling, creative writing"
-    />
-    <link
-      rel="canonical"
-      href="https://fastonlinetools.com/bubble-text-generator"
-    />    
+    <title>Random JSON Generator | Free Online Tool</title>
+  <meta name="description" content="Generate random JSON data effortlessly with our free online Random JSON Generator. Perfect for developers, testers, and anyone working with APIs or mock data.">
+  <meta name="keywords" content="random json generator, json generator, free online tools, mock data, api testing, json data">
+  <meta property="og:title" content="Random JSON Generator | Free Online Tool">
+  <meta property="og:description" content="Easily generate random JSON data with our intuitive tool. Ideal for API testing, development, and learning.">
+  <meta property="og:url" content="https://www.fastonlinetools.com/random-json-generator">
+  <meta name="twitter:title" content="Random JSON Generator | Free Online Tool">
+  <meta name="twitter:description" content="Generate random JSON data quickly and accurately. Perfect for developers and testers.">
+  <meta name="twitter:url" content="https://www.fastonlinetools.com/random-json-generator">
+  <link rel="canonical" href="https://www.fastonlinetools.com/random-json-generator">    
 </head>
 
 <body>
@@ -128,34 +124,34 @@
 </header>
     
 
-    <section class="flex flex-col items-center justify-center min-h-screen p-4">
-      <header class="text-center mb-6">
-        <h1 class="text-3xl font-bold text-purple-800">Bubble Text Generator</h1>
-        <p class="text-gray-700">Transform your text into creative bubble styles for social media, chats, and more!</p>
-    </header>
-    
-    <main class="w-full max-w-3xl">
-        <textarea id="textarea1" placeholder="Type here..." 
-                  class="w-full p-3 border-2 border-purple-600 rounded-lg mb-4 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-purple-400" 
-                  oninput="updateText()"></textarea>
-        
-        <section class="flex flex-col items-start">
-            <div class="bubble bg-green-100" id="circleText">ⒸⓗⓐⓉ ⒼⓅⓉ</div>
-            <div class="bubble bg-blue-100" id="squareText">🅒🅗🅐🅣 🅖🅟🅣</div>
-        </section>
+    <body>
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4">
+      <h1 class="text-2xl font-bold text-center">Random JSON Generator</h1>
+    </div>
+  </header>
 
-        <section class="mt-6">
-            <h2 class="text-2xl font-semibold text-purple-700">Benefits of Using a Bubble Text Generator</h2>
-            <ul class="list-disc pl-6 text-gray-700">
-                <li><strong>Enhanced Engagement:</strong> Bubble text adds a playful and creative touch to your messages, making them more visually appealing.</li>
-                <li><strong>Easy Customization:</strong> Quickly transform your text into various styles, allowing you to personalize your communications effortlessly.</li>
-                <li><strong>Attract Attention:</strong> Use bubble text for important announcements or highlights, making key information stand out.</li>
-                <li><strong>Social Media Friendly:</strong> Perfect for platforms like Instagram, Facebook, and Twitter, where unique text styles can help your posts get noticed.</li>
-                <li><strong>Creative Writing:</strong> Ideal for enhancing creative writing projects, making your text more engaging and fun.</li>
-            </ul>
-        </section>
-    </main>
-    </section>
+  <div class="tool-container">
+    <div class="input-group">
+      <label for="jsonFieldsInput" class="font-medium">Enter Number of Fields:</label>
+      <input type="number" id="jsonFieldsInput" placeholder="e.g., 5" class="py-2 px-4 border border-gray-300 rounded-lg">
+    </div>
+    <button id="generateButton" class="bg-[#fe5f3c] text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition duration-300">Generate JSON</button>
+    <div id="outputBox" class="output-box mt-4"></div>
+  </div>
+
+  <!-- Help Section -->
+  <div class="help-section container mx-auto mt-8">
+    <h2 class="text-xl font-bold mb-4">What is Random JSON Generation?</h2>
+    <p>Random JSON generation creates mock JSON data with random fields and values. This is useful for testing APIs, developing applications, or learning how JSON data structures work.</p>
+    <p>This tool allows you to generate random JSON data. Here are some common use cases:</p>
+    <ul class="list-disc pl-6 mt-4">
+      <li><strong>API Testing:</strong> Generate mock data for testing API endpoints.</li>
+      <li><strong>Development:</strong> Simulate real-world data for application development.</li>
+      <li><strong>Learning:</strong> Understand how JSON data structures are formatted.</li>
+      <li><strong>Data Analysis:</strong> Create sample datasets for analysis or visualization.</li>
+    </ul>
+  </div>
 
     
     <footer class="bg-[#1A1D2B]">
@@ -474,76 +470,62 @@
   </style>
 </footer>
     <style>
-        body {
-            background-color: #f7fafc; /* Simple light background */
-        }
-        .bubble {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 10px;
-            max-width: 80%;
-            word-wrap: break-word;
-            margin-bottom: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .bubble:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        textarea {
-            border-color: #6a1b9a;
-        }
-    </style>
-        <script>
-        function updateText() {
-            const textarea1 = document.getElementById('textarea1');
-            const circleText = document.getElementById('circleText');
-            const squareText = document.getElementById('squareText');
-            const text = textarea1.value || 'Your text will appear here...';
+    /* Custom CSS for this tool */
+    .tool-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .output-box {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    .help-section {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #f4f4f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+  </style>
+   <script>
+    document.getElementById('generateButton').addEventListener('click', () => {
+      const jsonFieldsInput = document.getElementById('jsonFieldsInput').value.trim();
+      const outputBox = document.getElementById('outputBox');
 
-            circleText.innerText = toCircleText(text);
-            squareText.innerText = toSquareText(text);
-        }
+      if (!jsonFieldsInput || isNaN(jsonFieldsInput) || parseInt(jsonFieldsInput, 10) <= 0) {
+        outputBox.textContent = 'Please enter a valid number of fields.';
+        return;
+      }
 
-        function toCircleText(text) {
-            const circleMap = {
-                'a': 'Ⓐ', 'b': 'Ⓑ', 'c': 'Ⓒ', 'd': 'Ⓓ', 'e': 'Ⓔ',
-                'f': 'Ⓕ', 'g': 'Ⓖ', 'h': 'Ⓗ', 'i': 'Ⓘ', 'j': 'Ⓙ',
-                'k': 'Ⓗ', 'l': 'Ⓛ', 'm': 'Ⓜ', 'n': 'Ⓝ', 'o': 'Ⓞ',
-                'p': 'Ⓟ', 'q': 'Ⓠ', 'r': 'Ⓡ', 's': 'Ⓢ', 't': 'Ⓣ',
-                'u': 'Ⓤ', 'v': 'Ⓥ', 'w': 'Ⓦ', 'x': 'Ⓧ', 'y': 'Ⓨ', 
-                'z': 'Ⓩ', 
-                'A': 'Ⓐ', 'B': 'Ⓑ', 'C': 'Ⓒ', 'D': 'Ⓓ', 'E': 'Ⓔ',
-                'F': 'Ⓕ', 'G': 'Ⓖ', 'H': 'Ⓗ', 'I': 'Ⓘ', 'J': 'Ⓙ',
-                'K': 'Ⓗ', 'L': 'Ⓛ', 'M': 'Ⓜ', 'N': 'Ⓝ', 'O': 'Ⓞ',
-                'P': 'Ⓟ', 'Q': 'Ⓠ', 'R': 'Ⓡ', 'S': 'Ⓢ', 'T': 'Ⓣ',
-                'U': 'Ⓤ', 'V': 'Ⓥ', 'W': 'Ⓦ', 'X': 'Ⓧ', 'Y': 'Ⓨ', 
-                'Z': 'Ⓩ', 
-                ' ': ' ',
-            };
-            return Array.from(text).map(char => circleMap[char] || char).join('');
-        }
+      const numFields = parseInt(jsonFieldsInput, 10);
+      const randomData = {};
 
-        function toSquareText(text) {
-            const squareMap = {
-                'a': '🅰️', 'b': '🅱️', 'c': '🅲', 'd': '🅳', 'e': '🅴',
-                'f': '🅵', 'g': '🅶', 'h': '🅷', 'i': '🅸', 'j': '🅹',
-                'k': '🅺', 'l': '🅻', 'm': '🅼', 'n': '🅽', 'o': '🅾️',
-                'p': '🅿️', 'q': '🆀', 'r': '🆁', 's': '🆂', 't': '🆃',
-                'u': '🆄', 'v': '🆅', 'w': '🆆', 'x': '🆇', 'y': '🆈', 
-                'z': '🆉', 
-                'A': '🅰️', 'B': '🅱️', 'C': '🅲', 'D': '🅳', 'E': '🅴',
-                'F': '🅵', 'G': '🅶', 'H': '🅷', 'I': '🅸', 'J': '🅹',
-                'K': '🅺', 'L': '🅻', 'M': '🅼', 'N': '🅽', 'O': '🅾️',
-                'P': '🅿️', 'Q': '🆀', 'R': '🆁', 'S': '🆂', 'T': '🆃',
-                'U': '🆄', 'V': '🆅', 'W': '🆆', 'X': '🆇', 'Y': '🆈', 
-                'Z': '🆉', 
-                ' ': ' ',
-            };
-            return Array.from(text).map(char => squareMap[char] || char).join('');
-        }
-    </script>
+      for (let i = 1; i <= numFields; i++) {
+        const fieldName = `field${i}`;
+        const fieldType = Math.random() < 0.5 ? 'string' : 'number';
+        randomData[fieldName] = fieldType === 'string'
+          ? `value${Math.floor(Math.random() * 100)}`
+          : Math.floor(Math.random() * 1000);
+      }
+
+      const jsonString = JSON.stringify(randomData, null, 2);
+      outputBox.textContent = `Generated JSON:\n${jsonString}`;
+    });
+  </script>
 
 </body>
 
