@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  .header-container {
+    padding: 1.4rem 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 4rem;
+  }
+  .menu-list-item a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 500;
+  }
+  .extra-spacing::before {
+    content: "";
+    display: inline-block;
+    width: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 4rem;
+  }
+  .hamberger-icon {
+    display: none;
+  }
+  .mobile-header-list {
+    display: none;
+  }
+  .footer-container {
+    background-color: #1a1d2b;
+    padding: 9.6rem 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
+  }
+  .footer-container .list-wrap {
+    width: 33.33%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
+  }
+  .list-wrap .col {
+    width: 50%;
+  }
+  .list-wrap.full-width .col {
+    width: 100%;
+  }
+  .list-wrap h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0 0 2.4rem;
+  }
+  .list-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .list-wrap ul li {
+    margin-bottom: 1.6rem;
+  }
+  .list-wrap ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  .col-desc {
+    width: 85%;
+  }
+  .col-desc p {
+    color: #e5e7eb;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  .icon-list-wrap {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .list-wrap .icon-list-wrap li {
+    width: 1.8rem;
+  }
+  .copywrite-text {
+    background-color: #1a1d2b;
+  }
+  .copywrite-container {
+    padding: 0;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  .copywrite-text {
+    border-top: 1px solid #9ca3af4d;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 3.2rem 0 7.2rem;
+    margin: 0 3.2rem;
+  }
+  @media all and (max-width: 991px) {
+    .header-container {
+      padding: 1.2rem;
+    }
+    .menu-list {
+      display: none;
+    }
+    .hamberger-icon {
+      display: block;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z' /%3E%3C/svg%3E")
+        no-repeat;
+      width: 2.4rem;
+      height: 2.4rem;
+      border: none;
+      padding: 0;
+    }
+    .menu-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+      background-color: #fff;
+      padding: 1.2rem;
+    }
+    .menu-list-item a {
+      padding: 2.4rem;
+      display: block;
+    }
+    .extra-spacing::before {
+      width: 100%;
+      height: 0.1rem;
+    }
+    .close-btn {
+      width: 2.4rem;
+      height: 2.4rem;
+      display: inline-block;
+      border: none;
+      padding: 0;
+    }
+    .mobile-header-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-container {
+      display: block;
+      padding: 0;
+    }
+    .footer-container .list-wrap {
+      width: 100%;
+    }
+    .mid-menu {
+      margin: 6.4rem 0 0;
+    }
+    .copywrite-container {
+      padding: 0;
+    }
+    .copywrite-text {
+      padding: 3.2rem 0 0;
+      max-width: 100%;
+      width: auto;
+      margin: 6.4rem 0 0;
+    }
+    .footer-outer {
+      padding: 6.4rem 2.4rem 4rem;
+      background-color: #1a1d2b;
+    }
+  }
