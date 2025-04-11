@@ -10,6 +10,66 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://fastonlinetools.com/what-is-my-user-agent</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/ascii-to-binary</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/ascii-to-hex</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/ascii-to-text</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/binary-to-ip</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/binary-to-text</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/decimal-to-gray-text-convertor</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/gray-code-to-decimal</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/ip-to-binary</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/json-stringify</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/numbers-to-words</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/url-decoder</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/url-encode</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/words-to-numbers</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fastonlinetools.com/xor-calculator</loc>
+  <priority>1.00</priority>
+</url>
+<url>
   <loc>https://fastonlinetools.com/cpf-generator-brazil</loc>  
   <priority>1.00</priority>
 </url>
