@@ -121,32 +121,34 @@
 </header>
     
 
-    <section>
-        <header>
-            <h1>🔍 Random Body Part Generator</h1>
-            <p>Discover fascinating facts about different body parts!</p>
-        </header>
-        <div class="content-container">
-            <div>
-                <h2 id="part-name"></h2>
-                <p id="part-details"></p>
-                <button onclick="generateRandomBodyPart()">🎲 Generate Another</button>
-                <button onclick="downloadChat()">⬇️ Download Facts</button>
-            </div>
-            <img id="part-image" src="" alt="Generated Body Part">
+    <section class="flex flex-col items-center justify-center min-h-screen bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
+        <div class="text-center">
+            <h1 class="text-2xl font-bold text-gray-800">🔍 Random Body Part Generator</h1>
+            <p class="text-gray-600 mt-2">Discover fascinating facts about different body parts!</p>
         </div>
-        <div style="margin-top: 20px; text-align: left;">
-            <h3>About the Random Body Part Generator</h3>
-            <p>
+        <div class="content-container flex flex-col md:flex-row items-center justify-between mt-6 w-full">
+            <div class="w-full md:w-1/2">
+                <h2 id="part-name" class="text-xl font-semibold text-blue-700"></h2>
+                <p id="part-details" class="text-gray-700 mt-2"></p>
+                <div class="flex space-x-2 mt-4">
+                    <button onclick="generateRandomBodyPart()" class="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition">🎲 Generate Another</button>
+                    <button onclick="downloadChat()" class="w-full px-4 py-2 bg-gray-200 text-gray-800 font-medium rounded hover:bg-gray-300 transition">⬇️ Download Facts</button>
+                </div>
+            </div>
+            <img id="part-image" src="" alt="Generated Body Part" class="w-full md:w-1/2 mt-4 md:mt-0 rounded-lg">
+        </div>
+        <div class="mt-8 text-left w-full">
+            <h3 class="text-lg font-semibold text-gray-800">About the Random Body Part Generator</h3>
+            <p class="text-gray-700 mt-2">
                 The Random Body Part Generator is an interactive educational tool designed to help users explore the fascinating world of human anatomy. By generating random body parts and providing detailed descriptions of their functions, this tool serves as a fun and engaging way to learn about the human body.
             </p>
-            <p>
+            <p class="text-gray-700 mt-2">
                 Whether you're a student studying biology, a teacher looking for innovative teaching methods, or simply an enthusiast curious about the human body, this generator offers valuable insights into the structure and function of various body parts. From the brain to the toes, each part plays a unique role in maintaining the body's overall health and functionality.
             </p>
-            <p>
+            <p class="text-gray-700 mt-2">
                 With over 100 body parts included in the database, this tool covers everything from major organs like the heart and lungs to smaller components like the uvula and papillae. Each entry provides a concise yet informative description, helping users deepen their understanding of human anatomy.
             </p>
-            <p>
+            <p class="text-gray-700 mt-2">
                 The generator also includes a download feature, allowing users to save the complete list of body parts and their descriptions for offline reference. This makes it an excellent resource for research, study, or casual exploration.
             </p>
         </div>
@@ -468,127 +470,6 @@
       }
   </style>
 </footer>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body Styling */
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #f3e7e9, #e3eeff);
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        /* Section Styling */
-        section {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 800px;
-            width: 100%;
-            margin: 10px;
-        }
-
-        /* Header Styling */
-        header h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #4a5568;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1rem;
-            color: #6b7280;
-            margin-bottom: 20px;
-        }
-
-        /* Image Styling */
-        #part-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
-
-        /* Desktop View Image Placement */
-        @media (min-width: 768px) {
-            .content-container {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-            #part-image {
-                width: 45%;
-                margin-left: 20px;
-            }
-        }
-
-        /* Body Part Name and Details Styling */
-        #part-name {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #4c51bf;
-            margin-bottom: 10px;
-        }
-
-        #part-details {
-            font-size: 1rem;
-            color: #4a5568;
-            margin-bottom: 20px;
-        }
-
-        /* Button Styling */
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 1rem;
-            font-weight: bold;
-            color: white;
-            background-color: #4c51bf;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #4338ca;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            header p {
-                font-size: 0.9rem;
-            }
-
-            #part-name {
-                font-size: 1.2rem;
-            }
-
-            #part-details {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
-
     <script>
         const bodyParts = [
             { name: "Head", details: "The head houses the brain, eyes, ears, nose, and mouth, and is essential for sensory perception." },
